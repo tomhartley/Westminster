@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2405A09125533A20065FC03 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2405A08125533A20065FC03 /* libxml2.2.7.3.dylib */; };
+		E253916712FDE8780061361E /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E253916412FDE8780061361E /* HTMLNode.m */; };
+		E253916812FDE8780061361E /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E253916612FDE8780061361E /* HTMLParser.m */; };
+		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
+		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
+		E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */; };
+		E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */; };
+		E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26E81236C6F700C084B7 /* UIKit.framework */; };
+		E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26EA1236C6F700C084B7 /* Foundation.framework */; };
+		E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26EC1236C6F700C084B7 /* CoreGraphics.framework */; };
+		E29A26F21236C6F700C084B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E29A26F01236C6F700C084B7 /* InfoPlist.strings */; };
+		E29A26F41236C6F700C084B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F31236C6F700C084B7 /* main.m */; };
+		E29A26F71236C6F700C084B7 /* WestminsterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */; };
+		E29A26FA1236C6F700C084B7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A26F81236C6F700C084B7 /* MainWindow.xib */; };
+		E29A27141236C73600C084B7 /* WSAlmanackController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A27121236C73600C084B7 /* WSAlmanackController.m */; };
+		E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A27131236C73600C084B7 /* WSAlmanackController.xib */; };
+		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
+		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
+		E2D05952125548AC00696D71 /* WSDayFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D05951125548AC00696D71 /* WSDayFood.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2405A08125533A20065FC03 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = /usr/lib/libxml2.2.7.3.dylib; sourceTree = "<absolute>"; };
+		E253916312FDE8780061361E /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		E253916412FDE8780061361E /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		E253916512FDE8780061361E /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		E253916612FDE8780061361E /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealsTableViewDelegate.h; path = ../MealsTableViewDelegate.h; sourceTree = "<group>"; };
+		E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MealsTableViewDelegate.m; path = ../MealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSFoodViewController.h; path = ../WSFoodViewController.h; sourceTree = "<group>"; };
+		E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSFoodViewController.m; path = ../WSFoodViewController.m; sourceTree = "<group>"; };
+		E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSFoodViewController.xib; sourceTree = "<group>"; };
+		E29A26E51236C6F700C084B7 /* Westminster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westminster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29A26E81236C6F700C084B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E29A26EA1236C6F700C084B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E29A26EC1236C6F700C084B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E29A26EE1236C6F700C084B7 /* Westminster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Westminster-Info.plist"; sourceTree = "<group>"; };
+		E29A26EF1236C6F700C084B7 /* Westminster_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Westminster_Prefix.pch; sourceTree = "<group>"; };
+		E29A26F11236C6F700C084B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E29A26F31236C6F700C084B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WestminsterAppDelegate.h; sourceTree = "<group>"; };
+		E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WestminsterAppDelegate.m; sourceTree = "<group>"; };
+		E29A26F91236C6F700C084B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		E29A27111236C73600C084B7 /* WSAlmanackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSAlmanackController.h; path = Controllers/WSAlmanackController.h; sourceTree = "<group>"; };
+		E29A27121236C73600C084B7 /* WSAlmanackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSAlmanackController.m; path = Controllers/WSAlmanackController.m; sourceTree = "<group>"; };
+		E29A27131236C73600C084B7 /* WSAlmanackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAlmanackController.xib; path = Classes/Controllers/WSAlmanackController.xib; sourceTree = "<group>"; };
+		E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDataFetcher.h; path = Model/WSDataFetcher.h; sourceTree = "<group>"; };
+		E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSDataFetcher.m; path = Model/WSDataFetcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E2A3710012F477C700061B2D /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
+		E2B61C7912F476A200F314A5 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
+		E2D05950125548AC00696D71 /* WSDayFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSDayFood.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E2D05951125548AC00696D71 /* WSDayFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSDayFood.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E29A26E21236C6F700C084B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */,
+				E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */,
+				E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */,
+				E2405A09125533A20065FC03 /* libxml2.2.7.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E253916212FDE8780061361E /* zootreeves-Objective-C-HMTL-Parser-23f861d */ = {
+			isa = PBXGroup;
+			children = (
+				E253916312FDE8780061361E /* HTMLNode.h */,
+				E253916412FDE8780061361E /* HTMLNode.m */,
+				E253916512FDE8780061361E /* HTMLParser.h */,
+				E253916612FDE8780061361E /* HTMLParser.m */,
+			);
+			path = "zootreeves-Objective-C-HMTL-Parser-23f861d";
+			sourceTree = "<group>";
+		};
+		E29A26D61236C6F700C084B7 = {
+			isa = PBXGroup;
+			children = (
+				E29A26DD1236C6F700C084B7 /* Classes */,
+				E29A26DE1236C6F700C084B7 /* Other Sources */,
+				E29A26DF1236C6F700C084B7 /* Resources */,
+				E2B61C7412F46ED900F314A5 /* iPad */,
+				E29A26E01236C6F700C084B7 /* Frameworks */,
+				E29A26E61236C6F700C084B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E29A26DD1236C6F700C084B7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E25723C5125E78E000B0380C /* NSDate+Helper.h */,
+				E25723C6125E78E000B0380C /* NSDate+Helper.m */,
+				E253916212FDE8780061361E /* zootreeves-Objective-C-HMTL-Parser-23f861d */,
+				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
+				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
+				E29A27111236C73600C084B7 /* WSAlmanackController.h */,
+				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
+				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+				E29A27121236C73600C084B7 /* WSAlmanackController.m */,
+				E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */,
+				E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */,
+				E2D05950125548AC00696D71 /* WSDayFood.h */,
+				E2D05951125548AC00696D71 /* WSDayFood.m */,
+				E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */,
+				E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E29A26DE1236C6F700C084B7 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E2B61C7912F476A200F314A5 /* 48-fork-and-knife.png */,
+				E29A26EF1236C6F700C084B7 /* Westminster_Prefix.pch */,
+				E29A26F31236C6F700C084B7 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		E29A26DF1236C6F700C084B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
+				E29A27131236C73600C084B7 /* WSAlmanackController.xib */,
+				E29A26EE1236C6F700C084B7 /* Westminster-Info.plist */,
+				E29A26F01236C6F700C084B7 /* InfoPlist.strings */,
+				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
+				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E29A26E01236C6F700C084B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E29A26E81236C6F700C084B7 /* UIKit.framework */,
+				E29A26EA1236C6F700C084B7 /* Foundation.framework */,
+				E29A26EC1236C6F700C084B7 /* CoreGraphics.framework */,
+				E2405A08125533A20065FC03 /* libxml2.2.7.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E29A26E61236C6F700C084B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E29A26E51236C6F700C084B7 /* Westminster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2B61C7412F46ED900F314A5 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E29A26E41236C6F700C084B7 /* Westminster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E29A27091236C6F700C084B7 /* Build configuration list for PBXNativeTarget "Westminster" */;
+			buildPhases = (
+				E29A26E11236C6F700C084B7 /* Sources */,
+				E29A26E21236C6F700C084B7 /* Frameworks */,
+				E29A26E31236C6F700C084B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Westminster;
+			productName = Westminster;
+			productReference = E29A26E51236C6F700C084B7 /* Westminster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E29A26D81236C6F700C084B7 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E29A26DB1236C6F700C084B7 /* Build configuration list for PBXProject "Westminster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E29A26D61236C6F700C084B7;
+			productRefGroup = E29A26E61236C6F700C084B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E29A26E41236C6F700C084B7 /* Westminster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E29A26E31236C6F700C084B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29A26F21236C6F700C084B7 /* InfoPlist.strings in Resources */,
+				E29A26FA1236C6F700C084B7 /* MainWindow.xib in Resources */,
+				E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */,
+				E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */,
+				E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E29A26E11236C6F700C084B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29A26F41236C6F700C084B7 /* main.m in Sources */,
+				E29A26F71236C6F700C084B7 /* WestminsterAppDelegate.m in Sources */,
+				E29A27141236C73600C084B7 /* WSAlmanackController.m in Sources */,
+				E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */,
+				E2D05952125548AC00696D71 /* WSDayFood.m in Sources */,
+				E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */,
+				E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */,
+				E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */,
+				E253916712FDE8780061361E /* HTMLNode.m in Sources */,
+				E253916812FDE8780061361E /* HTMLParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E29A26F01236C6F700C084B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E29A26F11236C6F700C084B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E29A26F81236C6F700C084B7 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E29A26F91236C6F700C084B7 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E29A27071236C6F700C084B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79B98E00-A301-471B-A4E9-24C0D5B4FA44";
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		E29A27081236C6F700C084B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Release;
+		};
+		E29A270A1236C6F700C084B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2/;
+				INFOPLIST_FILE = "Westminster-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PRODUCT_NAME = Westminster;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E29A270B1236C6F700C084B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2/;
+				INFOPLIST_FILE = "Westminster-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PRODUCT_NAME = Westminster;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E29A26DB1236C6F700C084B7 /* Build configuration list for PBXProject "Westminster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29A27071236C6F700C084B7 /* Debug */,
+				E29A27081236C6F700C084B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E29A27091236C6F700C084B7 /* Build configuration list for PBXNativeTarget "Westminster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29A270A1236C6F700C084B7 /* Debug */,
+				E29A270B1236C6F700C084B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E29A26D81236C6F700C084B7 /* Project object */;
+}

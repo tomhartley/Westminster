@@ -1,0 +1,20 @@
+//
+//  WestminsterAppDelegate.h
+//  Westminster
+//
+//  Created by Tom Hartley on 07/09/2010.
+//  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface WestminsterAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
+	UIWindow *window;
+	UITabBarController *tabBarController;
+}
+
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+
+@end

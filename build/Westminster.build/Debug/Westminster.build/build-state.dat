@@ -1,0 +1,68 @@
+TWestminster
+v7
+r1
+cCheck dependencies
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib
+c000000004C8695E80000000000001A7B
+t1283888616
+s6779
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app
+t2
+s0
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/Info.plist
+t2
+s0
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/Resources/WSAlmanackController.nib
+t2
+s0
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/Resources/en.lproj/MainWindow.nib
+t2
+s0
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/InfoPlist.strings
+c000000004C868F770000000000000066
+t1283886967
+s102
+
+N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib
+c000000004C86934D0000000000002818
+t1283887949
+s10264
+
+NWestminster-Info.plist
+c000000004C868F770000000000000386
+t1283886967
+s902
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies307581013#307581013#0(66"[BEROR]error: There is no SDK with the name or path 'iphoneos4.1'1(4@58"error: There is no SDK with the name or path 'iphoneos4.1'307581013#18446744073709551615#0#0(1@0"0(0#1#0"32651522506817640#0"0#
+
+CCompileXIB /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib
+r0
+
+CCompileXIB /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib
+r0
+
+CCopyStringsFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+r0
+
+CProcessInfoPlistFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app/Contents/Info.plist Westminster-Info.plist
+r0
+
+CTouch /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug/Westminster.app
+r0
+
