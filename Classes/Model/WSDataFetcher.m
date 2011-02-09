@@ -17,8 +17,67 @@ static WSDataFetcher *sharedInstance = nil;
 #pragma mark -
 #pragma mark class instance methods
 
+-(void)downloadAll {
+	[self updateFood];
+}
+
+-(void)downloadAllAuthFree {
+	[self updateFood];
+}
+
+
+-(void)updateEvents {
+	
+}
+
+-(void)updateFood {
+	NSString *fst = [[NSDate date] stringWithFormat:@"yyyyMMdd"];
+	NSString *snd = [[[NSDate date] dateByAddingTimeInterval:8*60*24*60]stringWithFormat:@"yyyyMMdd"];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/menu.asp?fromdt=%@&todt=%@",fst,snd]];
+	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
+	[APIreq setUserInfo:[NSDictionary dictionaryWithObject:@"menu" forKey:@"type"]];
+	[APIreq setUserInfo:[NSDictionary dictionaryWithObject:@"Downloaded Menu" forKey:@"description"]];
+	[APIreq autorelease];
+	[APIreq setDidFinishSelector:@selector(mealsFinished:)];
+	[APIreq setDidFailSelector:@selector(mealsFailed:)];
+	APIreq.delegate=delegate;
+	[networkQueue addOperation:APIreq];
+	[networkQueue go];
+	NSLog(@"%@",@"Data Download Started...");
+}
+
+-(void)updatePreps {
+	
+}
+
+-(void)updateProfile {
+	
+}
+
+-(void)updateNotices {
+	
+}
+
+-(void)updateClasses {
+	
+}
+
 #pragma mark -
 #pragma mark Singleton methods
+
+-(WSDataFetcher *)init {
+	[super init];
+	delegate = [[WSAPIDelegate alloc] init];
+	networkQueue = [[ASINetworkQueue alloc] init];
+	networkQueue.delegate=delegate;
+	/*
+	[networkQueue setRequestDidFinishSelector:@selector(requestFinished:)];
+	[networkQueue setRequestDidStartSelector:@selector(requestStarted:)];*/
+	//[networkQueue setQueueDidFinishSelector:@selector(:)];
+	
+	return self;
+}
+
 
 + (WSDataFetcher *)sharedInstance
 {

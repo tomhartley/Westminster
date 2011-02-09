@@ -7,6 +7,7 @@
 //
 
 #import "WestminsterAppDelegate.h"
+#import "WSDataFetcher.h"
 
 @implementation WestminsterAppDelegate
 
@@ -20,6 +21,15 @@
 	// Override point for customization after application launch.
 	// Add the tab bar controller's current view as a subview of the window
 	[window addSubview:tabBarController.view];
+	if ([[WSAuthManager sharedInstance] needsAuth]) {
+		WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
+		authController.modalPresentationStyle= UIModalPresentationFormSheet;
+		[tabBarController presentModalViewController:authController animated:YES];
+	} else {
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];
+		[[WSDataFetcher sharedInstance] downloadAll];
+	}
+	
 	[window makeKeyAndVisible];
     return YES;
 }

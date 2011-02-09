@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TapkuLibrary/TapkuLibrary.h>
+#import "WSAuthManager.h"
+#import "WSAuthController.h"
 
 @interface WestminsterAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	UIWindow *window;

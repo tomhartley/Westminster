@@ -7,49 +7,83 @@
 //
 
 #import "WSFoodViewController.h"
-
+#import "WSDataManager.h"
+#import "WSDataFetcher.h"
+#import "WSAuthManager.h"
+#import <TapkuLibrary/TapkuLibrary.h>
 
 @implementation WSFoodViewController
-
-#pragma mark -
-#pragma mark Memory management
 
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	WSDataFetcher *fetcher = [[WSDataFetcher alloc] init];
-	weekFoods = [fetcher nextMeals];
-	[weekFoods retain];
-	[fetcher release];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMeals) name:@"WSFoodUpdatedNotification" object:nil];
+	//weekFoods = [[WSDataManager sharedInstance] currentFood];
+	//[weekFoods retain];
 	delegatz = [[NSMutableArray alloc] init];
 	tableViews = [[NSMutableArray alloc] init];
-	[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(setUpScrollView) userInfo:nil repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(setUpScrollView) userInfo:nil repeats:NO];
 }
 
+ 
 -(void)setUpScrollView {
+	NSLog(@"%@",@"setUpScrollView reporting for duty...");
 	//Now set up the scroll view
 	int w = scrollView.frame.size.width;
 	int h = scrollView.frame.size.height;
 	NSLog(@"%d",h);
-	scrollView.contentSize = CGSizeMake(w*[weekFoods count], h);
+	scrollView.contentSize = CGSizeMake(w*7, h);
 	//Add subviews to it
 	int margins = w/15;
-	for (int i = 0; i<[weekFoods count];i++) {
+	for (int i = 0; i<7;i++) {
 		UITableView *tableView =[[UITableView alloc] init];
 		//tableView.frame = CGRectMake(w*i+10,10,w-20,h-70);
 		tableView.frame = CGRectMake(w*i+margins,margins,w-(margins*2),h-(margins*2));
 		tableView.separatorColor = [UIColor lightGrayColor];
 		tableView.backgroundColor = [UIColor darkGrayColor];
-		MealsTableViewDelegate *delegate = [[MealsTableViewDelegate alloc] initWithFood:[weekFoods objectAtIndex:i]];
+		MealsTableViewDelegate *delegate;
+		@try {
+			delegate = [[MealsTableViewDelegate alloc] initWithFood:[weekFoods objectAtIndex:i]];
+		}
+		@catch (NSException *exception) {
+			delegate = [[MealsTableViewDelegate alloc] initWithFood:nil];
+		}
 		tableView.dataSource = delegate;
 		tableView.delegate = delegate;
-		tableView.layer.cornerRadius=5;
+		tableView.layer.cornerRadius=7;
 		[delegatz addObject:delegate];
 		[scrollView addSubview:tableView];
 		[tableViews addObject:tableView];
 		[tableView release];
 		[delegate release];
 	}
+	[self updateDate];
+}
+
+-(void)updateMeals {
+	NSLog(@"%@",@"WSFoodViewControllerReporting for duty...");
+	[weekFoods release];
+	weekFoods = [[WSDataManager sharedInstance] currentFood];
+	[weekFoods retain];
+/*	int i = 0;
+	for (UITableView *aTableView in tableViews) {
+		if (i<[weekFoods count]) {
+			[tableViews makeObjectsPerformSelector:@selector(reloadData)];
+			id a = aTableView.delegate;
+			aTableView.delegate=nil;
+			aTableView.dataSource = nil;
+			[delegatz removeObject:a];
+			MealsTableViewDelegate *delegate = [[MealsTableViewDelegate alloc] initWithFood:[weekFoods objectAtIndex:i]];
+			aTableView.dataSource = delegate;
+			aTableView.delegate = delegate;
+			[delegatz addObject:delegate];
+		}
+		i++;
+	}
+	[self updateDate];*/
+	[tableViews removeAllObjects];
+	[delegatz removeAllObjects];
+	[self setUpScrollView];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -70,7 +104,13 @@
 }
 
 - (void)updateDate {
-	dateLabel.text = [[weekFoods objectAtIndex:pageControl.currentPage] dateDescription];
+	@try {
+		dateLabel.text = [[weekFoods objectAtIndex:pageControl.currentPage] dateDescription];
+
+	}
+	@catch (NSException *exception) {
+		dateLabel.text = @"";
+	}
 }
 
 - (void)scrollToPage:(int)pageNumber {
@@ -84,6 +124,15 @@
 	int x = scrollView.contentOffset.x;
 	pageControl.currentPage = x/scrollView.frame.size.width;
 	[self updateDate];
+}
+
+- (IBAction)refreshFood:(id)sender {
+	[[WSDataFetcher sharedInstance] updateFood];
+}
+
+- (IBAction)signOut:(id)sender {
+	[[WSAuthManager sharedInstance] signOut];
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -7,17 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HTMLParser.h"
+#import "ASIHTTPRequest.h"
+#import "ASINetworkQueue.h"
+#import "WSAPIDelegate.h"
 
 @interface WSDataFetcher : NSObject {
-	
+	ASINetworkQueue *networkQueue;
+	WSAPIDelegate *delegate;
 }
 
 -(void)downloadAll;
-
+-(void)downloadAllAuthFree;
 //Authentication not required
 -(void)updateEvents;
--(NSArray *)downloadEventsWithCategory:(NSString *)category withStartDate:(NSDate *)sDate withEndDate:(NSDate *)eDate;
+//-(NSArray *)downloadEventsWithCategory:(NSString *)category withStartDate:(NSDate *)sDate withEndDate:(NSDate *)eDate;
 -(void)updateFood;
 
 
@@ -28,7 +31,6 @@
 -(void)updateClasses;
 
 
--(void)updateAPIKeyUsername:(NSString *)uName password:(NSString *)pWord;
 
 
 + (WSDataFetcher *)sharedInstance;

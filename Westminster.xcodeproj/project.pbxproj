@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2405A09125533A20065FC03 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2405A08125533A20065FC03 /* libxml2.2.7.3.dylib */; };
-		E253916712FDE8780061361E /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E253916412FDE8780061361E /* HTMLNode.m */; };
-		E253916812FDE8780061361E /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E253916612FDE8780061361E /* HTMLParser.m */; };
+		E225589712FEBB7300D34090 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589612FEBB7300D34090 /* icon.png */; };
+		E225589912FEBC2100D34090 /* iconiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589812FEBC2100D34090 /* iconiPad.png */; };
+		E225589C12FEC81600D34090 /* WSAPIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E225589B12FEC81100D34090 /* WSAPIDelegate.m */; };
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
+		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
 		E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */; };
 		E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */; };
 		E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26E81236C6F700C084B7 /* UIKit.framework */; };
@@ -25,19 +26,77 @@
 		E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A27131236C73600C084B7 /* WSAlmanackController.xib */; };
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
+		E2AE1C5212FED04500A5CE4E /* WSAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5012FED04500A5CE4E /* WSAuthController.m */; };
+		E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */; };
+		E2AE1C5612FED50400A5CE4E /* WSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5512FED50300A5CE4E /* WSAuthManager.m */; };
+		E2AE1C6412FF028900A5CE4E /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C6312FF028800A5CE4E /* TapkuLibrary.bundle */; };
+		E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6912FF02B600A5CE4E /* MapKit.framework */; };
+		E2AE1C6C12FF040800A5CE4E /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6B12FF040700A5CE4E /* libTapkuLibrary.a */; };
+		E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */; };
+		E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */; };
+		E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */; };
 		E2D05952125548AC00696D71 /* WSDayFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D05951125548AC00696D71 /* WSDayFood.m */; };
+		E2F88BAB12FDEA5B00D5D078 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */; };
+		E2F88BAC12FDEA5B00D5D078 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5D12FDEA5B00D5D078 /* ASIDataCompressor.m */; };
+		E2F88BAD12FDEA5B00D5D078 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5F12FDEA5B00D5D078 /* ASIDataDecompressor.m */; };
+		E2F88BAE12FDEA5B00D5D078 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6112FDEA5B00D5D078 /* ASIDownloadCache.m */; };
+		E2F88BAF12FDEA5B00D5D078 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6312FDEA5B00D5D078 /* ASIFormDataRequest.m */; };
+		E2F88BB012FDEA5B00D5D078 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6512FDEA5B00D5D078 /* ASIHTTPRequest.m */; };
+		E2F88BB112FDEA5B00D5D078 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6912FDEA5B00D5D078 /* ASIInputStream.m */; };
+		E2F88BB212FDEA5B00D5D078 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6B12FDEA5B00D5D078 /* ASINetworkQueue.m */; };
+		E2F88BD512FDF2B400D5D078 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88BD412FDF2B400D5D078 /* Reachability.m */; };
+		E2FECD0512FDF85F0028A348 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0412FDF85F0028A348 /* CFNetwork.framework */; };
+		E2FECD0712FDF8720028A348 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */; };
+		E2FECD0912FDF87B0028A348 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */; };
+		E2FECD0B12FDF8960028A348 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */; };
+		E2FECD0E12FDFE5A0028A348 /* WSXMLDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FECD0D12FDFE5A0028A348 /* WSXMLDataParser.m */; };
+		E2FECD1212FE03F80028A348 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FECD1112FE03F80028A348 /* GDataXMLNode.m */; };
+		E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD1512FE07130028A348 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E2135BA312FE1E2300890F81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		E2135BA512FE1E2300890F81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B6EDD521154791900E454DA;
+			remoteInfo = TapkuLibraryExtra;
+		};
+		E2AE1C5F12FF025000A5CE4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		E2AE1C6112FF025000A5CE4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B6EDD511154791900E454DA;
+			remoteInfo = TapkuLibraryExtra;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		E2405A08125533A20065FC03 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = /usr/lib/libxml2.2.7.3.dylib; sourceTree = "<absolute>"; };
-		E253916312FDE8780061361E /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
-		E253916412FDE8780061361E /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
-		E253916512FDE8780061361E /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
-		E253916612FDE8780061361E /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
-		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
-		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../../Documents/Frameworks/Tapku/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		E225589612FEBB7300D34090 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E225589812FEBC2100D34090 /* iconiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconiPad.png; sourceTree = "<group>"; };
+		E225589A12FEC80C00D34090 /* WSAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAPIDelegate.h; sourceTree = "<group>"; };
+		E225589B12FEC81100D34090 /* WSAPIDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAPIDelegate.m; sourceTree = "<group>"; };
+		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "../NSDate+Helper.h"; sourceTree = "<group>"; };
+		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "../NSDate+Helper.m"; sourceTree = "<group>"; };
 		E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealsTableViewDelegate.h; path = ../MealsTableViewDelegate.h; sourceTree = "<group>"; };
 		E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MealsTableViewDelegate.m; path = ../MealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E262E05B1300A1FC008D4E18 /* WSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDataManager.h; sourceTree = "<group>"; };
+		E262E05C1300A1FD008D4E18 /* WSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDataManager.m; sourceTree = "<group>"; };
 		E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSFoodViewController.h; path = ../WSFoodViewController.h; sourceTree = "<group>"; };
 		E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSFoodViewController.m; path = ../WSFoodViewController.m; sourceTree = "<group>"; };
 		E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSFoodViewController.xib; sourceTree = "<group>"; };
@@ -58,9 +117,52 @@
 		E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDataFetcher.h; path = Model/WSDataFetcher.h; sourceTree = "<group>"; };
 		E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSDataFetcher.m; path = Model/WSDataFetcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E2A3710012F477C700061B2D /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
+		E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAuthController.h; sourceTree = "<group>"; };
+		E2AE1C5012FED04500A5CE4E /* WSAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAuthController.m; sourceTree = "<group>"; };
+		E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAuthController.xib; path = Classes/WSAuthController.xib; sourceTree = "<group>"; };
+		E2AE1C5412FED50300A5CE4E /* WSAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAuthManager.h; sourceTree = "<group>"; };
+		E2AE1C5512FED50300A5CE4E /* WSAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAuthManager.m; sourceTree = "<group>"; };
+		E2AE1C6312FF028800A5CE4E /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../../Documents/Frameworks/Tapku/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		E2AE1C6912FF02B600A5CE4E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E2AE1C6B12FF040700A5CE4E /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTapkuLibrary.a; sourceTree = SOURCE_ROOT; };
+		E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNoticeController.h; path = ../WSNoticeController.h; sourceTree = "<group>"; };
+		E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNoticeController.m; path = ../WSNoticeController.m; sourceTree = "<group>"; };
+		E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSNoticeController.xib; sourceTree = "<group>"; };
 		E2B61C7912F476A200F314A5 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
 		E2D05950125548AC00696D71 /* WSDayFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSDayFood.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E2D05951125548AC00696D71 /* WSDayFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSDayFood.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E2F88B5912FDEA5B00D5D078 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		E2F88B5B12FDEA5B00D5D078 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		E2F88B5C12FDEA5B00D5D078 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		E2F88B5D12FDEA5B00D5D078 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		E2F88B5E12FDEA5B00D5D078 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		E2F88B5F12FDEA5B00D5D078 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		E2F88B6012FDEA5B00D5D078 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		E2F88B6112FDEA5B00D5D078 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		E2F88B6212FDEA5B00D5D078 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		E2F88B6312FDEA5B00D5D078 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		E2F88B6412FDEA5B00D5D078 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		E2F88B6512FDEA5B00D5D078 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		E2F88B6612FDEA5B00D5D078 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		E2F88B6712FDEA5B00D5D078 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		E2F88B6812FDEA5B00D5D078 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		E2F88B6912FDEA5B00D5D078 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		E2F88B6A12FDEA5B00D5D078 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		E2F88B6B12FDEA5B00D5D078 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		E2F88B6C12FDEA5B00D5D078 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		E2F88BD312FDF2B400D5D078 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E2F88BD412FDF2B400D5D078 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E2FECD0412FDF85F0028A348 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		E2FECD0C12FDFE5A0028A348 /* WSXMLDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSXMLDataParser.h; sourceTree = "<group>"; };
+		E2FECD0D12FDFE5A0028A348 /* WSXMLDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSXMLDataParser.m; sourceTree = "<group>"; };
+		E2FECD1012FE03F80028A348 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		E2FECD1112FE03F80028A348 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		E2FECD1512FE07130028A348 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,30 +170,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
+				E2AE1C6C12FF040800A5CE4E /* libTapkuLibrary.a in Frameworks */,
+				E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */,
+				E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */,
+				E2FECD0B12FDF8960028A348 /* libz.1.2.3.dylib in Frameworks */,
+				E2FECD0912FDF87B0028A348 /* MobileCoreServices.framework in Frameworks */,
+				E2FECD0712FDF8720028A348 /* SystemConfiguration.framework in Frameworks */,
+				E2FECD0512FDF85F0028A348 /* CFNetwork.framework in Frameworks */,
 				E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */,
 				E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */,
 				E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */,
-				E2405A09125533A20065FC03 /* libxml2.2.7.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E253916212FDE8780061361E /* zootreeves-Objective-C-HMTL-Parser-23f861d */ = {
+		E2135B9F12FE1E2300890F81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E253916312FDE8780061361E /* HTMLNode.h */,
-				E253916412FDE8780061361E /* HTMLNode.m */,
-				E253916512FDE8780061361E /* HTMLParser.h */,
-				E253916612FDE8780061361E /* HTMLParser.m */,
+				E2135BA412FE1E2300890F81 /* libTapkuLibrary.a */,
+				E2135BA612FE1E2300890F81 /* libTapkuLibraryExtra.a */,
 			);
-			path = "zootreeves-Objective-C-HMTL-Parser-23f861d";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E225589D12FEC86400D34090 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
+				E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */,
+				E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */,
+				E2AE1C5012FED04500A5CE4E /* WSAuthController.m */,
+				E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */,
+				E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */,
+				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
+				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
+				E29A27111236C73600C084B7 /* WSAlmanackController.h */,
+				E29A27121236C73600C084B7 /* WSAlmanackController.m */,
+				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
+				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E225589E12FEC86E00D34090 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
+				E262E05C1300A1FD008D4E18 /* WSDataManager.m */,
+				E2D05950125548AC00696D71 /* WSDayFood.h */,
+				E2D05951125548AC00696D71 /* WSDayFood.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		E29A26D61236C6F700C084B7 = {
 			isa = PBXGroup;
 			children = (
+				E2AE1C6312FF028800A5CE4E /* TapkuLibrary.bundle */,
 				E29A26DD1236C6F700C084B7 /* Classes */,
 				E29A26DE1236C6F700C084B7 /* Other Sources */,
 				E29A26DF1236C6F700C084B7 /* Resources */,
@@ -104,21 +242,10 @@
 		E29A26DD1236C6F700C084B7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E25723C5125E78E000B0380C /* NSDate+Helper.h */,
-				E25723C6125E78E000B0380C /* NSDate+Helper.m */,
-				E253916212FDE8780061361E /* zootreeves-Objective-C-HMTL-Parser-23f861d */,
-				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
-				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
-				E29A27111236C73600C084B7 /* WSAlmanackController.h */,
-				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
-				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
-				E29A27121236C73600C084B7 /* WSAlmanackController.m */,
-				E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */,
-				E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */,
-				E2D05950125548AC00696D71 /* WSDayFood.h */,
-				E2D05951125548AC00696D71 /* WSDayFood.m */,
-				E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */,
-				E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */,
+				E2AE1C4B12FEC91800A5CE4E /* API */,
+				E225589E12FEC86E00D34090 /* Model */,
+				E225589D12FEC86400D34090 /* Controller */,
+				E2F88BD012FDF2B400D5D078 /* Libraries */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -136,11 +263,15 @@
 		E29A26DF1236C6F700C084B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
+				E225589812FEBC2100D34090 /* iconiPad.png */,
+				E225589612FEBB7300D34090 /* icon.png */,
 				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
 				E29A27131236C73600C084B7 /* WSAlmanackController.xib */,
 				E29A26EE1236C6F700C084B7 /* Westminster-Info.plist */,
 				E29A26F01236C6F700C084B7 /* InfoPlist.strings */,
 				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
+				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
 				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
 			);
 			name = Resources;
@@ -149,10 +280,18 @@
 		E29A26E01236C6F700C084B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2AE1C6B12FF040700A5CE4E /* libTapkuLibrary.a */,
+				E2FECD1512FE07130028A348 /* libxml2.dylib */,
+				E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */,
+				E2AE1C6912FF02B600A5CE4E /* MapKit.framework */,
+				E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */,
+				E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */,
+				E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */,
+				E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */,
+				E2FECD0412FDF85F0028A348 /* CFNetwork.framework */,
 				E29A26E81236C6F700C084B7 /* UIKit.framework */,
 				E29A26EA1236C6F700C084B7 /* Foundation.framework */,
 				E29A26EC1236C6F700C084B7 /* CoreGraphics.framework */,
-				E2405A08125533A20065FC03 /* libxml2.2.7.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,11 +304,94 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E2AE1C4A12FEC90400A5CE4E /* NSDate+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E25723C5125E78E000B0380C /* NSDate+Helper.h */,
+				E25723C6125E78E000B0380C /* NSDate+Helper.m */,
+			);
+			name = "NSDate+Helper";
+			sourceTree = "<group>";
+		};
+		E2AE1C4B12FEC91800A5CE4E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E2AE1C5412FED50300A5CE4E /* WSAuthManager.h */,
+				E2AE1C5512FED50300A5CE4E /* WSAuthManager.m */,
+				E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */,
+				E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */,
+				E225589A12FEC80C00D34090 /* WSAPIDelegate.h */,
+				E225589B12FEC81100D34090 /* WSAPIDelegate.m */,
+				E2FECD0C12FDFE5A0028A348 /* WSXMLDataParser.h */,
+				E2FECD0D12FDFE5A0028A348 /* WSXMLDataParser.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		E2B61C7412F46ED900F314A5 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		E2F88B5812FDEA5B00D5D078 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E2F88B5912FDEA5B00D5D078 /* ASIAuthenticationDialog.h */,
+				E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */,
+				E2F88B5B12FDEA5B00D5D078 /* ASICacheDelegate.h */,
+				E2F88B5C12FDEA5B00D5D078 /* ASIDataCompressor.h */,
+				E2F88B5D12FDEA5B00D5D078 /* ASIDataCompressor.m */,
+				E2F88B5E12FDEA5B00D5D078 /* ASIDataDecompressor.h */,
+				E2F88B5F12FDEA5B00D5D078 /* ASIDataDecompressor.m */,
+				E2F88B6012FDEA5B00D5D078 /* ASIDownloadCache.h */,
+				E2F88B6112FDEA5B00D5D078 /* ASIDownloadCache.m */,
+				E2F88B6212FDEA5B00D5D078 /* ASIFormDataRequest.h */,
+				E2F88B6312FDEA5B00D5D078 /* ASIFormDataRequest.m */,
+				E2F88B6412FDEA5B00D5D078 /* ASIHTTPRequest.h */,
+				E2F88B6512FDEA5B00D5D078 /* ASIHTTPRequest.m */,
+				E2F88B6612FDEA5B00D5D078 /* ASIHTTPRequestConfig.h */,
+				E2F88B6712FDEA5B00D5D078 /* ASIHTTPRequestDelegate.h */,
+				E2F88B6812FDEA5B00D5D078 /* ASIInputStream.h */,
+				E2F88B6912FDEA5B00D5D078 /* ASIInputStream.m */,
+				E2F88B6A12FDEA5B00D5D078 /* ASINetworkQueue.h */,
+				E2F88B6B12FDEA5B00D5D078 /* ASINetworkQueue.m */,
+				E2F88B6C12FDEA5B00D5D078 /* ASIProgressDelegate.h */,
+			);
+			name = ASIHTTPRequest;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		E2F88BD012FDF2B400D5D078 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E2AE1C4A12FEC90400A5CE4E /* NSDate+Helper */,
+				E2FECD0F12FE03410028A348 /* GDataXML */,
+				E2F88B5812FDEA5B00D5D078 /* ASIHTTPRequest */,
+				E2F88BD212FDF2B400D5D078 /* Reachability */,
+			);
+			name = Libraries;
+			path = External;
+			sourceTree = "<group>";
+		};
+		E2F88BD212FDF2B400D5D078 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E2F88BD312FDF2B400D5D078 /* Reachability.h */,
+				E2F88BD412FDF2B400D5D078 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		E2FECD0F12FE03410028A348 /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				E2FECD1012FE03F80028A348 /* GDataXMLNode.h */,
+				E2FECD1112FE03F80028A348 /* GDataXMLNode.m */,
+			);
+			name = GDataXML;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +408,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				E2AE1C6012FF025000A5CE4E /* PBXTargetDependency */,
+				E2AE1C6212FF025000A5CE4E /* PBXTargetDependency */,
 			);
 			name = Westminster;
 			productName = Westminster;
@@ -207,12 +431,35 @@
 			mainGroup = E29A26D61236C6F700C084B7;
 			productRefGroup = E29A26E61236C6F700C084B7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E2135B9F12FE1E2300890F81 /* Products */;
+					ProjectRef = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E29A26E41236C6F700C084B7 /* Westminster */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E2135BA412FE1E2300890F81 /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = E2135BA312FE1E2300890F81 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2135BA612FE1E2300890F81 /* libTapkuLibraryExtra.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibraryExtra.a;
+			remoteRef = E2135BA512FE1E2300890F81 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E29A26E31236C6F700C084B7 /* Resources */ = {
@@ -224,6 +471,11 @@
 				E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */,
 				E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */,
 				E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */,
+				E225589712FEBB7300D34090 /* icon.png in Resources */,
+				E225589912FEBC2100D34090 /* iconiPad.png in Resources */,
+				E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */,
+				E2AE1C6412FF028900A5CE4E /* TapkuLibrary.bundle in Resources */,
+				E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,12 +494,39 @@
 				E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */,
 				E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */,
 				E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */,
-				E253916712FDE8780061361E /* HTMLNode.m in Sources */,
-				E253916812FDE8780061361E /* HTMLParser.m in Sources */,
+				E2F88BAB12FDEA5B00D5D078 /* ASIAuthenticationDialog.m in Sources */,
+				E2F88BAC12FDEA5B00D5D078 /* ASIDataCompressor.m in Sources */,
+				E2F88BAD12FDEA5B00D5D078 /* ASIDataDecompressor.m in Sources */,
+				E2F88BAE12FDEA5B00D5D078 /* ASIDownloadCache.m in Sources */,
+				E2F88BAF12FDEA5B00D5D078 /* ASIFormDataRequest.m in Sources */,
+				E2F88BB012FDEA5B00D5D078 /* ASIHTTPRequest.m in Sources */,
+				E2F88BB112FDEA5B00D5D078 /* ASIInputStream.m in Sources */,
+				E2F88BB212FDEA5B00D5D078 /* ASINetworkQueue.m in Sources */,
+				E2F88BD512FDF2B400D5D078 /* Reachability.m in Sources */,
+				E2FECD0E12FDFE5A0028A348 /* WSXMLDataParser.m in Sources */,
+				E2FECD1212FE03F80028A348 /* GDataXMLNode.m in Sources */,
+				E225589C12FEC81600D34090 /* WSAPIDelegate.m in Sources */,
+				E2AE1C5212FED04500A5CE4E /* WSAuthController.m in Sources */,
+				E2AE1C5612FED50400A5CE4E /* WSAuthManager.m in Sources */,
+				E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */,
+				E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2AE1C6012FF025000A5CE4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = E2AE1C5F12FF025000A5CE4E /* PBXContainerItemProxy */;
+		};
+		E2AE1C6212FF025000A5CE4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibraryExtra;
+			targetProxy = E2AE1C6112FF025000A5CE4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E29A26F01236C6F700C084B7 /* InfoPlist.strings */ = {
@@ -279,7 +558,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79B98E00-A301-471B-A4E9-24C0D5B4FA44";
 				SDKROOT = iphoneos4.1;
@@ -294,8 +575,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.1;
 			};
@@ -305,16 +588,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2/;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					/Users/Tom/Documents/Frameworks/Tapku/src,
+				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = Westminster;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -325,15 +624,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2/;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					/Users/Tom/Documents/Frameworks/Tapku/src,
+				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = Westminster;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

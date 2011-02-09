@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "WSDayFood.h"
-#import "WSDataFetcher.h"
 #import "MealsTableViewDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -27,5 +26,9 @@
 - (void)updateDate;
 - (void)scrollToPage:(int)pageNumber;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+-(void)updateMeals;
+
+- (IBAction)refreshFood:(id)sender;
+- (IBAction)signOut:(id)sender;
 
 @end
