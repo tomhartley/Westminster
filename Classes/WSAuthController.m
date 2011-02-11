@@ -36,9 +36,14 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewDidAppear:animated];
+	CAGradientLayer *gradient = [CAGradientLayer layer];
+	gradient.frame = self.view.frame;
+	gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor lightGrayColor] CGColor], nil];
+	[self.view.layer insertSublayer:gradient atIndex:0];
+
     // Do any additional setup after loading the view from its nib.
 }
 

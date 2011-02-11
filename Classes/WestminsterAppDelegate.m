@@ -25,6 +25,7 @@
 		WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 		authController.modalPresentationStyle= UIModalPresentationFormSheet;
 		[tabBarController presentModalViewController:authController animated:YES];
+		[authController autorelease];
 	} else {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];
 		[[WSDataFetcher sharedInstance] downloadAll];

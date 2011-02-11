@@ -11,6 +11,7 @@
 #import "WSDataFetcher.h"
 #import "WSAuthManager.h"
 #import <TapkuLibrary/TapkuLibrary.h>
+#import "WSAuthController.h"
 
 @implementation WSFoodViewController
 
@@ -18,8 +19,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMeals) name:@"WSFoodUpdatedNotification" object:nil];
-	//weekFoods = [[WSDataManager sharedInstance] currentFood];
-	//[weekFoods retain];
+	weekFoods = [[WSDataManager sharedInstance] currentFood];
+	[weekFoods retain];
 	delegatz = [[NSMutableArray alloc] init];
 	tableViews = [[NSMutableArray alloc] init];
 	[NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(setUpScrollView) userInfo:nil repeats:NO];
@@ -61,26 +62,17 @@
 }
 
 -(void)updateMeals {
-	NSLog(@"%@",@"WSFoodViewControllerReporting for duty...");
 	[weekFoods release];
 	weekFoods = [[WSDataManager sharedInstance] currentFood];
 	[weekFoods retain];
-/*	int i = 0;
-	for (UITableView *aTableView in tableViews) {
-		if (i<[weekFoods count]) {
-			[tableViews makeObjectsPerformSelector:@selector(reloadData)];
-			id a = aTableView.delegate;
-			aTableView.delegate=nil;
-			aTableView.dataSource = nil;
-			[delegatz removeObject:a];
-			MealsTableViewDelegate *delegate = [[MealsTableViewDelegate alloc] initWithFood:[weekFoods objectAtIndex:i]];
-			aTableView.dataSource = delegate;
-			aTableView.delegate = delegate;
-			[delegatz addObject:delegate];
+	[self updateDate];
+	for (UITableView *tView in [scrollView subviews]) {
+		[tView removeFromSuperview];
+		if ([tView isMemberOfClass:[UITableView class]]) {
+			tView.delegate = nil;
+			tView.dataSource = nil;
 		}
-		i++;
 	}
-	[self updateDate];*/
 	[tableViews removeAllObjects];
 	[delegatz removeAllObjects];
 	[self setUpScrollView];
@@ -133,6 +125,10 @@
 - (IBAction)signOut:(id)sender {
 	[[WSAuthManager sharedInstance] signOut];
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
+	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
+	authController.modalPresentationStyle= UIModalPresentationFormSheet;
+	[self.parentViewController presentModalViewController:authController animated:YES];
+	[authController autorelease];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

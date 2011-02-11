@@ -49,14 +49,6 @@ static WSAuthManager *sharedInstance = nil;
 
 -(BOOL)needsAuth {
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	/*NSString *expires = [[prefs dictionaryForKey:@"APIToken"] objectForKey:@"date"];
-	if (!expires) {
-		return YES;
-	} else if ([[NSDate dateFromString:expires withFormat:@"yyyyMMdd"] compare:[NSDate date]] == NSOrderedAscending){
-		return NO;
-	} else {
-		return YES;
-	}*/
 	if ([[[prefs dictionaryForKey:@"APIToken"]objectForKey:@"shouldSave"] isEqual:@"NO"]) {
 		return YES;
 	}
@@ -84,6 +76,11 @@ static WSAuthManager *sharedInstance = nil;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setObject:[NSDictionary dictionaryWithObject:@"NO" forKey:@"success"] forKey:@"APIToken"];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSDeletePersonalData" object:nil];
+}
+
+-(NSString *)apiToken {
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	return [[prefs dictionaryForKey:@"APIToken"]objectForKey:@"token"];
 }
 
 #pragma mark -

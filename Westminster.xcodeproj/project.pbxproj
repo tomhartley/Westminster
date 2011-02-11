@@ -36,6 +36,11 @@
 		E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */; };
 		E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */; };
 		E2D05952125548AC00696D71 /* WSDayFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D05951125548AC00696D71 /* WSDayFood.m */; };
+		E2D542F01304878900C22202 /* WSPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D542EF1304878900C22202 /* WSPrep.m */; };
+		E2D5A3D61304737000908FC4 /* WSPrepController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5A3D51304737000908FC4 /* WSPrepController.m */; };
+		E2D5A3D9130473BB00908FC4 /* WSPrepViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */; };
+		E2D5A3DC1304745100908FC4 /* WSPrepViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */; };
+		E2D5A3DE130479CB00908FC4 /* 117-todo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D5A3DD130479CB00908FC4 /* 117-todo.png */; };
 		E2F88BAB12FDEA5B00D5D078 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */; };
 		E2F88BAC12FDEA5B00D5D078 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5D12FDEA5B00D5D078 /* ASIDataCompressor.m */; };
 		E2F88BAD12FDEA5B00D5D078 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5F12FDEA5B00D5D078 /* ASIDataDecompressor.m */; };
@@ -132,6 +137,14 @@
 		E2B61C7912F476A200F314A5 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
 		E2D05950125548AC00696D71 /* WSDayFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSDayFood.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E2D05951125548AC00696D71 /* WSDayFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSDayFood.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E2D542EE1304878800C22202 /* WSPrep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSPrep.h; path = Model/WSPrep.h; sourceTree = "<group>"; };
+		E2D542EF1304878900C22202 /* WSPrep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSPrep.m; path = Model/WSPrep.m; sourceTree = "<group>"; };
+		E2D5A3D41304737000908FC4 /* WSPrepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrepController.h; sourceTree = "<group>"; };
+		E2D5A3D51304737000908FC4 /* WSPrepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPrepController.m; sourceTree = "<group>"; };
+		E2D5A3D7130473BB00908FC4 /* WSPrepViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrepViewCell.h; sourceTree = "<group>"; };
+		E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPrepViewCell.m; sourceTree = "<group>"; };
+		E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSPrepViewCell.xib; sourceTree = "<group>"; };
+		E2D5A3DD130479CB00908FC4 /* 117-todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "117-todo.png"; sourceTree = "<group>"; };
 		E2F88B5912FDEA5B00D5D078 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		E2F88B5B12FDEA5B00D5D078 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +212,8 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2D5A3D41304737000908FC4 /* WSPrepController.h */,
+				E2D5A3D51304737000908FC4 /* WSPrepController.m */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
 				E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */,
 				E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */,
@@ -222,6 +237,8 @@
 				E262E05C1300A1FD008D4E18 /* WSDataManager.m */,
 				E2D05950125548AC00696D71 /* WSDayFood.h */,
 				E2D05951125548AC00696D71 /* WSDayFood.m */,
+				E2D542EE1304878800C22202 /* WSPrep.h */,
+				E2D542EF1304878900C22202 /* WSPrep.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -242,6 +259,7 @@
 		E29A26DD1236C6F700C084B7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E2D5A3DA130473CE00908FC4 /* View */,
 				E2AE1C4B12FEC91800A5CE4E /* API */,
 				E225589E12FEC86E00D34090 /* Model */,
 				E225589D12FEC86400D34090 /* Controller */,
@@ -263,6 +281,7 @@
 		E29A26DF1236C6F700C084B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
 				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
 				E225589812FEBC2100D34090 /* iconiPad.png */,
 				E225589612FEBB7300D34090 /* icon.png */,
@@ -273,6 +292,7 @@
 				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
 				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
 				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
+				E2D5A3DD130479CB00908FC4 /* 117-todo.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -333,6 +353,15 @@
 			children = (
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		E2D5A3DA130473CE00908FC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5A3D7130473BB00908FC4 /* WSPrepViewCell.h */,
+				E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		E2F88B5812FDEA5B00D5D078 /* ASIHTTPRequest */ = {
@@ -476,6 +505,8 @@
 				E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */,
 				E2AE1C6412FF028900A5CE4E /* TapkuLibrary.bundle in Resources */,
 				E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */,
+				E2D5A3DC1304745100908FC4 /* WSPrepViewCell.xib in Resources */,
+				E2D5A3DE130479CB00908FC4 /* 117-todo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +541,9 @@
 				E2AE1C5612FED50400A5CE4E /* WSAuthManager.m in Sources */,
 				E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */,
 				E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */,
+				E2D5A3D61304737000908FC4 /* WSPrepController.m in Sources */,
+				E2D5A3D9130473BB00908FC4 /* WSPrepViewCell.m in Sources */,
+				E2D542F01304878900C22202 /* WSPrep.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +622,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,7 +647,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -624,7 +658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -648,7 +682,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BF2A5689-4656-42A1-9EFF-E12A52A3BE6A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

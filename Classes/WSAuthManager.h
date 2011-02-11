@@ -23,4 +23,5 @@
 -(BOOL)apiTokenIsValid:(NSString *)token;
 -(void)loginResponse:(ASIHTTPRequest *)APIReq;
 -(void)signOut;
+-(NSString *)apiToken;
 @end

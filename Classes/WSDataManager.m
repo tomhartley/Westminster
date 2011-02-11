@@ -11,7 +11,7 @@
 static WSDataManager *sharedInstance  = nil;
 
 @implementation WSDataManager;
-@synthesize currentFood;
+@synthesize currentFood, currentPrep;
 
 -(NSArray *)currentFood {
 	return currentFood;
@@ -24,12 +24,32 @@ static WSDataManager *sharedInstance  = nil;
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSFoodUpdatedNotification" object:nil];
 }
 
+-(NSArray *)currentPrep {
+	return currentPrep;
+}
+
+-(void)setCurrentPrep:(NSArray *)prep {
+	[currentPrep release];
+	currentPrep=prep;
+	[currentPrep retain];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSPrepUpdatedNotification" object:nil];
+}
+//WSDeletePersonalData
+
+-(void)deletePersonalInformation {
+	self.currentPrep = nil;
+}
+
+//Singleton methods
+
 + (WSDataManager *)sharedInstance
 {
     @synchronized(self)
     {
-        if (sharedInstance == nil)
+        if (sharedInstance == nil) {
             sharedInstance = [[WSDataManager alloc] init];
+			[[NSNotificationCenter defaultCenter] addObserver:sharedInstance selector:@selector(deletePersonalInformation) name:@"WSDeletePersonalData" object:nil];
+		}
     }
     return sharedInstance;
 }

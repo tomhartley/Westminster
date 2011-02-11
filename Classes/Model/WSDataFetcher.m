@@ -9,6 +9,7 @@
 #import "WSDataFetcher.h"
 #import "WSDayFood.h"
 #import "NSDate+Helper.h"
+#import "WSAuthManager.h"
 
 static WSDataFetcher *sharedInstance = nil;
 
@@ -19,6 +20,7 @@ static WSDataFetcher *sharedInstance = nil;
 
 -(void)downloadAll {
 	[self updateFood];
+	[self updatePreps];
 }
 
 -(void)downloadAllAuthFree {
@@ -33,7 +35,7 @@ static WSDataFetcher *sharedInstance = nil;
 -(void)updateFood {
 	NSString *fst = [[NSDate date] stringWithFormat:@"yyyyMMdd"];
 	NSString *snd = [[[NSDate date] dateByAddingTimeInterval:8*60*24*60]stringWithFormat:@"yyyyMMdd"];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/menu.asp?fromdt=%@&todt=%@",fst,snd]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/menu.asp?fromdt=%@",fst,snd]];
 	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
 	[APIreq setUserInfo:[NSDictionary dictionaryWithObject:@"menu" forKey:@"type"]];
 	[APIreq setUserInfo:[NSDictionary dictionaryWithObject:@"Downloaded Menu" forKey:@"description"]];
@@ -47,7 +49,14 @@ static WSDataFetcher *sharedInstance = nil;
 }
 
 -(void)updatePreps {
-	
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/prep.asp?token=%@",[[[WSAuthManager sharedInstance] apiToken] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
+	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
+	[APIreq autorelease];
+	[APIreq setDidFinishSelector:@selector(prepsFinished:)];
+	[APIreq setDidFailSelector:@selector(prepsFailed:)];
+	APIreq.delegate=delegate;
+	[networkQueue addOperation:APIreq];
+	[networkQueue go];
 }
 
 -(void)updateProfile {

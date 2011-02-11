@@ -85,7 +85,6 @@
 						<string key="NSFrame">{{20, 390}, {280, 21}}</string>
 						<reference key="NSSuperview" ref="793339117"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -119,7 +118,6 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="422660676"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIBarStyle">1</int>
 						<object class="NSArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUINavigationItem" id="575866733">

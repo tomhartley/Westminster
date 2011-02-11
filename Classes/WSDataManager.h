@@ -11,11 +11,13 @@
 
 @interface WSDataManager : NSObject {
     NSArray *currentFood;
+	NSArray *currentPrep;
 }
-
+-(void)deletePersonalInformation;
 + (WSDataManager *)sharedInstance;
 
 @property (nonatomic, retain) NSArray *currentFood;
+@property (nonatomic, retain) NSArray *currentPrep;
 
 
 @end

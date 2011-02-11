@@ -15,13 +15,23 @@
 -(void)mealsFinished:(ASIHTTPRequest *)request {
 	NSArray *meals = [[[[WSXMLDataParser alloc] init] autorelease] parseMeals:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentFood:meals];
-	NSLog(@"%@",@"Data Download Finished...");
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Meals"];
-	NSLog(@"%@",@"Data Download Posting Finished...");
 }
 
 -(void)mealsFailed:(ASIHTTPRequest *)request {
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Meals Failed"];
+	NSError *error = [request error];
+	NSLog(@"%@", error);
+}
+
+-(void)prepsFinished:(ASIHTTPRequest *)request {
+	NSArray *prep = [[[[WSXMLDataParser alloc] init] autorelease] parsePreps:[request responseData]];
+	[[WSDataManager sharedInstance] setCurrentPrep:prep];
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Preps"];
+}
+
+-(void)prepsFailed:(ASIHTTPRequest *)request {
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Preps Failed"];
 	NSError *error = [request error];
 	NSLog(@"%@", error);
 }

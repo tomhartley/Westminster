@@ -8,6 +8,7 @@
 
 #import "WSXMLDataParser.h"
 #import "NSDate+Helper.h"
+#import "WSPrep.h"
 #import "WSDayFood.h"
 
 @implementation WSXMLDataParser
@@ -68,6 +69,29 @@
 	}
 	
 	return meals;
+}
+
+-(NSArray *)parsePreps:(NSData *)xmlData {
+	NSMutableArray *preps = [NSMutableArray array];
+	NSError *error;
+    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
+														   options:0 error:&error];
+	if (doc == nil) { return nil; }
+	NSLog(@"%@", doc.rootElement);
+	NSArray *prepsToParse = [doc.rootElement elementsForName:@"prep"];
+	for(int a = 0;a<[prepsToParse count];a++) {
+		WSPrep *prep = [[WSPrep alloc]init];
+		[prep autorelease];
+		prep.teacherInitials = [[[[prepsToParse objectAtIndex:a] elementsForName:@"teacherinitials"] objectAtIndex:0] stringValue];
+		prep.descriptionText = [[[[prepsToParse objectAtIndex:a] elementsForName:@"note"] objectAtIndex:0] stringValue];
+		prep.subject = [[[[prepsToParse objectAtIndex:a] elementsForName:@"subject"] objectAtIndex:0] stringValue];
+		prep.editable = [[[[[prepsToParse objectAtIndex:a] elementsForName:@"private"] objectAtIndex:0] stringValue] isEqualToString:@"1"];
+		NSString *dateString = [[[[prepsToParse objectAtIndex:a] elementsForName:@"datedue"] objectAtIndex:0] stringValue];
+		prep.dueDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
+		[preps addObject:prep];
+	}
+	
+	return preps;
 }
 
 @end

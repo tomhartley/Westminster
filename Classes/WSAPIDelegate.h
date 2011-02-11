@@ -15,4 +15,9 @@
 }
 
 -(void)mealsFinished:(ASIHTTPRequest *)request;
+-(void)mealsFailed:(ASIHTTPRequest *)request;
+
+-(void)prepsFinished:(ASIHTTPRequest *)request;
+-(void)prepsFailed:(ASIHTTPRequest *)request;
+
 @end
