@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D88062F7130569C2002774C7 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D88062F6130569C2002774C7 /* TapkuLibrary.bundle */; };
+		D88062F9130569E1002774C7 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88062F8130569E1002774C7 /* libTapkuLibrary.a */; };
+		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
 		E225589712FEBB7300D34090 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589612FEBB7300D34090 /* icon.png */; };
 		E225589912FEBC2100D34090 /* iconiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589812FEBC2100D34090 /* iconiPad.png */; };
 		E225589C12FEC81600D34090 /* WSAPIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E225589B12FEC81100D34090 /* WSAPIDelegate.m */; };
@@ -29,9 +32,7 @@
 		E2AE1C5212FED04500A5CE4E /* WSAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5012FED04500A5CE4E /* WSAuthController.m */; };
 		E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */; };
 		E2AE1C5612FED50400A5CE4E /* WSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5512FED50300A5CE4E /* WSAuthManager.m */; };
-		E2AE1C6412FF028900A5CE4E /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C6312FF028800A5CE4E /* TapkuLibrary.bundle */; };
 		E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6912FF02B600A5CE4E /* MapKit.framework */; };
-		E2AE1C6C12FF040800A5CE4E /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6B12FF040700A5CE4E /* libTapkuLibrary.a */; };
 		E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */; };
 		E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */; };
 		E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */; };
@@ -60,30 +61,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E2135BA312FE1E2300890F81 /* PBXContainerItemProxy */ = {
+		D88062EF130568F8002774C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			containerPortal = D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = TapkuLibrary;
 		};
-		E2135BA512FE1E2300890F81 /* PBXContainerItemProxy */ = {
+		D88062F1130568F8002774C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			containerPortal = D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3B6EDD521154791900E454DA;
 			remoteInfo = TapkuLibraryExtra;
 		};
-		E2AE1C5F12FF025000A5CE4E /* PBXContainerItemProxy */ = {
+		D88062FA13056A9E002774C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			containerPortal = D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = TapkuLibrary;
 		};
-		E2AE1C6112FF025000A5CE4E /* PBXContainerItemProxy */ = {
+		D88062FC13056A9E002774C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+			containerPortal = D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 3B6EDD511154791900E454DA;
 			remoteInfo = TapkuLibraryExtra;
@@ -91,7 +92,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../../Documents/Frameworks/Tapku/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		D88062F6130569C2002774C7 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		D88062F8130569E1002774C7 /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTapkuLibrary.a; sourceTree = SOURCE_ROOT; };
+		D88062FE1305AC87002774C7 /* WSNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNotice.h; path = Model/WSNotice.h; sourceTree = "<group>"; };
+		D88062FF1305AC87002774C7 /* WSNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNotice.m; path = Model/WSNotice.m; sourceTree = "<group>"; };
 		E225589612FEBB7300D34090 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E225589812FEBC2100D34090 /* iconiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconiPad.png; sourceTree = "<group>"; };
 		E225589A12FEC80C00D34090 /* WSAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAPIDelegate.h; sourceTree = "<group>"; };
@@ -127,9 +132,7 @@
 		E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAuthController.xib; path = Classes/WSAuthController.xib; sourceTree = "<group>"; };
 		E2AE1C5412FED50300A5CE4E /* WSAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAuthManager.h; sourceTree = "<group>"; };
 		E2AE1C5512FED50300A5CE4E /* WSAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAuthManager.m; sourceTree = "<group>"; };
-		E2AE1C6312FF028800A5CE4E /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../../Documents/Frameworks/Tapku/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		E2AE1C6912FF02B600A5CE4E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		E2AE1C6B12FF040700A5CE4E /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTapkuLibrary.a; sourceTree = SOURCE_ROOT; };
 		E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNoticeController.h; path = ../WSNoticeController.h; sourceTree = "<group>"; };
 		E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNoticeController.m; path = ../WSNoticeController.m; sourceTree = "<group>"; };
@@ -183,8 +186,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88062F9130569E1002774C7 /* libTapkuLibrary.a in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
-				E2AE1C6C12FF040800A5CE4E /* libTapkuLibrary.a in Frameworks */,
 				E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */,
 				E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */,
 				E2FECD0B12FDF8960028A348 /* libz.1.2.3.dylib in Frameworks */,
@@ -200,11 +203,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E2135B9F12FE1E2300890F81 /* Products */ = {
+		D88062E8130568F7002774C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2135BA412FE1E2300890F81 /* libTapkuLibrary.a */,
-				E2135BA612FE1E2300890F81 /* libTapkuLibraryExtra.a */,
+				D88062F0130568F8002774C7 /* libTapkuLibrary.a */,
+				D88062F2130568F8002774C7 /* libTapkuLibraryExtra.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +236,8 @@
 		E225589E12FEC86E00D34090 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D88062FE1305AC87002774C7 /* WSNotice.h */,
+				D88062FF1305AC87002774C7 /* WSNotice.m */,
 				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
 				E262E05C1300A1FD008D4E18 /* WSDataManager.m */,
 				E2D05950125548AC00696D71 /* WSDayFood.h */,
@@ -246,7 +251,7 @@
 		E29A26D61236C6F700C084B7 = {
 			isa = PBXGroup;
 			children = (
-				E2AE1C6312FF028800A5CE4E /* TapkuLibrary.bundle */,
+				D88062F6130569C2002774C7 /* TapkuLibrary.bundle */,
 				E29A26DD1236C6F700C084B7 /* Classes */,
 				E29A26DE1236C6F700C084B7 /* Other Sources */,
 				E29A26DF1236C6F700C084B7 /* Resources */,
@@ -300,11 +305,11 @@
 		E29A26E01236C6F700C084B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2AE1C6B12FF040700A5CE4E /* libTapkuLibrary.a */,
+				D88062F8130569E1002774C7 /* libTapkuLibrary.a */,
+				D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */,
 				E2FECD1512FE07130028A348 /* libxml2.dylib */,
 				E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */,
 				E2AE1C6912FF02B600A5CE4E /* MapKit.framework */,
-				E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */,
 				E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */,
 				E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */,
 				E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */,
@@ -437,8 +442,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				E2AE1C6012FF025000A5CE4E /* PBXTargetDependency */,
-				E2AE1C6212FF025000A5CE4E /* PBXTargetDependency */,
+				D88062FB13056A9E002774C7 /* PBXTargetDependency */,
+				D88062FD13056A9E002774C7 /* PBXTargetDependency */,
 			);
 			name = Westminster;
 			productName = Westminster;
@@ -462,8 +467,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E2135B9F12FE1E2300890F81 /* Products */;
-					ProjectRef = E2135B9E12FE1E2300890F81 /* TapkuLibrary.xcodeproj */;
+					ProductGroup = D88062E8130568F7002774C7 /* Products */;
+					ProjectRef = D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -474,18 +479,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E2135BA412FE1E2300890F81 /* libTapkuLibrary.a */ = {
+		D88062F0130568F8002774C7 /* libTapkuLibrary.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTapkuLibrary.a;
-			remoteRef = E2135BA312FE1E2300890F81 /* PBXContainerItemProxy */;
+			remoteRef = D88062EF130568F8002774C7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E2135BA612FE1E2300890F81 /* libTapkuLibraryExtra.a */ = {
+		D88062F2130568F8002774C7 /* libTapkuLibraryExtra.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTapkuLibraryExtra.a;
-			remoteRef = E2135BA512FE1E2300890F81 /* PBXContainerItemProxy */;
+			remoteRef = D88062F1130568F8002774C7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -503,10 +508,10 @@
 				E225589712FEBB7300D34090 /* icon.png in Resources */,
 				E225589912FEBC2100D34090 /* iconiPad.png in Resources */,
 				E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */,
-				E2AE1C6412FF028900A5CE4E /* TapkuLibrary.bundle in Resources */,
 				E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */,
 				E2D5A3DC1304745100908FC4 /* WSPrepViewCell.xib in Resources */,
 				E2D5A3DE130479CB00908FC4 /* 117-todo.png in Resources */,
+				D88062F7130569C2002774C7 /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,21 +549,22 @@
 				E2D5A3D61304737000908FC4 /* WSPrepController.m in Sources */,
 				E2D5A3D9130473BB00908FC4 /* WSPrepViewCell.m in Sources */,
 				E2D542F01304878900C22202 /* WSPrep.m in Sources */,
+				D88063001305AC87002774C7 /* WSNotice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E2AE1C6012FF025000A5CE4E /* PBXTargetDependency */ = {
+		D88062FB13056A9E002774C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TapkuLibrary;
-			targetProxy = E2AE1C5F12FF025000A5CE4E /* PBXContainerItemProxy */;
+			targetProxy = D88062FA13056A9E002774C7 /* PBXContainerItemProxy */;
 		};
-		E2AE1C6212FF025000A5CE4E /* PBXTargetDependency */ = {
+		D88062FD13056A9E002774C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TapkuLibraryExtra;
-			targetProxy = E2AE1C6112FF025000A5CE4E /* PBXContainerItemProxy */;
+			targetProxy = D88062FC13056A9E002774C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -586,7 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -596,7 +602,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79B98E00-A301-471B-A4E9-24C0D5B4FA44";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
 				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
@@ -605,7 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -614,6 +620,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
 				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
@@ -622,7 +629,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,7 +641,7 @@
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					/Users/Tom/Documents/Frameworks/Tapku/src,
+					/Users/tomhartley/Documents/Programming/Westminster/src,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
@@ -647,7 +655,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				PROVISIONING_PROFILE = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -658,7 +667,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -668,7 +678,7 @@
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					/Users/Tom/Documents/Frameworks/Tapku/src,
+					/Users/tomhartley/Documents/Programming/Westminster/src,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
@@ -682,7 +692,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BF2A5689-4656-42A1-9EFF-E12A52A3BE6A";
+				PROVISIONING_PROFILE = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

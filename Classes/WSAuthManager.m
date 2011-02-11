@@ -14,7 +14,9 @@ static WSAuthManager *sharedInstance = nil;
 @implementation WSAuthManager
 
 -(void)updateAPITokenUsername:(NSString *)uName password:(NSString *)pWord saveForNextTime:(BOOL)shouldSave progressDelegate:(id)progressDelegate delegate:(id)del selector:(SEL)sely {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/auth.asp?username=%@&password=%@",uName,pWord]];
+    NSString *safeUsername = [uName stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    NSString *safePassword = [pWord stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/auth.asp?username=%@&password=%@",safeUsername,safePassword]];
 	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
 	[APIreq setDownloadProgressDelegate:progressDelegate];
 	[APIreq setShowAccurateProgress:YES];
@@ -64,6 +66,7 @@ static WSAuthManager *sharedInstance = nil;
 	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
 	[APIreq autorelease];
 	[APIreq startSynchronous];
+    
 	NSString *reply = [[[[WSXMLDataParser alloc] init] autorelease] parseTokenCheckXML :[APIreq responseData]];
 	if ([reply isEqual:@"valid"]) {
 		return YES;

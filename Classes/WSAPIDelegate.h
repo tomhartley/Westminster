@@ -20,4 +20,7 @@
 -(void)prepsFinished:(ASIHTTPRequest *)request;
 -(void)prepsFailed:(ASIHTTPRequest *)request;
 
+-(void)noticesFinished:(ASIHTTPRequest *)request;
+-(void)noticesFailed:(ASIHTTPRequest *)request;
+
 @end

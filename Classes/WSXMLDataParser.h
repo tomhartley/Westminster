@@ -16,5 +16,5 @@
 -(NSString *)parseTokenCheckXML:(NSData *)xmlData;
 -(NSArray *)parseMeals:(NSData *)xmlData;
 -(NSArray *)parsePreps:(NSData *)xmlData;
-
+-(NSArray *)parseNotices:(NSData *)xmlData;
 @end

@@ -36,4 +36,16 @@
 	NSLog(@"%@", error);
 }
 
+-(void)noticesFinished:(ASIHTTPRequest *)request {
+	//NSArray *prep = [[[[WSXMLDataParser alloc] init] autorelease] parseNotices:[request responseData]];
+	//[[WSDataManager sharedInstance] setCurrentNotices:prep];
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Notices"];
+}
+
+-(void)noticesFailed:(ASIHTTPRequest *)request {
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Notices Failed"];
+	NSError *error = [request error];
+	NSLog(@"%@", error);
+}
+
 @end

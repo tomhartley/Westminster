@@ -126,8 +126,12 @@
 	[[WSAuthManager sharedInstance] signOut];
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
 	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
-	authController.modalPresentationStyle= UIModalPresentationFormSheet;
-	[self.parentViewController presentModalViewController:authController animated:YES];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
+	}
+#endif
+    [self.parentViewController presentModalViewController:authController animated:YES];
 	[authController autorelease];
 }
 
