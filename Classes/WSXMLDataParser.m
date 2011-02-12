@@ -18,6 +18,7 @@
 	NSError *error;
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
 														   options:0 error:&error];
+	[doc autorelease];
 	if (doc == nil) { return nil; }
 	NSLog(@"%@", doc.rootElement);
 	NSArray *authenticationStatuses = [doc.rootElement elementsForName:@"authentication"];
@@ -32,7 +33,6 @@
 		[dict setObject:@"NO" forKey:@"success"];
 		return dict;
 	}
-	
 	return dict;
 }
 
@@ -44,6 +44,7 @@
 	//NSLog(@"%@", doc.rootElement);
 	NSArray *statuses = [doc.rootElement elementsForName:@"status"];
 	NSString *status = [[statuses objectAtIndex:0] stringValue];
+	[doc release];
 	return status;
 }
 
@@ -66,8 +67,9 @@
 		NSString *dateString = [[[[mealsToParse objectAtIndex:a] elementsForName:@"date"] objectAtIndex:0] stringValue];
 		food.date = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
 		[meals addObject:food];
+		[food release];
 	}
-	
+	[doc release];
 	return meals;
 }
 
@@ -91,13 +93,13 @@
 		prep.dueDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
 		[preps addObject:prep];
 	}
-	
+	[doc release];
 	return preps;
 }
 
 -(NSArray *)parseNotices:(NSData *)xmlData {
 	NSMutableArray *notices = [NSMutableArray array];
-	NSError *error;
+	/*NSError *error;
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
 														   options:0 error:&error];
 	if (doc == nil) { return nil; }
@@ -113,9 +115,9 @@
 		prep.editable = [[[[[prepsToParse objectAtIndex:a] elementsForName:@"private"] objectAtIndex:0] stringValue] isEqualToString:@"1"];
 		NSString *dateString = [[[[prepsToParse objectAtIndex:a] elementsForName:@"datedue"] objectAtIndex:0] stringValue];
 		prep.dueDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
-		[notices addObject:prep];*/
+		[notices addObject:prep];
 	}
-	
+	*/
 	return notices;
 }
 

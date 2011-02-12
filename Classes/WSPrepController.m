@@ -74,6 +74,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
 	//self.tableView.backgroundColor = [UIColor blackColor];
 	self.tableView.separatorColor = [UIColor darkGrayColor];
+	self.tableView.rowHeight = 160.0;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

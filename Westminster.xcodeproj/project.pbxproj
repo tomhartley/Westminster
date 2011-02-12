@@ -227,8 +227,6 @@
 				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
 				E29A27111236C73600C084B7 /* WSAlmanackController.h */,
 				E29A27121236C73600C084B7 /* WSAlmanackController.m */,
-				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
-				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -236,6 +234,8 @@
 		E225589E12FEC86E00D34090 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
+				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
 				D88062FE1305AC87002774C7 /* WSNotice.h */,
 				D88062FF1305AC87002774C7 /* WSNotice.m */,
 				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
@@ -641,7 +641,7 @@
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					/Users/tomhartley/Documents/Programming/Westminster/src,
+					src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
@@ -678,7 +678,7 @@
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					/Users/tomhartley/Documents/Programming/Westminster/src,
+					src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;

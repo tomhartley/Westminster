@@ -14,19 +14,21 @@
 
 @interface WSFoodViewController : UIViewController <UIScrollViewDelegate> {
 	NSArray *weekFoods;
-	NSMutableArray *delegatz;
 	NSMutableArray *tableViews;
+	NSMutableArray *delegates;
 	IBOutlet UIScrollView *scrollView;
 	IBOutlet UIPageControl *pageControl;
 	IBOutlet UILabel *dateLabel;
 }
 
-- (void)setUpScrollView;
+- (void)updateTableViews;
+- (void)layoutSubviews;
+-(void)updateMeals;
 - (IBAction)pageControlChanged:(UIPageControl *)sender;
 - (void)updateDate;
 - (void)scrollToPage:(int)pageNumber;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
--(void)updateMeals;
+
 
 - (IBAction)refreshFood:(id)sender;
 - (IBAction)signOut:(id)sender;

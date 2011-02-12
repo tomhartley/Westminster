@@ -18,77 +18,84 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	self.view.autoresizesSubviews = YES; 
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMeals) name:@"WSFoodUpdatedNotification" object:nil];
 	weekFoods = [[WSDataManager sharedInstance] currentFood];
 	[weekFoods retain];
-	delegatz = [[NSMutableArray alloc] init];
 	tableViews = [[NSMutableArray alloc] init];
-	[NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(setUpScrollView) userInfo:nil repeats:NO];
+	delegates = [[NSMutableArray alloc] init];
+	[NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(layoutSubviews) userInfo:nil repeats:NO];
 }
 
- 
--(void)setUpScrollView {
-	NSLog(@"%@",@"setUpScrollView reporting for duty...");
-	//Now set up the scroll view
-	int w = scrollView.frame.size.width;
-	int h = scrollView.frame.size.height;
-	NSLog(@"%d",h);
-	scrollView.contentSize = CGSizeMake(w*7, h);
-	//Add subviews to it
-	int margins = w/15;
-	for (int i = 0; i<7;i++) {
-		UITableView *tableView =[[UITableView alloc] init];
-		//tableView.frame = CGRectMake(w*i+10,10,w-20,h-70);
-		tableView.frame = CGRectMake(w*i+margins,margins,w-(margins*2),h-(margins*2));
-		tableView.separatorColor = [UIColor lightGrayColor];
-		tableView.backgroundColor = [UIColor darkGrayColor];
-		MealsTableViewDelegate *delegate;
-		@try {
-			delegate = [[MealsTableViewDelegate alloc] initWithFood:[weekFoods objectAtIndex:i]];
+-(void)updateTableViews {
+	//For each table view
+	for (int i = 0; i<7; i++) {
+		UITableView *tableView = [tableViews objectAtIndex:i];
+		MealsTableViewDelegate *delegate = tableView.delegate;
+		//Set its delegate's food to the updated version
+		if ([weekFoods count]>i) {
+			delegate.foodDay = [weekFoods objectAtIndex:i];
+		} else {
+			delegate.foodDay = nil;
 		}
-		@catch (NSException *exception) {
-			delegate = [[MealsTableViewDelegate alloc] initWithFood:nil];
-		}
-		tableView.dataSource = delegate;
-		tableView.delegate = delegate;
-		tableView.layer.cornerRadius=7;
-		[delegatz addObject:delegate];
-		[scrollView addSubview:tableView];
-		[tableViews addObject:tableView];
-		[tableView release];
-		[delegate release];
+		//Tell the table view to reload its data
+		[tableView reloadData];
 	}
 	[self updateDate];
+}
+
+-(void)layoutSubviews {
+	//Create table views if neccesary
+	if ([tableViews count]==0) {
+		for (int i = 0; i<7; i++) {
+			UITableView *tableView =[[UITableView alloc] init];
+			tableView.separatorColor = [UIColor lightGrayColor];
+			tableView.backgroundColor = [UIColor darkGrayColor];
+			tableView.layer.cornerRadius=7;
+			MealsTableViewDelegate *delegate = [[MealsTableViewDelegate alloc] init];
+			tableView.dataSource = delegate;
+			tableView.delegate = delegate;
+			[tableViews addObject:tableView];
+			[delegates addObject:delegate];
+			[scrollView addSubview:tableView];
+			[tableView release];
+			[delegate release];
+		}
+	}
+	//Get values for setting up
+	int w = scrollView.frame.size.width;
+	int h = scrollView.frame.size.height;
+	int margins = w/20;
+	scrollView.contentSize = CGSizeMake(w*7, h);
+	
+	for (int i = 0; i<7; i++) {
+		//Get table view
+		UITableView *tableView = [tableViews objectAtIndex:i];
+		//Resize it
+		tableView.frame = CGRectMake(w*i+margins,0,w-(margins*2),h);
+	}
+	//Scroll back to correct page
+	int page = pageControl.currentPage;
+	[self scrollToPage:page];
 }
 
 -(void)updateMeals {
 	[weekFoods release];
 	weekFoods = [[WSDataManager sharedInstance] currentFood];
 	[weekFoods retain];
-	[self updateDate];
-	for (UITableView *tView in [scrollView subviews]) {
-		[tView removeFromSuperview];
-		if ([tView isMemberOfClass:[UITableView class]]) {
-			tView.delegate = nil;
-			tView.dataSource = nil;
-		}
-	}
-	[tableViews removeAllObjects];
-	[delegatz removeAllObjects];
-	[self setUpScrollView];
+	[self updateTableViews];
+
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-	for (UITableView *tView in [scrollView subviews]) {
-		[tView removeFromSuperview];
-		if ([tView isMemberOfClass:[UITableView class]]) {
-			tView.delegate = nil;
-			tView.dataSource = nil;
-		}
-	}
-	[tableViews removeAllObjects];
-	[delegatz removeAllObjects];
-	[self setUpScrollView];
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
+	[self layoutSubviews];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+	[self layoutSubviews];
 }
 
 - (IBAction)pageControlChanged:(UIPageControl *)sender {
@@ -157,7 +164,7 @@
     [pageControl release];
     [dateLabel release];
 	[tableViews release];
-	[delegatz release];
+	[delegates release];
     [super dealloc];
 }
 

@@ -33,7 +33,7 @@ static WSAuthManager *sharedInstance = nil;
 	id del = [[APIReq userInfo] objectForKey:@"delegate"];
 	[APIdict setObject:([[APIReq userInfo] objectForKey:@"shouldSave"]) forKey:@"shouldSave"];
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	
+	[APIdict autorelease];
 	[prefs setObject:APIdict forKey:@"APIToken"];
 	[prefs synchronize];
 	if ([[APIdict valueForKey:@"success"] isEqual:@"YES"]) {

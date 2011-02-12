@@ -45,7 +45,6 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -66,6 +65,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
 				<object class="IBUIViewController" key="IBUISelectedViewController" id="202721393">
+					<bool key="IBUIAutoresizesArchivedViewToFullSize">NO</bool>
 					<string key="IBUITitle">WSFoodViewController</string>
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="70155178">
 						<string key="IBUITitle">Menu</string>
@@ -116,7 +116,6 @@
 						<array class="NSMutableArray" key="IBUIViewControllers">
 							<object class="IBUIViewController" id="188314736">
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="449715403">
-									<reference key="IBUINavigationBar"/>
 									<string key="IBUITitle">Prep Reminders</string>
 									<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="448661623">
 										<string key="IBUITitle">Sign Out</string>
@@ -148,7 +147,6 @@
 					<int key="NSvFlags">266</int>
 					<string key="NSFrame">{{0, 431}, {320, 49}}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSNextKeyView"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
 						<bytes key="NSWhite">MCAwAA</bytes>
