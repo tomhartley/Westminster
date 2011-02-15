@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GDataXMLNode.h"
-@interface WSXMLDataParser : NSObject <NSXMLParserDelegate>{
+@interface WSXMLDataParser : NSObject {
     
 }
 

@@ -14,6 +14,8 @@
 #import "WSDataFetcher.h"
 #import "WSAuthManager.h"
 #import "WSAuthController.h"
+#import "WSDetailPrep.h"
+#import "GANTracker.h"
 
 @implementation WSPrepController
 
@@ -27,6 +29,11 @@
 }
 
 -(IBAction)refresh {
+	[[GANTracker sharedTracker] trackEvent:@"prep"
+									action:@"refresh"
+									 label:nil
+									 value:-1
+								 withError:nil];
 	[[WSDataFetcher sharedInstance] updatePreps];
 }
 
@@ -92,6 +99,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	[[GANTracker sharedTracker] trackPageview:@"/prepController"
+									withError:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -199,6 +208,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	int row = indexPath.row;
+	WSDetailPrep *detail = [[WSDetailPrep alloc]initWithNibName:@"WSDetailPrep" bundle:nil prep:[preps objectAtIndex:row]];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
+	 if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		 [detail setModalPresentationStyle:UIModalPresentationFormSheet];
+	 }
+#endif
+	[self presentModalViewController:[detail autorelease] animated:YES];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

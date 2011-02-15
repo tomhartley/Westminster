@@ -12,6 +12,8 @@
 #import "WSAuthManager.h"
 #import <TapkuLibrary/TapkuLibrary.h>
 #import "WSAuthController.h"
+#import "GANTracker.h"
+
 
 @implementation WSFoodViewController
 
@@ -96,6 +98,8 @@
 {
     [super viewWillAppear:animated];
 	[self layoutSubviews];
+	[[GANTracker sharedTracker] trackPageview:@"/foodController"
+									withError:nil];
 }
 
 - (IBAction)pageControlChanged:(UIPageControl *)sender {
@@ -127,6 +131,11 @@
 
 - (IBAction)refreshFood:(id)sender {
 	[[WSDataFetcher sharedInstance] updateFood];
+	[[GANTracker sharedTracker] trackEvent:@"food"
+									action:@"refresh"
+									 label:nil
+									 value:-1
+								 withError:nil];
 }
 
 - (IBAction)signOut:(id)sender {

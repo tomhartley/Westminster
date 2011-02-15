@@ -11,6 +11,12 @@
 
 @implementation WSPrep
 
-@synthesize teacherInitials,dueDate,descriptionText,subject,editable;
+@synthesize teacherInitials,dueDate,descriptionText,subject,editable,documentID,documentDescription, documentFilename;
+
+-(BOOL)containsDocument {
+	
+	
+	return ! ([documentID isEqualToString:@""]);
+}
 
 @end

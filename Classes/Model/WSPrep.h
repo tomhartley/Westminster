@@ -14,6 +14,9 @@
 	NSDate *dueDate;
 	NSString *descriptionText;
 	NSString *subject;
+	NSString *documentID;
+	NSString *documentDescription;
+	NSString *documentFilename;
 	BOOL editable;
 }
 
@@ -21,7 +24,10 @@
 @property (nonatomic, retain) NSDate *dueDate;
 @property (nonatomic, retain) NSString *descriptionText;
 @property (nonatomic, retain) NSString *subject;
+@property (nonatomic, retain) NSString *documentID;
+@property (nonatomic, retain) NSString *documentDescription;
+@property (nonatomic, retain) NSString *documentFilename;
 @property (nonatomic) BOOL editable;
 
-
+-(BOOL)containsDocument;
 @end

@@ -14,6 +14,7 @@
 @interface WestminsterAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	UIWindow *window;
 	UITabBarController *tabBarController;
+	NSDate *openedDate;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

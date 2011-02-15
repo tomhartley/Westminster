@@ -9,6 +9,7 @@
 #import "WSAuthController.h"
 #import "WSAuthManager.h"
 #import "WSDataFetcher.h"
+#import "GANTracker.h"
 
 @implementation WSAuthController
 
@@ -43,8 +44,9 @@
 	gradient.frame = self.view.frame;
 	gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor lightGrayColor] CGColor], nil];
 	[self.view.layer insertSublayer:gradient atIndex:0];
-
-    // Do any additional setup after loading the view from its nib.
+	
+	[[GANTracker sharedTracker] trackPageview:@"/authController"
+									withError:nil];
 }
 
 - (void)viewDidUnload
@@ -71,6 +73,11 @@
 - (IBAction)login:(id)sender {
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Connecting..."];
 	[[WSAuthManager sharedInstance] updateAPITokenUsername:uNameField.text password:pWordField.text saveForNextTime:keepLoggedInSwitch.on progressDelegate:nil delegate:self selector:@selector(loginResponse:)];
+	[[GANTracker sharedTracker] trackEvent:@"auth"
+									action:@"userLogin"
+									 label:nil
+									 value:-1
+								 withError:nil];
 }
 
 -(void)loginResponse:(NSString *)success {
@@ -78,6 +85,7 @@
 		[self dismissModalViewControllerAnimated:YES];
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];
 		[[WSDataFetcher sharedInstance] downloadAll];
+		
 	} else {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Failed"];
 	}
@@ -89,8 +97,12 @@
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Logged in as guest"];
 	[[WSDataFetcher sharedInstance] downloadAllAuthFree];
 	[self dismissModalViewControllerAnimated:YES];
+	[[GANTracker sharedTracker] trackEvent:@"auth"
+									action:@"guestLogin"
+									 label:nil
+									 value:-1
+								 withError:nil];
 }
-
 - (IBAction)dismissKeyboard:(UITextField *)sender {
 	[sender resignFirstResponder];
 }

@@ -10,12 +10,15 @@
 		D88062F7130569C2002774C7 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D88062F6130569C2002774C7 /* TapkuLibrary.bundle */; };
 		D88062F9130569E1002774C7 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88062F8130569E1002774C7 /* libTapkuLibrary.a */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
+		E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */; };
 		E225589712FEBB7300D34090 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589612FEBB7300D34090 /* icon.png */; };
 		E225589912FEBC2100D34090 /* iconiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589812FEBC2100D34090 /* iconiPad.png */; };
 		E225589C12FEC81600D34090 /* WSAPIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E225589B12FEC81100D34090 /* WSAPIDelegate.m */; };
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
+		E2897142130705F0005483A6 /* WSDetailPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = E2897140130705F0005483A6 /* WSDetailPrep.m */; };
+		E2897143130705F0005483A6 /* WSDetailPrep.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2897141130705F0005483A6 /* WSDetailPrep.xib */; };
 		E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */; };
 		E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */; };
 		E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26E81236C6F700C084B7 /* UIKit.framework */; };
@@ -29,6 +32,8 @@
 		E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A27131236C73600C084B7 /* WSAlmanackController.xib */; };
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
+		E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */; };
+		E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */; };
 		E2AE1C5212FED04500A5CE4E /* WSAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5012FED04500A5CE4E /* WSAuthController.m */; };
 		E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */; };
 		E2AE1C5612FED50400A5CE4E /* WSAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5512FED50300A5CE4E /* WSAuthManager.m */; };
@@ -97,6 +102,8 @@
 		D88062F8130569E1002774C7 /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTapkuLibrary.a; sourceTree = SOURCE_ROOT; };
 		D88062FE1305AC87002774C7 /* WSNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNotice.h; path = Model/WSNotice.h; sourceTree = "<group>"; };
 		D88062FF1305AC87002774C7 /* WSNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNotice.m; path = Model/WSNotice.m; sourceTree = "<group>"; };
+		E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+VerticalAlign.h"; path = "../UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
+		E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+VerticalAlign.m"; path = "../UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
 		E225589612FEBB7300D34090 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E225589812FEBC2100D34090 /* iconiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconiPad.png; sourceTree = "<group>"; };
 		E225589A12FEC80C00D34090 /* WSAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAPIDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +114,9 @@
 		E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MealsTableViewDelegate.m; path = ../MealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E262E05B1300A1FC008D4E18 /* WSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDataManager.h; sourceTree = "<group>"; };
 		E262E05C1300A1FD008D4E18 /* WSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDataManager.m; sourceTree = "<group>"; };
+		E289713F130705F0005483A6 /* WSDetailPrep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDetailPrep.h; path = Controllers/WSDetailPrep.h; sourceTree = "<group>"; };
+		E2897140130705F0005483A6 /* WSDetailPrep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSDetailPrep.m; path = Controllers/WSDetailPrep.m; sourceTree = "<group>"; };
+		E2897141130705F0005483A6 /* WSDetailPrep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSDetailPrep.xib; path = Classes/Controllers/WSDetailPrep.xib; sourceTree = "<group>"; };
 		E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSFoodViewController.h; path = ../WSFoodViewController.h; sourceTree = "<group>"; };
 		E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSFoodViewController.m; path = ../WSFoodViewController.m; sourceTree = "<group>"; };
 		E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSFoodViewController.xib; sourceTree = "<group>"; };
@@ -127,6 +137,9 @@
 		E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDataFetcher.h; path = Model/WSDataFetcher.h; sourceTree = "<group>"; };
 		E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSDataFetcher.m; path = Model/WSDataFetcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E2A3710012F477C700061B2D /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
+		E2A95F1913076360009CE9ED /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAuthController.h; sourceTree = "<group>"; };
 		E2AE1C5012FED04500A5CE4E /* WSAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAuthController.m; sourceTree = "<group>"; };
 		E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAuthController.xib; path = Classes/WSAuthController.xib; sourceTree = "<group>"; };
@@ -186,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */,
 				D88062F9130569E1002774C7 /* libTapkuLibrary.a in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
 				E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */,
@@ -197,6 +211,7 @@
 				E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */,
 				E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */,
 				E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */,
+				E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,8 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E289713F130705F0005483A6 /* WSDetailPrep.h */,
+				E2897140130705F0005483A6 /* WSDetailPrep.m */,
 				E2D5A3D41304737000908FC4 /* WSPrepController.h */,
 				E2D5A3D51304737000908FC4 /* WSPrepController.m */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
@@ -286,6 +303,7 @@
 		E29A26DF1236C6F700C084B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2897141130705F0005483A6 /* WSDetailPrep.xib */,
 				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
 				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
 				E225589812FEBC2100D34090 /* iconiPad.png */,
@@ -305,6 +323,8 @@
 		E29A26E01236C6F700C084B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */,
+				E2A95F1813076345009CE9ED /* GAnalytics */,
 				D88062F8130569E1002774C7 /* libTapkuLibrary.a */,
 				D88062E7130568F7002774C7 /* TapkuLibrary.xcodeproj */,
 				E2FECD1512FE07130028A348 /* libxml2.dylib */,
@@ -327,6 +347,15 @@
 				E29A26E51236C6F700C084B7 /* Westminster.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E2A95F1813076345009CE9ED /* GAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				E2A95F1913076360009CE9ED /* GANTracker.h */,
+				E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */,
+			);
+			name = GAnalytics;
 			sourceTree = "<group>";
 		};
 		E2AE1C4A12FEC90400A5CE4E /* NSDate+Helper */ = {
@@ -400,6 +429,8 @@
 		E2F88BD012FDF2B400D5D078 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */,
+				E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */,
 				E2AE1C4A12FEC90400A5CE4E /* NSDate+Helper */,
 				E2FECD0F12FE03410028A348 /* GDataXML */,
 				E2F88B5812FDEA5B00D5D078 /* ASIHTTPRequest */,
@@ -512,6 +543,7 @@
 				E2D5A3DC1304745100908FC4 /* WSPrepViewCell.xib in Resources */,
 				E2D5A3DE130479CB00908FC4 /* 117-todo.png in Resources */,
 				D88062F7130569C2002774C7 /* TapkuLibrary.bundle in Resources */,
+				E2897143130705F0005483A6 /* WSDetailPrep.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +582,8 @@
 				E2D5A3D9130473BB00908FC4 /* WSPrepViewCell.m in Sources */,
 				E2D542F01304878900C22202 /* WSPrep.m in Sources */,
 				D88063001305AC87002774C7 /* WSNotice.m in Sources */,
+				E2897142130705F0005483A6 /* WSDetailPrep.m in Sources */,
+				E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +664,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,7 +690,7 @@
 				);
 				PRODUCT_NAME = Westminster;
 				PROVISIONING_PROFILE = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -668,7 +702,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,7 +727,7 @@
 				);
 				PRODUCT_NAME = Westminster;
 				PROVISIONING_PROFILE = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

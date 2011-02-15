@@ -88,6 +88,9 @@
 		NSString *prepDescription = [[[[prepsToParse objectAtIndex:a] elementsForName:@"note"] objectAtIndex:0] stringValue];
         prep.descriptionText = [prepDescription substringFromIndex:1];
 		prep.subject = [[[[prepsToParse objectAtIndex:a] elementsForName:@"subject"] objectAtIndex:0] stringValue];
+		prep.documentDescription = [[[[prepsToParse objectAtIndex:a] elementsForName:@"description"] objectAtIndex:0] stringValue];
+		prep.documentFilename = [[[[prepsToParse objectAtIndex:a] elementsForName:@"filename"] objectAtIndex:0] stringValue];
+		prep.documentID = [[[[prepsToParse objectAtIndex:a] elementsForName:@"documentID"] objectAtIndex:0] stringValue];
 		prep.editable = [[[[[prepsToParse objectAtIndex:a] elementsForName:@"private"] objectAtIndex:0] stringValue] isEqualToString:@"1"];
 		NSString *dateString = [[[[prepsToParse objectAtIndex:a] elementsForName:@"datedue"] objectAtIndex:0] stringValue];
 		prep.dueDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
@@ -106,7 +109,7 @@
 	NSLog(@"%@", doc.rootElement);
 	NSArray *noticesToParse = [doc.rootElement elementsForName:@"prep"];
 	for(int a = 0;a<[noticesToParse count];a++) {
-		/*WSPrep *prep = [[WSPrep alloc]init];
+		WSPrep *prep = [[WSPrep alloc]init];
 		[prep autorelease];
 		prep.teacherInitials = [[[[prepsToParse objectAtIndex:a] elementsForName:@"teacherinitials"] objectAtIndex:0] stringValue];
 		NSString *prepDescription = [[[[prepsToParse objectAtIndex:a] elementsForName:@"note"] objectAtIndex:0] stringValue];

@@ -8,6 +8,7 @@
 
 #import "WestminsterAppDelegate.h"
 #import "WSDataFetcher.h"
+#import "GANTracker.h"
 
 @implementation WestminsterAppDelegate
 
@@ -17,7 +18,20 @@
 @synthesize tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+	openedDate = [[NSDate date] retain];
+	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1"
+											   dispatchPeriod:10
+													 delegate:nil];
+	NSError *error;
+	if (![[GANTracker sharedTracker] trackEvent:@"state"
+										 action:@"opened"
+										  label:nil
+										  value:-1
+									  withError:&error]) {
+		NSLog(@"%@", error);
+	}
+			
+	
 	// Override point for customization after application launch.
 	// Add the tab bar controller's current view as a subview of the window
 	[window addSubview:tabBarController.view];
@@ -41,7 +55,12 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-
+	[[GANTracker sharedTracker] trackEvent:@"state"
+									action:@"quit"
+									 label:nil
+									 value:([openedDate timeIntervalSinceNow]*-1)
+								 withError:nil];
+	[[GANTracker sharedTracker] stopTracker];
 	// Save data if appropriate.
 }
 
