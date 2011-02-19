@@ -11,9 +11,16 @@
 		D88062F9130569E1002774C7 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88062F8130569E1002774C7 /* libTapkuLibrary.a */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
 		E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */; };
+		E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E212BEB5130FD8350009F2D2 /* 18-envelope.png */; };
+		E212BEBC130FE8360009F2D2 /* WSProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212BEBA130FE8360009F2D2 /* WSProfileController.m */; };
+		E212BEBD130FE8360009F2D2 /* WSProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212BEBB130FE8360009F2D2 /* WSProfileController.xib */; };
+		E212BED2130FEC910009F2D2 /* WSProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E212BED1130FEC910009F2D2 /* WSProfile.m */; };
 		E225589712FEBB7300D34090 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589612FEBB7300D34090 /* icon.png */; };
 		E225589912FEBC2100D34090 /* iconiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = E225589812FEBC2100D34090 /* iconiPad.png */; };
 		E225589C12FEC81600D34090 /* WSAPIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E225589B12FEC81100D34090 /* WSAPIDelegate.m */; };
+		E228C89A130F626600E135FF /* WSAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E228C898130F626600E135FF /* WSAboutController.m */; };
+		E228C89B130F626600E135FF /* WSAboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E228C899130F626600E135FF /* WSAboutController.xib */; };
+		E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E228C89D130F731D00E135FF /* MessageUI.framework */; };
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
@@ -104,10 +111,20 @@
 		D88062FF1305AC87002774C7 /* WSNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNotice.m; path = Model/WSNotice.m; sourceTree = "<group>"; };
 		E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+VerticalAlign.h"; path = "../UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
 		E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+VerticalAlign.m"; path = "../UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
+		E212BEB5130FD8350009F2D2 /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope.png"; sourceTree = "<group>"; };
+		E212BEB9130FE8360009F2D2 /* WSProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSProfileController.h; path = Controllers/WSProfileController.h; sourceTree = "<group>"; };
+		E212BEBA130FE8360009F2D2 /* WSProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSProfileController.m; path = Controllers/WSProfileController.m; sourceTree = "<group>"; };
+		E212BEBB130FE8360009F2D2 /* WSProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSProfileController.xib; path = Classes/Controllers/WSProfileController.xib; sourceTree = "<group>"; };
+		E212BED0130FEC910009F2D2 /* WSProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProfile.h; sourceTree = "<group>"; };
+		E212BED1130FEC910009F2D2 /* WSProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProfile.m; sourceTree = "<group>"; };
 		E225589612FEBB7300D34090 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E225589812FEBC2100D34090 /* iconiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconiPad.png; sourceTree = "<group>"; };
 		E225589A12FEC80C00D34090 /* WSAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAPIDelegate.h; sourceTree = "<group>"; };
 		E225589B12FEC81100D34090 /* WSAPIDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAPIDelegate.m; sourceTree = "<group>"; };
+		E228C897130F626600E135FF /* WSAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSAboutController.h; path = Controllers/WSAboutController.h; sourceTree = "<group>"; };
+		E228C898130F626600E135FF /* WSAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSAboutController.m; path = Controllers/WSAboutController.m; sourceTree = "<group>"; };
+		E228C899130F626600E135FF /* WSAboutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAboutController.xib; path = Classes/Controllers/WSAboutController.xib; sourceTree = "<group>"; };
+		E228C89D130F731D00E135FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "../NSDate+Helper.h"; sourceTree = "<group>"; };
 		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "../NSDate+Helper.m"; sourceTree = "<group>"; };
 		E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealsTableViewDelegate.h; path = ../MealsTableViewDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */,
 				E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */,
 				D88062F9130569E1002774C7 /* libTapkuLibrary.a in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
@@ -227,17 +245,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E212BEB7130FD83A0009F2D2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E212BEB5130FD8350009F2D2 /* 18-envelope.png */,
+				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
+				E2D5A3DD130479CB00908FC4 /* 117-todo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E212BEB8130FD8570009F2D2 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				E212BEBB130FE8360009F2D2 /* WSProfileController.xib */,
+				E228C899130F626600E135FF /* WSAboutController.xib */,
+				E2897141130705F0005483A6 /* WSDetailPrep.xib */,
+				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
+				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
+				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
+				E29A27131236C73600C084B7 /* WSAlmanackController.xib */,
+				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
+				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E289713F130705F0005483A6 /* WSDetailPrep.h */,
-				E2897140130705F0005483A6 /* WSDetailPrep.m */,
+				E228C897130F626600E135FF /* WSAboutController.h */,
+				E228C898130F626600E135FF /* WSAboutController.m */,
 				E2D5A3D41304737000908FC4 /* WSPrepController.h */,
 				E2D5A3D51304737000908FC4 /* WSPrepController.m */,
+				E289713F130705F0005483A6 /* WSDetailPrep.h */,
+				E2897140130705F0005483A6 /* WSDetailPrep.m */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
 				E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */,
 				E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */,
 				E2AE1C5012FED04500A5CE4E /* WSAuthController.m */,
+				E212BEB9130FE8360009F2D2 /* WSProfileController.h */,
+				E212BEBA130FE8360009F2D2 /* WSProfileController.m */,
 				E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */,
 				E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */,
 				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
@@ -253,6 +301,8 @@
 			children = (
 				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
 				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+				E212BED0130FEC910009F2D2 /* WSProfile.h */,
+				E212BED1130FEC910009F2D2 /* WSProfile.m */,
 				D88062FE1305AC87002774C7 /* WSNotice.h */,
 				D88062FF1305AC87002774C7 /* WSNotice.m */,
 				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
@@ -268,7 +318,6 @@
 		E29A26D61236C6F700C084B7 = {
 			isa = PBXGroup;
 			children = (
-				D88062F6130569C2002774C7 /* TapkuLibrary.bundle */,
 				E29A26DD1236C6F700C084B7 /* Classes */,
 				E29A26DE1236C6F700C084B7 /* Other Sources */,
 				E29A26DF1236C6F700C084B7 /* Resources */,
@@ -303,19 +352,12 @@
 		E29A26DF1236C6F700C084B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E2897141130705F0005483A6 /* WSDetailPrep.xib */,
-				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
-				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
+				E212BEB8130FD8570009F2D2 /* Nibs */,
+				E212BEB7130FD83A0009F2D2 /* Images */,
 				E225589812FEBC2100D34090 /* iconiPad.png */,
 				E225589612FEBB7300D34090 /* icon.png */,
-				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
-				E29A27131236C73600C084B7 /* WSAlmanackController.xib */,
 				E29A26EE1236C6F700C084B7 /* Westminster-Info.plist */,
 				E29A26F01236C6F700C084B7 /* InfoPlist.strings */,
-				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
-				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
-				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
-				E2D5A3DD130479CB00908FC4 /* 117-todo.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -323,6 +365,8 @@
 		E29A26E01236C6F700C084B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E228C89D130F731D00E135FF /* MessageUI.framework */,
+				D88062F6130569C2002774C7 /* TapkuLibrary.bundle */,
 				E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */,
 				E2A95F1813076345009CE9ED /* GAnalytics */,
 				D88062F8130569E1002774C7 /* libTapkuLibrary.a */,
@@ -544,6 +588,9 @@
 				E2D5A3DE130479CB00908FC4 /* 117-todo.png in Resources */,
 				D88062F7130569C2002774C7 /* TapkuLibrary.bundle in Resources */,
 				E2897143130705F0005483A6 /* WSDetailPrep.xib in Resources */,
+				E228C89B130F626600E135FF /* WSAboutController.xib in Resources */,
+				E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */,
+				E212BEBD130FE8360009F2D2 /* WSProfileController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +631,9 @@
 				D88063001305AC87002774C7 /* WSNotice.m in Sources */,
 				E2897142130705F0005483A6 /* WSDetailPrep.m in Sources */,
 				E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */,
+				E228C89A130F626600E135FF /* WSAboutController.m in Sources */,
+				E212BEBC130FE8360009F2D2 /* WSProfileController.m in Sources */,
+				E212BED2130FEC910009F2D2 /* WSProfile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +721,7 @@
 					"\"$(SRCROOT)/../../../Documents/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -708,6 +759,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Documents/Frameworks\"",
 				);
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (

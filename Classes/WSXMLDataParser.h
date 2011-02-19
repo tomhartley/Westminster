@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GDataXMLNode.h"
+#import "WSProfile.h"
+
 @interface WSXMLDataParser : NSObject {
     
 }
@@ -17,4 +19,5 @@
 -(NSArray *)parseMeals:(NSData *)xmlData;
 -(NSArray *)parsePreps:(NSData *)xmlData;
 -(NSArray *)parseNotices:(NSData *)xmlData;
+-(WSProfile *)parseProfile:(NSData *)xmlData;
 @end

@@ -11,7 +11,7 @@
 static WSDataManager *sharedInstance  = nil;
 
 @implementation WSDataManager;
-@synthesize currentFood, currentPrep;
+@synthesize currentFood, currentPrep, currentProfile;
 
 -(NSArray *)currentFood {
 	return currentFood;
@@ -34,10 +34,23 @@ static WSDataManager *sharedInstance  = nil;
 	[currentPrep retain];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSPrepUpdatedNotification" object:nil];
 }
+
+-(WSProfile *)currentProfile {
+	return currentProfile;
+}
+
+-(void)setCurrentProfile:(WSProfile *)profile {
+	[currentProfile release];
+	currentProfile = profile;
+	[currentProfile retain];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSProfileUpdatedNotification" object:nil];
+}
+
 //WSDeletePersonalData
 
 -(void)deletePersonalInformation {
 	self.currentPrep = nil;
+	self.currentProfile = nil;
 }
 
 //Singleton methods

@@ -26,6 +26,7 @@
 	UINavigationBar *navigationBar;
 	UITextView *descriptionTextView;
 	UIView *locationForProgressView;
+	ASIHTTPRequest *req;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil prep:(WSPrep *)prep;

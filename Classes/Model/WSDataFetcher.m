@@ -21,6 +21,7 @@ static WSDataFetcher *sharedInstance = nil;
 -(void)downloadAll {
 	[self updateFood];
 	[self updatePreps];
+	[self updateProfile];
     //[self updateNotices];
 }
 
@@ -61,7 +62,18 @@ static WSDataFetcher *sharedInstance = nil;
 }
 
 -(void)updateProfile {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/notices.asp?token=%@",[[[WSAuthManager sharedInstance] apiToken] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/profile.asp?token=%@",[[[WSAuthManager sharedInstance] apiToken] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
+	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
+	[APIreq autorelease];
+	[APIreq setDidFinishSelector:@selector(profileFinished:)];
+	[APIreq setDidFailSelector:@selector(profileFailed:)];
+	APIreq.delegate=delegate;
+	[networkQueue addOperation:APIreq];
+	[networkQueue go];
+}
+
+-(void)updateNotices {
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/notices.asp?token=%@",[[[WSAuthManager sharedInstance] apiToken] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
 	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
 	[APIreq autorelease];
 	[APIreq setDidFinishSelector:@selector(noticesFinished:)];
@@ -69,10 +81,6 @@ static WSDataFetcher *sharedInstance = nil;
 	APIreq.delegate=delegate;
 	[networkQueue addOperation:APIreq];
 	[networkQueue go];
-}
-
--(void)updateNotices {
-	
 }
 
 -(void)updateClasses {

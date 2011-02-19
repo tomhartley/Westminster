@@ -124,6 +124,153 @@
 	return notices;
 }
 
-
+-(WSProfile *)parseProfile:(NSData *)xmlData {
+	WSProfile *profile = [[WSProfile alloc] init];
+	NSError *error;
+	GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
+	options:0 error:&error];
+	if (doc == nil) { return nil; }
+	@try {
+		GDataXMLElement *root = [[doc.rootElement elementsForName:@"profile"] objectAtIndex:0];
+		@try {
+			profile.UWI = [[[root elementsForName:@"uwi"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.type = [[[root elementsForName:@"type"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.firstNames = [[[root elementsForName:@"forenames"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.surname = [[[root elementsForName:@"surname"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.initials = [[[root elementsForName:@"initials"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.preferredName = [[[root elementsForName:@"preferredname"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.gender = [[[[root elementsForName:@"uwi"] objectAtIndex:0] stringValue] isEqualToString:@"M"] ? WSGenderMale:WSGenderFemale;
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			NSString *dateString = [[[root elementsForName:@"dateofbirth"] objectAtIndex:0] stringValue];
+			profile.dateOfBirth = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.email = [[[root elementsForName:@"emailaddress"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			NSString *dateString = [[[root elementsForName:@"dateofarrival"] objectAtIndex:0] stringValue];
+			profile.dateOfArrival = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.scholarhsip= [[[root elementsForName:@"scholarhsip"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.boarder = [[[[root elementsForName:@"boarder"] objectAtIndex:0] stringValue] isEqualToString:@"Yes"];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.house = [[[root elementsForName:@"housename"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.year = [[[root elementsForName:@"yearname"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.form = [[[root elementsForName:@"form"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.tutor = [[[root elementsForName:@"tutor"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.examID = [[[root elementsForName:@"examid"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.examUCI = [[[root elementsForName:@"examuci"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.examName = [[[root elementsForName:@"examname"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.previousSchool= [[[root elementsForName:@"previousschool"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.entryMethod = [[[root elementsForName:@"entrymethod"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			profile.mobileNumber = [[[root elementsForName:@"mobile"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+	}
+	@catch (NSException *exception) {
+		return nil;
+	}	
+	return profile;
+}
 
 @end

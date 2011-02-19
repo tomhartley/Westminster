@@ -45,6 +45,7 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -64,6 +65,22 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="932553525">
+					<string key="IBUITitle">About</string>
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="302273372">
+						<string key="IBUITitle">Profile</string>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<array key="IBUIToolbarItems" id="0"/>
+					<reference key="IBUIParentViewController" ref="1034742383"/>
+					<string key="IBUINibName">WSProfileController</string>
+					<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+						<int key="IBUIInterfaceOrientation">1</int>
+						<int key="interfaceOrientation">1</int>
+					</object>
+					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					<bool key="IBUIHorizontal">NO</bool>
+				</object>
 				<array class="NSMutableArray" key="IBUIViewControllers">
 					<object class="IBUIViewController" id="202721393">
 						<bool key="IBUIAutoresizesArchivedViewToFullSize">NO</bool>
@@ -76,7 +93,7 @@
 							</object>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
-						<array key="IBUIToolbarItems" id="0"/>
+						<reference key="IBUIToolbarItems" ref="0"/>
 						<reference key="IBUIParentViewController" ref="1034742383"/>
 						<string key="IBUINibName">WSFoodViewController</string>
 						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
@@ -115,6 +132,7 @@
 						<array class="NSMutableArray" key="IBUIViewControllers">
 							<object class="IBUIViewController" id="188314736">
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="449715403">
+									<reference key="IBUINavigationBar"/>
 									<string key="IBUITitle">Prep Reminders</string>
 									<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="448661623">
 										<string key="IBUITitle">Sign Out</string>
@@ -140,12 +158,34 @@
 							</object>
 						</array>
 					</object>
+					<reference ref="932553525"/>
+					<object class="IBUIViewController" id="90346246">
+						<string key="IBUITitle">About</string>
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="968539866">
+							<string key="IBUITitle">About</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">18-envelope.png</string>
+							</object>
+							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						</object>
+						<reference key="IBUIToolbarItems" ref="0"/>
+						<reference key="IBUIParentViewController" ref="1034742383"/>
+						<string key="IBUINibName">WSAboutController</string>
+						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+							<int key="IBUIInterfaceOrientation">1</int>
+							<int key="interfaceOrientation">1</int>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<bool key="IBUIHorizontal">NO</bool>
+					</object>
 				</array>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">266</int>
 					<string key="NSFrame">{{0, 431}, {320, 49}}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSNextKeyView"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
 						<bytes key="NSWhite">MCAwAA</bytes>
@@ -235,6 +275,8 @@
 							<reference ref="795333663"/>
 							<reference ref="286134342"/>
 							<reference ref="202721393"/>
+							<reference ref="90346246"/>
+							<reference ref="932553525"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -305,6 +347,32 @@
 						<reference key="object" ref="625368357"/>
 						<reference key="parent" ref="449715403"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">143</int>
+						<reference key="object" ref="90346246"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="968539866"/>
+						</array>
+						<reference key="parent" ref="1034742383"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">142</int>
+						<reference key="object" ref="968539866"/>
+						<reference key="parent" ref="90346246"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">145</int>
+						<reference key="object" ref="932553525"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="302273372"/>
+						</array>
+						<reference key="parent" ref="1034742383"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">144</int>
+						<reference key="object" ref="302273372"/>
+						<reference key="parent" ref="932553525"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -322,6 +390,10 @@
 				<string key="135.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="136.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="137.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="142.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="143.CustomClassName">WSAboutController</string>
+				<string key="144.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="145.CustomClassName">WSProfileController</string>
 				<dictionary class="NSMutableDictionary" key="2.IBAttributePlaceholdersKey"/>
 				<string key="2.IBEditorWindowLastContentRect">{{229, 373}, {320, 480}}</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -332,7 +404,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">141</int>
+			<int key="maxID">145</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
@@ -341,6 +413,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="117-todo.png">{18, 19}</string>
+			<string key="18-envelope.png">{24, 16}</string>
 			<string key="48-fork-and-knife.png">{18, 26}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">294</string>

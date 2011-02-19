@@ -8,7 +8,7 @@
 
 #import "WSAPIDelegate.h"
 #import "WSDataManager.h"
-
+#import "WSProfile.h"
 
 @implementation WSAPIDelegate
 
@@ -43,6 +43,18 @@
 }
 
 -(void)noticesFailed:(ASIHTTPRequest *)request {
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Notices Failed"];
+	NSError *error = [request error];
+	NSLog(@"%@", error);
+}
+
+-(void)profileFinished:(ASIHTTPRequest *)request {
+	WSProfile *profile = [[[[WSXMLDataParser alloc] init] autorelease] parseProfile:[request responseData]];
+	[[WSDataManager sharedInstance] setCurrentProfile:profile];
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Profile"];
+}
+
+-(void)profileFailed:(ASIHTTPRequest *)request {
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Notices Failed"];
 	NSError *error = [request error];
 	NSLog(@"%@", error);

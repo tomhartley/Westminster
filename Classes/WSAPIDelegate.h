@@ -23,4 +23,6 @@
 -(void)noticesFinished:(ASIHTTPRequest *)request;
 -(void)noticesFailed:(ASIHTTPRequest *)request;
 
+-(void)profileFinished:(ASIHTTPRequest *)request;
+-(void)profileFailed:(ASIHTTPRequest *)request;
 @end

@@ -10,7 +10,7 @@
 #import "WSDayFood.h"
 
 
-@interface MealsTableViewDelegate : NSObject <UITableViewDelegate, UITableViewDataSource> {
+@interface MealsTableViewDelegate : NSObject <UITableViewDataSource, UITableViewDelegate> {
     WSDayFood *foodDay;
 }
 

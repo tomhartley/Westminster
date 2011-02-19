@@ -60,7 +60,7 @@
 	//Set up text fields
 	initialsLabel.text = thePrep.teacherInitials;
 	navigationBar.topItem.title = thePrep.subject;
-	dueDate.text = [thePrep.dueDate stringWithFormat:@"dd/MM/yyyy"];
+	dueDate.text = [@"Due Date" stringByAppendingString:[thePrep.dueDate stringWithFormat:@"dd/MM/yyyy"]];
 	privateLabel.text = thePrep.editable ? @"Private" : @"Public";
 	descriptionTextView.text = thePrep.descriptionText;
 	documentNameLabel.text = [thePrep containsDocument] ? ([thePrep.documentDescription isEqualToString:@""]? thePrep.documentFilename : thePrep.documentDescription) : @"No attachment";
@@ -108,7 +108,7 @@
 		downloadButton.hidden = YES;
 		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/download.asp?token=%@&documentID=%@",[[[WSAuthManager sharedInstance] apiToken] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],[thePrep.documentID stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
 		NSLog(@"%@",url);
-		ASIHTTPRequest *req = [[ASIHTTPRequest alloc] initWithURL:url];
+		req = [[ASIHTTPRequest alloc] initWithURL:url];
 		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 		NSString *documentsDirectory = [paths objectAtIndex:0];
 		req.downloadDestinationPath = [documentsDirectory stringByAppendingPathComponent:thePrep.documentFilename];
@@ -149,7 +149,7 @@
 	return NO;
 }
 
--(void)documentDownloaded:(ASIHTTPRequest *)req {
+-(void)documentDownloaded:(ASIHTTPRequest *)reqy {
 	//NSLog(req.downloadDestinationPath);
 	docControl = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:req.downloadDestinationPath]];
 	docControl.delegate = self;
@@ -165,11 +165,14 @@
 	return self;
 }
 
--(void)documentDownloadFailed:(ASIHTTPRequest *)req {
+-(void)documentDownloadFailed:(ASIHTTPRequest *)reqy {
 	NSLog(@"%@",req.error);
 }
 
 - (IBAction)dismiss:(id)sender {
+	req.delegate = nil;
+	req.downloadProgressDelegate = nil;
+	[req release];
 	[self dismissModalViewControllerAnimated:YES];
 }
 @end
