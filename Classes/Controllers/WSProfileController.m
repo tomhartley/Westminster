@@ -20,38 +20,14 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:@"WSProfileUpdatedNotification" object:nil];
-		cells = [[NSMutableArray alloc] initWithCapacity:40];
-		[self update];
     }
     return self;
 }
--(void)setUpTableViewCells {
-	
-	static NSString *CellIdentifier = @"Cell";
 
-	[cells removeAllObjects];
-	TKLabelFieldCell *cell1 = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
-	cell1.label.text = @"First Name";
-	cell1.field.text = profile.firstNames;
-	[cells addObject:cell1];
-	[cell1 release];
-	TKLabelFieldCell *cell2 = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
-	cell2.label.text = @"Surname";
-	cell2.field.text = profile.surname;
-	[cells addObject:cell2];
-	[cell2 release];
-	TKLabelFieldCell *cell3 = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
-	cell3.label.text = @"Email";
-	cell3.field.text = profile.email;
-	[cells addObject:cell3];
-	[cell3 release];
-	TKLabelFieldCell *cell4 = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
-	cell4.label.text = @"Phone";
-	cell4.field.text = profile.mobileNumber;
-	[cells addObject:cell4];
-	[cell4 release];
-
+-(void)viewWillAppear:(BOOL)animated {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:@"WSProfileUpdatedNotification" object:nil];
+	[self update];
 }
 
 #pragma mark Table view methods
@@ -59,11 +35,51 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [cells count];
+    return 9;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-	return [cells objectAtIndex:indexPath.row];
+	TKLabelFieldCell *cell = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:nil];
+	switch (indexPath.row) {
+		case 0:
+			cell.label.text = @"First Name";
+			cell.field.text = profile.firstNames;
+			break;
+		case 1:
+			cell.label.text = @"Surname";
+			cell.field.text = profile.surname;
+			break;
+		case 2:
+			cell.label.text = @"Email";
+			cell.field.text = profile.email;
+			break;
+		case 3:
+			cell.label.text = @"Phone";
+			cell.field.text = profile.mobileNumber;
+			break;
+		case 4:
+			cell.label.text = @"House";
+			cell.field.text = profile.house;
+			break;
+		case 5:
+			cell.label.text = @"Tutor";
+			cell.field.text = profile.tutor;
+			break;
+		case 6:
+			cell.label.text = @"Previous School";
+			cell.field.text = profile.previousSchool;
+			break;
+		case 7:
+			cell.label.text = @"Year";
+			cell.field.text = profile.year;
+			break;
+		case 8:
+			cell.label.text = @"Form";
+			cell.field.text = profile.form;
+			break;
+		default:
+			break;
+	}
+	return [cell autorelease];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -73,7 +89,7 @@
 
 - (void)dealloc
 {
-	[cells release];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
 
@@ -101,11 +117,17 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		return YES;
+	}
+#endif
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 - (IBAction)signOut:(id)sender {
 	[[WSAuthManager sharedInstance] signOut];
@@ -116,7 +138,7 @@
 		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
-	[self.parentViewController.parentViewController presentModalViewController:authController animated:YES];
+	[self.parentViewController presentModalViewController:authController animated:YES];
 	[authController autorelease];
 }
 
@@ -126,7 +148,7 @@
 
 -(void)update {
 	[self getProfile];
-	[self setUpTableViewCells];
+	[tableView reloadData];
 }
 
 -(void)getProfile {

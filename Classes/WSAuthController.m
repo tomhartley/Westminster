@@ -59,16 +59,17 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
-	#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			return YES;
-		}
-	#endif
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		return YES;
+	}
+#endif
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 - (IBAction)login:(id)sender {
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Connecting..."];

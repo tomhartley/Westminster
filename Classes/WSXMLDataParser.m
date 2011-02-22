@@ -131,7 +131,7 @@
 	options:0 error:&error];
 	if (doc == nil) { return nil; }
 	@try {
-		GDataXMLElement *root = [[doc.rootElement elementsForName:@"profile"] objectAtIndex:0];
+		GDataXMLElement *root = doc.rootElement;
 		@try {
 			profile.UWI = [[[root elementsForName:@"uwi"] objectAtIndex:0] stringValue];
 		}
@@ -169,7 +169,7 @@
 			NSLog(@"%@",exception);
 		}
 		@try {
-			profile.gender = [[[[root elementsForName:@"uwi"] objectAtIndex:0] stringValue] isEqualToString:@"M"] ? WSGenderMale:WSGenderFemale;
+			profile.gender = [[[[root elementsForName:@"sex"] objectAtIndex:0] stringValue] isEqualToString:@"M"] ? WSGenderMale:WSGenderFemale;
 		}
 		@catch (NSException *exception) {
 			NSLog(@"%@",exception);
@@ -269,7 +269,8 @@
 	}
 	@catch (NSException *exception) {
 		return nil;
-	}	
+	}
+	
 	return profile;
 }
 

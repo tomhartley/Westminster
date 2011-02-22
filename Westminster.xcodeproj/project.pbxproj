@@ -48,6 +48,7 @@
 		E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */; };
 		E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */; };
 		E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */; };
+		E2B05BB813131B4B00D2E7CD /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B05BB713131B4B00D2E7CD /* 111-user.png */; };
 		E2D05952125548AC00696D71 /* WSDayFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D05951125548AC00696D71 /* WSDayFood.m */; };
 		E2D542F01304878900C22202 /* WSPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D542EF1304878900C22202 /* WSPrep.m */; };
 		E2D5A3D61304737000908FC4 /* WSPrepController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5A3D51304737000908FC4 /* WSPrepController.m */; };
@@ -167,7 +168,7 @@
 		E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNoticeController.h; path = ../WSNoticeController.h; sourceTree = "<group>"; };
 		E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNoticeController.m; path = ../WSNoticeController.m; sourceTree = "<group>"; };
 		E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSNoticeController.xib; sourceTree = "<group>"; };
-		E2B61C7912F476A200F314A5 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
+		E2B05BB713131B4B00D2E7CD /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
 		E2D05950125548AC00696D71 /* WSDayFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSDayFood.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E2D05951125548AC00696D71 /* WSDayFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSDayFood.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E2D542EE1304878800C22202 /* WSPrep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSPrep.h; path = Model/WSPrep.h; sourceTree = "<group>"; };
@@ -248,6 +249,7 @@
 		E212BEB7130FD83A0009F2D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E2B05BB713131B4B00D2E7CD /* 111-user.png */,
 				E212BEB5130FD8350009F2D2 /* 18-envelope.png */,
 				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
 				E2D5A3DD130479CB00908FC4 /* 117-todo.png */,
@@ -342,7 +344,6 @@
 		E29A26DE1236C6F700C084B7 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E2B61C7912F476A200F314A5 /* 48-fork-and-knife.png */,
 				E29A26EF1236C6F700C084B7 /* Westminster_Prefix.pch */,
 				E29A26F31236C6F700C084B7 /* main.m */,
 			);
@@ -591,6 +592,7 @@
 				E228C89B130F626600E135FF /* WSAboutController.xib in Resources */,
 				E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */,
 				E212BEBD130FE8360009F2D2 /* WSProfileController.xib in Resources */,
+				E2B05BB813131B4B00D2E7CD /* 111-user.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,8 +742,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				PROVISIONING_PROFILE = "C84C4936-F708-47B1-A0E7-86E010DAE48B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C84C4936-F708-47B1-A0E7-86E010DAE48B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -778,8 +780,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				PROVISIONING_PROFILE = "C84C4936-F708-47B1-A0E7-86E010DAE48B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C84C4936-F708-47B1-A0E7-86E010DAE48B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

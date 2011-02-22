@@ -12,7 +12,6 @@
 @interface WSProfileController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     WSProfile *profile;
 	IBOutlet UITableView *tableView;
-	NSMutableArray *cells;
 }
 - (IBAction)signOut:(id)sender;
 - (IBAction)refresh:(id)sender;
