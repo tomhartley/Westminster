@@ -10,7 +10,12 @@
 
 
 @interface WSNotice : NSObject {
-    
+	NSString *noticeID;
+    NSString *description;
+	NSString *title;
+	NSDate *addedDate;
+	NSDate *removalDate;
+	NSInteger audience;
 }
 
 @end

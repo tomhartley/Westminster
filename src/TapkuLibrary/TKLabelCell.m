@@ -47,7 +47,6 @@
 		label.adjustsFontSizeToFitWidth = YES;
 		label.baselineAdjustment = UIBaselineAdjustmentNone;
 		
-		//label.backgroundColor = [UIColor redColor];
 		label.numberOfLines = 20;
     }
     return self;
@@ -57,8 +56,10 @@
 - (void) layoutSubviews {
     [super layoutSubviews];
 	//NSLog(@"Layout subviews %f",[self indentationWidth]);
-	
 	float insetx = 16;
+	if (self.frame.size.width>500) {
+		insetx = 76;
+	}
 	if(self.editing) insetx += 30;
 	
 	

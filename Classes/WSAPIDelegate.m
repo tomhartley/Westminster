@@ -37,8 +37,8 @@
 }
 
 -(void)noticesFinished:(ASIHTTPRequest *)request {
-	//NSArray *prep = [[[[WSXMLDataParser alloc] init] autorelease] parseNotices:[request responseData]];
-	//[[WSDataManager sharedInstance] setCurrentNotices:prep];
+	//NSArray *notices = [[[[WSXMLDataParser alloc] init] autorelease] parseNotices:[request responseData]];
+	//[[WSDataManager sharedInstance] setCurrentNotices:notices];
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Notices"];
 }
 

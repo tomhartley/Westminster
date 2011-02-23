@@ -43,6 +43,8 @@
 		field = [[UILabel alloc] initWithFrame:CGRectZero];
 		[self addSubview:field];
 		field.font = [UIFont boldSystemFontOfSize:16.0];
+		label.backgroundColor = [UIColor clearColor];
+		field.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -52,7 +54,11 @@
     [super layoutSubviews];
 	
 	CGRect r = CGRectInset(self.bounds, 16, 8);
-	r.origin.x += 80;
+	if (self.frame.size.width>500) {
+		r.origin.x += 150; //iPad special
+	} else {
+		r.origin.x += 80;
+	}
 	r.size.width -= 80;
 	
 	if(self.editing){
