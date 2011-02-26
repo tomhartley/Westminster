@@ -86,6 +86,9 @@ static WSAuthManager *sharedInstance = nil;
 	return [[prefs dictionaryForKey:@"APIToken"]objectForKey:@"token"];
 }
 
+-(void)presentAuthController {
+	//TODO: Implement this
+}
 #pragma mark -
 #pragma mark Singleton methods
 

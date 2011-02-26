@@ -24,4 +24,5 @@
 -(void)loginResponse:(ASIHTTPRequest *)APIReq;
 -(void)signOut;
 -(NSString *)apiToken;
+-(void)presentAuthController;
 @end

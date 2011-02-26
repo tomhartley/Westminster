@@ -21,7 +21,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
     }
@@ -43,7 +43,7 @@
 	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
+		//[authController setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
 	[self.parentViewController.parentViewController presentModalViewController:authController animated:YES];
@@ -96,8 +96,7 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	[[GANTracker sharedTracker] trackPageview:@"/prepController"
 									withError:nil];

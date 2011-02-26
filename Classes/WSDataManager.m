@@ -11,7 +11,17 @@
 static WSDataManager *sharedInstance  = nil;
 
 @implementation WSDataManager;
-@synthesize currentFood, currentPrep, currentProfile;
+
+-(NSArray *)currentNotices {
+	return currentNotices;
+}
+
+-(void)setCurrentNotices:(NSArray *)notices {
+	[currentNotices release];
+	currentNotices = notices;
+	[currentNotices retain];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSFoodUpdatedNotification" object:nil];
+}
 
 -(NSArray *)currentFood {
 	return currentFood;
@@ -51,6 +61,7 @@ static WSDataManager *sharedInstance  = nil;
 -(void)deletePersonalInformation {
 	self.currentPrep = nil;
 	self.currentProfile = nil;
+	self.currentNotices = nil;
 }
 
 //Singleton methods

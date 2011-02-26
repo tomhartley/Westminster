@@ -13,6 +13,7 @@
     NSArray *currentFood;
 	NSArray *currentPrep;
 	WSProfile *currentProfile;
+	NSArray *currentNotices;
 }
 -(void)deletePersonalInformation;
 + (WSDataManager *)sharedInstance;
@@ -20,6 +21,7 @@
 @property (nonatomic, retain) NSArray *currentFood;
 @property (nonatomic, retain) NSArray *currentPrep;
 @property (nonatomic, retain) WSProfile *currentProfile;
+@property (nonatomic, retain) NSArray *currentNotices;
 
 
 @end

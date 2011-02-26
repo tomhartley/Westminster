@@ -16,6 +16,7 @@
 	NSDate *addedDate;
 	NSDate *removalDate;
 	NSInteger audience;
+	NSString *documentID;
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "WSAuthController.h"
 #import "WSDataFetcher.h"
 #import "WSDataManager.h"
-
+#import "GANTracker.h"
 @implementation WSProfileController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,6 +25,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+	[[GANTracker sharedTracker] trackPageview:@"/prepDetailController"
+									withError:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:@"WSProfileUpdatedNotification" object:nil];
 	[self update];

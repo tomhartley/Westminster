@@ -10,6 +10,7 @@
 #import "NSDate+Helper.h"
 #import "WSPrep.h"
 #import "WSDayFood.h"
+#import "WSNotice.h"
 
 @implementation WSXMLDataParser
 
@@ -102,25 +103,19 @@
 
 -(NSArray *)parseNotices:(NSData *)xmlData {
 	NSMutableArray *notices = [NSMutableArray array];
-	/*NSError *error;
+	NSError *error;
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
 														   options:0 error:&error];
 	if (doc == nil) { return nil; }
 	NSLog(@"%@", doc.rootElement);
-	NSArray *noticesToParse = [doc.rootElement elementsForName:@"prep"];
+	NSArray *noticesToParse = [doc.rootElement elementsForName:@"notice"];
 	for(int a = 0;a<[noticesToParse count];a++) {
-		WSPrep *prep = [[WSPrep alloc]init];
-		[prep autorelease];
-		prep.teacherInitials = [[[[prepsToParse objectAtIndex:a] elementsForName:@"teacherinitials"] objectAtIndex:0] stringValue];
-		NSString *prepDescription = [[[[prepsToParse objectAtIndex:a] elementsForName:@"note"] objectAtIndex:0] stringValue];
-        prep.descriptionText = [prepDescription substringFromIndex:1];
-		prep.subject = [[[[prepsToParse objectAtIndex:a] elementsForName:@"subject"] objectAtIndex:0] stringValue];
-		prep.editable = [[[[[prepsToParse objectAtIndex:a] elementsForName:@"private"] objectAtIndex:0] stringValue] isEqualToString:@"1"];
-		NSString *dateString = [[[[prepsToParse objectAtIndex:a] elementsForName:@"datedue"] objectAtIndex:0] stringValue];
-		prep.dueDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
-		[notices addObject:prep];
+		GDataXMLElement *el = [noticesToParse objectAtIndex:a];
+		WSNotice *notice = [[WSNotice alloc] init];
+		notice.noticeID = 
+		[notices addObject:notice];
 	}
-	*/
+	
 	return notices;
 }
 

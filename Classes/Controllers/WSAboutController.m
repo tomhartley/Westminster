@@ -8,6 +8,7 @@
 
 #import "WSAboutController.h"
 #import <TapkuLibrary/TapkuLibrary.h>
+#import "GANTracker.h"
 
 @implementation WSAboutController
 
@@ -39,6 +40,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated	{
+	[[GANTracker sharedTracker] trackPageview:@"/prepDetailController"
+									withError:nil];
+		
 }
 
 - (void)viewDidUnload

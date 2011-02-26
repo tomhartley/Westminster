@@ -37,8 +37,8 @@
 }
 
 -(void)noticesFinished:(ASIHTTPRequest *)request {
-	//NSArray *notices = [[[[WSXMLDataParser alloc] init] autorelease] parseNotices:[request responseData]];
-	//[[WSDataManager sharedInstance] setCurrentNotices:notices];
+	NSArray *notices = [[[[WSXMLDataParser alloc] init] autorelease] parseNotices:[request responseData]];
+	[[WSDataManager sharedInstance] setCurrentNotices:notices];
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Notices"];
 }
 
@@ -55,7 +55,7 @@
 }
 
 -(void)profileFailed:(ASIHTTPRequest *)request {
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Notices Failed"];
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Profile Failed"];
 	NSError *error = [request error];
 	NSLog(@"%@", error);
 }

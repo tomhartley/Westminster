@@ -60,7 +60,7 @@
 	//Set up text fields
 	initialsLabel.text = thePrep.teacherInitials;
 	navigationBar.topItem.title = thePrep.subject;
-	dueDate.text = [@"Due Date" stringByAppendingString:[thePrep.dueDate stringWithFormat:@"dd/MM/yyyy"]];
+	dueDate.text = [@"Due Date: " stringByAppendingString:[thePrep.dueDate stringWithFormat:@"dd/MM/yyyy"]];
 	privateLabel.text = thePrep.editable ? @"Private" : @"Public";
 	descriptionTextView.text = thePrep.descriptionText;
 	documentNameLabel.text = [thePrep containsDocument] ? ([thePrep.documentDescription isEqualToString:@""]? thePrep.documentFilename : thePrep.documentDescription) : @"No attachment";
