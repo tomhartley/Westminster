@@ -14,6 +14,7 @@ static WSAuthManager *sharedInstance = nil;
 @implementation WSAuthManager
 
 -(void)updateAPITokenUsername:(NSString *)uName password:(NSString *)pWord saveForNextTime:(BOOL)shouldSave progressDelegate:(id)progressDelegate delegate:(id)del selector:(SEL)sely {
+	NSLog(@"Login Started");
     NSString *safeUsername = [uName stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
     NSString *safePassword = [pWord stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/auth.asp?username=%@&password=%@",safeUsername,safePassword]];
@@ -28,6 +29,7 @@ static WSAuthManager *sharedInstance = nil;
 }
 
 -(void)loginResponse:(ASIHTTPRequest *)APIReq {
+	NSLog(@"Login Finished");
 	NSMutableDictionary *APIdict = [[[[[WSXMLDataParser alloc] init] autorelease] parseTokenXML:[APIReq responseData]] mutableCopy];
 	SEL sely = NSSelectorFromString([[APIReq userInfo] objectForKey:@"selector"]);
 	id del = [[APIReq userInfo] objectForKey:@"delegate"];
@@ -42,6 +44,13 @@ static WSAuthManager *sharedInstance = nil;
 	}
 	[del performSelector:sely withObject:@"NO"];
 	[APIReq release];
+}
+
+-(void)loginResponseFailed:(ASIHTTPRequest *)APIReq {
+	NSLog(@"Login Request Failed: %@",APIReq.error);
+	SEL sely = NSSelectorFromString([[APIReq userInfo] objectForKey:@"selector"]);
+	id del = [[APIReq userInfo] objectForKey:@"delegate"];
+	[del performSelector:sely withObject:@"NO"];
 }
 
 -(void)loginAsGuest {
@@ -62,12 +71,14 @@ static WSAuthManager *sharedInstance = nil;
 }
 
 -(BOOL)apiTokenIsValid:(NSString *)token {
+	NSLog(@"Auth check started");
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/token.asp?token=%@",[token stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
 	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
 	[APIreq autorelease];
 	[APIreq startSynchronous];
     
 	NSString *reply = [[[[WSXMLDataParser alloc] init] autorelease] parseTokenCheckXML :[APIreq responseData]];
+	NSLog(@"Auth check ended");
 	if ([reply isEqual:@"valid"]) {
 		return YES;
 	} else {

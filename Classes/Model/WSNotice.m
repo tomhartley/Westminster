@@ -10,5 +10,13 @@
 
 
 @implementation WSNotice
+@synthesize noticeID,description,title,addedDate,removalDate,audience,documentID,expanded;
 
+/*-(NSString *)description {
+	return [NSString stringWithFormat:@"\n%@\n%@\nFrom %@ to %@\nID:%@\nDocID:%@\nAudience:%d",title,description,addedDate,removalDate,noticeID,documentID,audience];
+}*/
+
+-(void)toggleExpansion {
+	expanded=!expanded;
+}
 @end

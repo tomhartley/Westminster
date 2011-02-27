@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface WSNotice : NSObject {
@@ -17,6 +17,18 @@
 	NSDate *removalDate;
 	NSInteger audience;
 	NSString *documentID;
+	BOOL expanded;
 }
+
+@property(nonatomic,retain) NSString *noticeID;
+@property(nonatomic,retain) NSString *description;
+@property(nonatomic,retain) NSString *title;
+@property(nonatomic,retain) NSDate *addedDate;
+@property(nonatomic,retain) NSDate *removalDate;
+@property(nonatomic,retain) NSString *documentID;
+@property(nonatomic) NSInteger audience;
+@property(nonatomic) BOOL expanded;
+
+-(void)toggleExpansion;
 
 @end

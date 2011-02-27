@@ -22,7 +22,7 @@ static WSDataFetcher *sharedInstance = nil;
 	[self updateFood];
 	[self updatePreps];
 	[self updateProfile];
-    //[self updateNotices];
+    [self updateNotices];
 }
 
 -(void)downloadAllAuthFree {

@@ -20,7 +20,7 @@ static WSDataManager *sharedInstance  = nil;
 	[currentNotices release];
 	currentNotices = notices;
 	[currentNotices retain];
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSFoodUpdatedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSNoticesUpdatedNotification" object:nil];
 }
 
 -(NSArray *)currentFood {

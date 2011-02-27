@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WSNoticeCell.h"
+#import "WSNotice.h"
 
 
 @interface WSNoticeController : UIViewController {
-    
+    NSArray *notices;
+	IBOutlet UITableView *tableView;
 }
 
+-(void)updateNotices;
+-(IBAction)refresh;
+-(int)getHeightForRow:(int)row;
 @end

@@ -21,7 +21,7 @@
 														   options:0 error:&error];
 	[doc autorelease];
 	if (doc == nil) { return nil; }
-	NSLog(@"%@", doc.rootElement);
+	//NSLog(@"%@", doc.rootElement);
 	NSArray *authenticationStatuses = [doc.rootElement elementsForName:@"authentication"];
 	NSString *authStatus = [[authenticationStatuses objectAtIndex:0] stringValue];
 	if ([authStatus isEqual:@"successful"]) {
@@ -55,7 +55,7 @@
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
 														   options:0 error:&error];
 	if (doc == nil) { return nil; }
-	NSLog(@"%@", doc.rootElement);
+	//NSLog(@"%@", doc.rootElement);
 	NSArray *mealsToParse = [doc.rootElement elementsForName:@"menu"];
 	for(int a = 0;a<[mealsToParse count];a++) {
 		WSDayFood *food = [[WSDayFood alloc]init];
@@ -80,7 +80,7 @@
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
 														   options:0 error:&error];
 	if (doc == nil) { return nil; }
-	NSLog(@"%@", doc.rootElement);
+	//NSLog(@"%@", doc.rootElement);
 	NSArray *prepsToParse = [doc.rootElement elementsForName:@"prep"];
 	for(int a = 0;a<[prepsToParse count];a++) {
 		WSPrep *prep = [[WSPrep alloc]init];
@@ -107,12 +107,59 @@
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
 														   options:0 error:&error];
 	if (doc == nil) { return nil; }
-	NSLog(@"%@", doc.rootElement);
+	//NSLog(@"%@", doc.rootElement);
 	NSArray *noticesToParse = [doc.rootElement elementsForName:@"notice"];
 	for(int a = 0;a<[noticesToParse count];a++) {
 		GDataXMLElement *el = [noticesToParse objectAtIndex:a];
 		WSNotice *notice = [[WSNotice alloc] init];
-		notice.noticeID = 
+		//ID, title, details,documentID,audience,expires,dateposted
+		notice.noticeID = [[el elementsForName:@"ID"] objectAtIndex:0];
+		@try {
+			notice.noticeID = [[[el elementsForName:@"ID"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			notice.description = [[[el elementsForName:@"details"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			notice.title = [[[el elementsForName:@"title"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			NSString *dateString = [[[el elementsForName:@"dateposted"] objectAtIndex:0] stringValue];
+			notice.addedDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			NSString *dateString = [[[el elementsForName:@"expires"] objectAtIndex:0] stringValue];
+			notice.removalDate = [NSDate dateFromString:dateString withFormat:@"yyyyMMdd"];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			notice.audience = [[[[el elementsForName:@"audience"] objectAtIndex:0] stringValue] integerValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		@try {
+			notice.documentID = [[[el elementsForName:@"documentID"] objectAtIndex:0] stringValue];
+		}
+		@catch (NSException *exception) {
+			NSLog(@"%@",exception);
+		}
+		//NSLog(@"%@",notice);
+		[notice autorelease];
 		[notices addObject:notice];
 	}
 	

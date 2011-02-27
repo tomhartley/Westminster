@@ -38,6 +38,7 @@
 		E29A27141236C73600C084B7 /* WSAlmanackController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A27121236C73600C084B7 /* WSAlmanackController.m */; };
 		E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A27131236C73600C084B7 /* WSAlmanackController.xib */; };
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
+		E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D7449131A9C0800B05163 /* WSNoticeCell.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
 		E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */; };
 		E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */; };
@@ -154,6 +155,8 @@
 		E29A27131236C73600C084B7 /* WSAlmanackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAlmanackController.xib; path = Classes/Controllers/WSAlmanackController.xib; sourceTree = "<group>"; };
 		E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDataFetcher.h; path = Model/WSDataFetcher.h; sourceTree = "<group>"; };
 		E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSDataFetcher.m; path = Model/WSDataFetcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E29D7448131A9C0800B05163 /* WSNoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNoticeCell.h; sourceTree = "<group>"; };
+		E29D7449131A9C0800B05163 /* WSNoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNoticeCell.m; sourceTree = "<group>"; };
 		E2A3710012F477C700061B2D /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
 		E2A95F1913076360009CE9ED /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
 		E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 			children = (
 				E2D5A3D7130473BB00908FC4 /* WSPrepViewCell.h */,
 				E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */,
+				E29D7448131A9C0800B05163 /* WSNoticeCell.h */,
+				E29D7449131A9C0800B05163 /* WSNoticeCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -636,6 +641,7 @@
 				E228C89A130F626600E135FF /* WSAboutController.m in Sources */,
 				E212BEBC130FE8360009F2D2 /* WSProfileController.m in Sources */,
 				E212BED2130FEC910009F2D2 /* WSProfile.m in Sources */,
+				E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
