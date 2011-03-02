@@ -49,11 +49,15 @@
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];
 		[[WSDataFetcher sharedInstance] downloadAll];
 	}
-	
+	tabBarController.selectedIndex = 1;
+	[NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(resetTab) userInfo:nil repeats:NO];
 	[window makeKeyAndVisible];
     return YES;
 }
 
+-(void)resetTab {
+	tabBarController.selectedIndex = 0;
+}
 - (void)applicationWillTerminate:(UIApplication *)application {
 	[[GANTracker sharedTracker] trackEvent:@"state"
 									action:@"quit"

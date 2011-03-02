@@ -131,7 +131,7 @@
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[[notices objectAtIndex:indexPath.row] toggleExpansion];
-	[[aTableView cellForRowAtIndexPath:indexPath] setExpanded:[[notices objectAtIndex:indexPath.row] expanded]];
+	[(WSNoticeCell *)[aTableView cellForRowAtIndexPath:indexPath] setExpanded:[[notices objectAtIndex:indexPath.row] expanded]];
 	[tableView beginUpdates];
 	[tableView endUpdates];
 	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];

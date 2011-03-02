@@ -140,11 +140,13 @@
 }
 - (BOOL) documentInteractionController: (UIDocumentInteractionController *) theController performAction: (SEL) action {
 	if (action == @selector(print:)) {
-		UIPrintInteractionController *controller = [UIPrintInteractionController sharedPrintController];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40200
+		UIPrintInteractionController *controller = [NSClassFromString(@"UIPrintInteractionController")  sharedPrintController];
 		controller.printingItem = theController.URL;
 		controller.delegate = self;
 		[controller presentFromRect:downloadButton.frame inView:self.view animated:YES completionHandler:nil];
 		return YES;
+#endif
 	}
 	return NO;
 }
