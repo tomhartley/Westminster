@@ -65,6 +65,7 @@
 	cell.description.text = [[notices objectAtIndex:indexPath.row] description];
 	cell.title.text = [[notices objectAtIndex:indexPath.row] title];
 	cell.expanded = [[notices objectAtIndex:indexPath.row] expanded];
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	//cell.backgroundColor = [UIColor lightGrayColor];
     return cell;
 }
@@ -81,6 +82,7 @@
     [super viewDidLoad];
 	[self updateNotices];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNotices) name:@"WSNoticesUpdatedNotification" object:nil];
+	tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)viewDidUnload

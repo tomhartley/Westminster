@@ -18,16 +18,23 @@
         // Initialization code
 		description = [[UILabel alloc] init];
 		title = [[UILabel alloc] init];
+		titleBGView = [[UIView alloc] init];
+		[self addSubview:titleBGView];
 		[self addSubview:description];
 		[self addSubview:title];
 		description.backgroundColor = [UIColor clearColor];
 		description.numberOfLines=0;
 		title.numberOfLines=0;
+		title.backgroundColor = [UIColor clearColor];
+		title.shadowColor = [UIColor whiteColor];
+		title.shadowOffset = CGSizeMake(0, 1);
 		title.font = [UIFont systemFontOfSize:17];
+		title.layer.cornerRadius = 3;
 		description.font = [UIFont systemFontOfSize:14];
 		description.lineBreakMode = UILineBreakModeWordWrap;
 		title.lineBreakMode = UILineBreakModeWordWrap;
-		title.backgroundColor = [UIColor lightGrayColor];
+		titleBGView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+		
     }
 	[self setNeedsLayout];
     return self;
@@ -48,12 +55,13 @@
 }
 //10 pixel margin on the left and right
 -(void)layoutSubviews {
+	int width = self.frame.size.width - 20;
 	if (expanded) {
 		//Layout for expanded version
-		int width = self.frame.size.width - 20;
         CGSize titleSize = [title.text sizeWithFont:[UIFont systemFontOfSize:17]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
         CGSize descriptionSize = [description.text sizeWithFont:[UIFont systemFontOfSize:14]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
 		title.frame = CGRectMake(10, 5, width, titleSize.height);
+		titleBGView.frame = CGRectMake(0, 5, width+20, titleSize.height);
 		description.frame=CGRectMake(10, title.frame.size.height+10, descriptionSize.width, descriptionSize.height);
         [UIView setAnimationsEnabled:YES];
         [UIView beginAnimations:@"alpha" context:nil];
@@ -62,12 +70,14 @@
         [UIView commitAnimations];
 	} else {
 		//Layout for non-expanded version
+        CGSize titleSize = [title.text sizeWithFont:[UIFont systemFontOfSize:17]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
+		titleBGView.frame = CGRectMake(0, 5, width+20, titleSize.height);
         [UIView setAnimationsEnabled:YES];
         [UIView beginAnimations:@"alpha" context:nil];
         [UIView setAnimationDuration:0.3];
         [description setAlpha:0];
         [UIView commitAnimations];
-		title.frame=CGRectMake(10.0, 5.0, self.frame.size.width-20, [self getHeight]-10);
+		title.frame=CGRectMake(10.0, 5.0, self.frame.size.width-20, titleSize.height);
 	}
 }
 

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
 
 @interface WSNoticeCell : UITableViewCell {
     UILabel *description;
 	UILabel *title;
+	UIView *titleBGView;
 	BOOL expanded;
 }
 
