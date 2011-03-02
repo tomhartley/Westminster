@@ -119,12 +119,12 @@
 	//if (!expanded) return 55;
 	int width = tableView.frame.size.width - 20;
 	//Get the height of the title (5 px margin above + below)
-	CGSize titleSize = [[[notices objectAtIndex:row] title] sizeWithFont:[UIFont systemFontOfSize:17] forWidth:width lineBreakMode:UILineBreakModeWordWrap];
+    CGSize titleSize = [[[notices objectAtIndex:row] title] sizeWithFont:[UIFont systemFontOfSize:17]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
 	if (![[notices objectAtIndex:row] expanded]) {
 		return titleSize.height+10;
 	}
 	//5 px + at top and bottom
-	CGSize descriptionSize = [[[notices objectAtIndex:row] description] sizeWithFont:[UIFont systemFontOfSize:14] forWidth:width lineBreakMode:UILineBreakModeWordWrap];
+    CGSize descriptionSize = [[[notices objectAtIndex:row] description] sizeWithFont:[UIFont systemFontOfSize:14]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
 	return descriptionSize.height+15+titleSize.height;
 }
 
@@ -134,6 +134,6 @@
 	[[aTableView cellForRowAtIndexPath:indexPath] setExpanded:[[notices objectAtIndex:indexPath.row] expanded]];
 	[tableView beginUpdates];
 	[tableView endUpdates];
-	//[tableView reloadData];
+	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 }
 @end

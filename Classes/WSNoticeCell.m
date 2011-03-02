@@ -37,28 +37,36 @@
 	//if (!expanded) return 55;
 	int width = [self superview].frame.size.width - 20;
 	//Get the height of the title (5 px margin above + below)
-	CGSize titleSize = [title.text sizeWithFont:[UIFont systemFontOfSize:17] forWidth:width lineBreakMode:UILineBreakModeWordWrap];
+    CGSize titleSize = [title.text sizeWithFont:[UIFont systemFontOfSize:17]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
 	if (!expanded) {
 		return titleSize.height+10;
 	}
 	//5 px + at top and bottom
-	CGSize descriptionSize = [description.text sizeWithFont:[UIFont systemFontOfSize:14] forWidth:width lineBreakMode:UILineBreakModeWordWrap];
+    CGSize descriptionSize = [description.text sizeWithFont:[UIFont systemFontOfSize:14]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
+
 	return descriptionSize.height+15+titleSize.height;
 }
-
 //10 pixel margin on the left and right
 -(void)layoutSubviews {
 	if (expanded) {
 		//Layout for expanded version
 		int width = self.frame.size.width - 20;
-		CGSize titleSize = [title.text sizeWithFont:[UIFont systemFontOfSize:17] forWidth:width lineBreakMode:UILineBreakModeWordWrap];
-		CGSize descriptionSize = [description.text sizeWithFont:[UIFont systemFontOfSize:14] forWidth:width lineBreakMode:UILineBreakModeWordWrap];
+        CGSize titleSize = [title.text sizeWithFont:[UIFont systemFontOfSize:17]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
+        CGSize descriptionSize = [description.text sizeWithFont:[UIFont systemFontOfSize:14]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
 		title.frame = CGRectMake(10, 5, width, titleSize.height);
 		description.frame=CGRectMake(10, title.frame.size.height+10, descriptionSize.width, descriptionSize.height);
-		description.hidden=FALSE;
+        [UIView setAnimationsEnabled:YES];
+        [UIView beginAnimations:@"alpha" context:nil];
+        [UIView setAnimationDuration:0.3];
+        [description setAlpha:1];
+        [UIView commitAnimations];
 	} else {
 		//Layout for non-expanded version
-		description.hidden=TRUE;
+        [UIView setAnimationsEnabled:YES];
+        [UIView beginAnimations:@"alpha" context:nil];
+        [UIView setAnimationDuration:0.3];
+        [description setAlpha:0];
+        [UIView commitAnimations];
 		title.frame=CGRectMake(10.0, 5.0, self.frame.size.width-20, [self getHeight]-10);
 	}
 }
