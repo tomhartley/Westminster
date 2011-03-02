@@ -28,9 +28,9 @@
 		E2897143130705F0005483A6 /* WSDetailPrep.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2897141130705F0005483A6 /* WSDetailPrep.xib */; };
 		E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */; };
 		E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */; };
-		E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26E81236C6F700C084B7 /* UIKit.framework */; };
-		E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26EA1236C6F700C084B7 /* Foundation.framework */; };
-		E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26EC1236C6F700C084B7 /* CoreGraphics.framework */; };
+		E29A26E91236C6F700C084B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26E81236C6F700C084B7 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26EA1236C6F700C084B7 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29A26EC1236C6F700C084B7 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E29A26F21236C6F700C084B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E29A26F01236C6F700C084B7 /* InfoPlist.strings */; };
 		E29A26F41236C6F700C084B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F31236C6F700C084B7 /* main.m */; };
 		E29A26F71236C6F700C084B7 /* WestminsterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */; };
@@ -40,7 +40,7 @@
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
 		E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D7449131A9C0800B05163 /* WSNoticeCell.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
-		E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */; };
+		E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */; };
 		E2AE1C5212FED04500A5CE4E /* WSAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5012FED04500A5CE4E /* WSAuthController.m */; };
 		E2AE1C5312FED04500A5CE4E /* WSAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */; };
@@ -65,7 +65,7 @@
 		E2F88BB112FDEA5B00D5D078 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6912FDEA5B00D5D078 /* ASIInputStream.m */; };
 		E2F88BB212FDEA5B00D5D078 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B6B12FDEA5B00D5D078 /* ASINetworkQueue.m */; };
 		E2F88BD512FDF2B400D5D078 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88BD412FDF2B400D5D078 /* Reachability.m */; };
-		E2FECD0512FDF85F0028A348 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0412FDF85F0028A348 /* CFNetwork.framework */; };
+		E2FECD0512FDF85F0028A348 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0412FDF85F0028A348 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E2FECD0712FDF8720028A348 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */; };
 		E2FECD0912FDF87B0028A348 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */; };
 		E2FECD0B12FDF8960028A348 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */; };
@@ -737,7 +737,7 @@
 					src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -775,7 +775,7 @@
 					src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
