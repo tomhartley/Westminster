@@ -116,18 +116,18 @@
 	[[WSDataFetcher sharedInstance] updateNotices];
 }
 
-//Font sizes: 14 for title, 12 for description, system font
+//Components of a row, height wise: 5 px blank, height + 10 +10at top and bottom for bg, 5 px, description,5px
 -(int)getHeightForRow:(int)row {
 	//if (!expanded) return 55;
 	int width = tableView.frame.size.width - 20;
 	//Get the height of the title (5 px margin above + below)
     CGSize titleSize = [[[notices objectAtIndex:row] title] sizeWithFont:[UIFont systemFontOfSize:17]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
 	if (![[notices objectAtIndex:row] expanded]) {
-		return titleSize.height+10;
+		return titleSize.height+30;
 	}
 	//5 px + at top and bottom
     CGSize descriptionSize = [[[notices objectAtIndex:row] description] sizeWithFont:[UIFont systemFontOfSize:14]constrainedToSize:CGSizeMake(width,10000) lineBreakMode:UILineBreakModeWordWrap];
-	return descriptionSize.height+15+titleSize.height;
+	return descriptionSize.height+35+titleSize.height;
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

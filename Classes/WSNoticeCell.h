@@ -21,5 +21,4 @@
 @property (nonatomic) BOOL expanded;
 
 -(void)toggleExpansion;
--(int)getHeight;
 @end

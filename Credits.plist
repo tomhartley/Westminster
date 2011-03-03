@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>People</key>
+	<array>
+		<dict>
+			<key>Name</key>
+			<string>Tom Hartley</string>
+			<key>Job</key>
+			<string>Concept, User Interface and Programming</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>William Wood</string>
+			<key>Job</key>
+			<string>Concept, testing and general guidance</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Jed Thompson</string>
+			<key>Job</key>
+			<string>User interface guidance</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Mr. Hindley</string>
+			<key>Job</key>
+			<string>Creation of API to access intranet data</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Ben Copsey</string>
+			<key>Job</key>
+			<string>Created ASIHTTP Library used in app</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Devin Ross</string>
+			<key>Job</key>
+			<string>Created Tapku Library used in app</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Joseph Wain</string>
+			<key>Job</key>
+			<string>Creation of Glyphish icons used within app</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Alex Matthews</string>
+			<key>Job</key>
+			<string>Beta testing</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Harry Lewis</string>
+			<key>Job</key>
+			<string>Beta testing</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Angus Mylne</string>
+			<key>Job</key>
+			<string>Beta testing</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Eish Sumra</string>
+			<key>Job</key>
+			<string>Beta testing</string>
+		</dict>
+	</array>
+</dict>
+</plist>

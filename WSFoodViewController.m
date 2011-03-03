@@ -27,7 +27,7 @@
 	[weekFoods retain];
 	tableViews = [[NSMutableArray alloc] init];
 	delegates = [[NSMutableArray alloc] init];
-	[NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(layoutSubviews) userInfo:nil repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(layoutSubviews) userInfo:nil repeats:NO];
 }
 
 -(void)updateTableViews {
@@ -65,6 +65,7 @@
 			[delegate release];
 		}
 	}
+	[self updateTableViews];
 	//Get values for setting up
 	int w = scrollView.frame.size.width;
 	int h = scrollView.frame.size.height;

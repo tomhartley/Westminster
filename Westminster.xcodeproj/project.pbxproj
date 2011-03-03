@@ -50,6 +50,10 @@
 		E2AE1C7212FF3CA300A5CE4E /* WSNoticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */; };
 		E2AE1C7312FF3CA300A5CE4E /* WSNoticeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */; };
 		E2B05BB813131B4B00D2E7CD /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B05BB713131B4B00D2E7CD /* 111-user.png */; };
+		E2CC48E41320294D000B7138 /* WSCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CC48E21320294C000B7138 /* WSCreditsController.m */; };
+		E2CC48E51320294D000B7138 /* WSCreditsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CC48E31320294D000B7138 /* WSCreditsController.xib */; };
+		E2CC48E7132029CE000B7138 /* Credits.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2CC48E6132029CE000B7138 /* Credits.plist */; };
+		E2CC48E913203A8E000B7138 /* 166-newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CC48E813203A8E000B7138 /* 166-newspaper.png */; };
 		E2D05952125548AC00696D71 /* WSDayFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D05951125548AC00696D71 /* WSDayFood.m */; };
 		E2D542F01304878900C22202 /* WSPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D542EF1304878900C22202 /* WSPrep.m */; };
 		E2D5A3D61304737000908FC4 /* WSPrepController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5A3D51304737000908FC4 /* WSPrepController.m */; };
@@ -172,6 +176,11 @@
 		E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNoticeController.m; path = ../WSNoticeController.m; sourceTree = "<group>"; };
 		E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSNoticeController.xib; sourceTree = "<group>"; };
 		E2B05BB713131B4B00D2E7CD /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
+		E2CC48E11320294C000B7138 /* WSCreditsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCreditsController.h; sourceTree = "<group>"; };
+		E2CC48E21320294C000B7138 /* WSCreditsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCreditsController.m; sourceTree = "<group>"; };
+		E2CC48E31320294D000B7138 /* WSCreditsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSCreditsController.xib; path = Classes/WSCreditsController.xib; sourceTree = "<group>"; };
+		E2CC48E6132029CE000B7138 /* Credits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credits.plist; sourceTree = "<group>"; };
+		E2CC48E813203A8E000B7138 /* 166-newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "166-newspaper.png"; sourceTree = "<group>"; };
 		E2D05950125548AC00696D71 /* WSDayFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSDayFood.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E2D05951125548AC00696D71 /* WSDayFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSDayFood.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E2D542EE1304878800C22202 /* WSPrep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSPrep.h; path = Model/WSPrep.h; sourceTree = "<group>"; };
@@ -252,6 +261,7 @@
 		E212BEB7130FD83A0009F2D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E2CC48E813203A8E000B7138 /* 166-newspaper.png */,
 				E2B05BB713131B4B00D2E7CD /* 111-user.png */,
 				E212BEB5130FD8350009F2D2 /* 18-envelope.png */,
 				E2A3710012F477C700061B2D /* 48-fork-and-knife.png */,
@@ -263,6 +273,7 @@
 		E212BEB8130FD8570009F2D2 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				E2CC48E31320294D000B7138 /* WSCreditsController.xib */,
 				E212BEBB130FE8360009F2D2 /* WSProfileController.xib */,
 				E228C899130F626600E135FF /* WSAboutController.xib */,
 				E2897141130705F0005483A6 /* WSDetailPrep.xib */,
@@ -279,6 +290,8 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2CC48E11320294C000B7138 /* WSCreditsController.h */,
+				E2CC48E21320294C000B7138 /* WSCreditsController.m */,
 				E228C897130F626600E135FF /* WSAboutController.h */,
 				E228C898130F626600E135FF /* WSAboutController.m */,
 				E2D5A3D41304737000908FC4 /* WSPrepController.h */,
@@ -356,6 +369,7 @@
 		E29A26DF1236C6F700C084B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2CC48E6132029CE000B7138 /* Credits.plist */,
 				E212BEB8130FD8570009F2D2 /* Nibs */,
 				E212BEB7130FD83A0009F2D2 /* Images */,
 				E225589812FEBC2100D34090 /* iconiPad.png */,
@@ -598,6 +612,9 @@
 				E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */,
 				E212BEBD130FE8360009F2D2 /* WSProfileController.xib in Resources */,
 				E2B05BB813131B4B00D2E7CD /* 111-user.png in Resources */,
+				E2CC48E51320294D000B7138 /* WSCreditsController.xib in Resources */,
+				E2CC48E7132029CE000B7138 /* Credits.plist in Resources */,
+				E2CC48E913203A8E000B7138 /* 166-newspaper.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +659,7 @@
 				E212BEBC130FE8360009F2D2 /* WSProfileController.m in Sources */,
 				E212BED2130FEC910009F2D2 /* WSProfile.m in Sources */,
 				E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */,
+				E2CC48E41320294D000B7138 /* WSCreditsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,8 +739,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -748,8 +766,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
+				PROVISIONING_PROFILE = "D95F39FC-843F-457A-AEBD-F845DC13B226";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D95F39FC-843F-457A-AEBD-F845DC13B226";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -760,8 +778,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -786,8 +804,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
+				PROVISIONING_PROFILE = "D95F39FC-843F-457A-AEBD-F845DC13B226";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D95F39FC-843F-457A-AEBD-F845DC13B226";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

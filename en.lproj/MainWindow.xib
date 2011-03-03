@@ -45,6 +45,7 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -67,6 +68,10 @@
 				<object class="IBUIViewController" key="IBUISelectedViewController" id="200927753">
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="231228707">
 						<string key="IBUITitle">Notices</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">166-newspaper.png</string>
+						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<array key="IBUIToolbarItems" id="0"/>
@@ -131,7 +136,6 @@
 						<array class="NSMutableArray" key="IBUIViewControllers">
 							<object class="IBUIViewController" id="188314736">
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="449715403">
-									<reference key="IBUINavigationBar"/>
 									<string key="IBUITitle">Prep Reminders</string>
 									<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="625368357">
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -198,6 +202,7 @@
 					<int key="NSvFlags">266</int>
 					<string key="NSFrame">{{0, 431}, {320, 49}}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSNextKeyView"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
 						<bytes key="NSWhite">MCAwAA</bytes>
@@ -427,6 +432,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="111-user.png">{24, 21}</string>
 			<string key="117-todo.png">{18, 19}</string>
+			<string key="166-newspaper.png">{28, 23}</string>
 			<string key="18-envelope.png">{24, 16}</string>
 			<string key="48-fork-and-knife.png">{18, 26}</string>
 		</dictionary>

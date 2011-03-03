@@ -15,5 +15,6 @@
     
 }
 - (IBAction)email:(id)sender;
+- (IBAction)credits:(id)sender;
 
 @end

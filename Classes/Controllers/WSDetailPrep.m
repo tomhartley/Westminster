@@ -153,7 +153,7 @@
 
 -(void)documentDownloaded:(ASIHTTPRequest *)reqy {
 	//NSLog(req.downloadDestinationPath);
-	docControl = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:req.downloadDestinationPath]];
+	docControl = [NSClassFromString(@"UIDocumentInteractionController") interactionControllerWithURL:[NSURL fileURLWithPath:req.downloadDestinationPath]];
 	docControl.delegate = self;
 	[docControl retain];
 	fileDownloaded = YES;
