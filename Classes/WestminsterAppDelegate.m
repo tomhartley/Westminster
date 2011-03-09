@@ -21,12 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	openedDate = [[NSDate date] retain];
 	NSError *error;
+	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1" dispatchPeriod:60 delegate:nil];
 	if (![[GANTracker sharedTracker] trackEvent:@"state"
 										 action:@"opened"
 										  label:nil
 										  value:-1
 									  withError:&error]) {
-		//NSLog(@"%@", error);
+		NSLog(@"%@", error);
 	}
 			
 	
@@ -49,7 +50,6 @@
 	}
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
 	[window makeKeyAndVisible];
-	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1" dispatchPeriod:60 delegate:nil];
     return YES;
 }
 
