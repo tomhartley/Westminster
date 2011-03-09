@@ -16,7 +16,7 @@
 -(BOOL)containsDocument {
 	
 	
-	return ! ([documentID isEqualToString:@""]);
+	return !documentID==nil;
 }
 
 @end
