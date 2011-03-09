@@ -15,7 +15,7 @@
 -(void)mealsFinished:(ASIHTTPRequest *)request {
 	NSArray *meals = [[[[WSXMLDataParser alloc] init] autorelease] parseMeals:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentFood:meals];
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Meals"];
+	//[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Meals"];
 	NSLog(@"Downloaded Meals");
 }
 
@@ -28,7 +28,7 @@
 -(void)prepsFinished:(ASIHTTPRequest *)request {
 	NSArray *prep = [[[[WSXMLDataParser alloc] init] autorelease] parsePreps:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentPrep:prep];
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Preps"];
+	//[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Preps"];
 	NSLog(@"Downloaded Preps");
 }
 
@@ -41,7 +41,7 @@
 -(void)noticesFinished:(ASIHTTPRequest *)request {
 	NSArray *notices = [[[[WSXMLDataParser alloc] init] autorelease] parseNotices:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentNotices:notices];
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Notices"];
+	//[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Notices"];
 	NSLog(@"Downloaded Notices");
 }
 
@@ -54,7 +54,7 @@
 -(void)profileFinished:(ASIHTTPRequest *)request {
 	WSProfile *profile = [[[[WSXMLDataParser alloc] init] autorelease] parseProfile:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentProfile:profile];
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Downloaded Profile"];
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:[NSString stringWithFormat:@"Hi %@",profile.preferredName]];
 	NSLog(@"Downloaded Profile");
 }
 

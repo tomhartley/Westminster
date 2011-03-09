@@ -24,6 +24,9 @@
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
+		E2871E4113258D57009FB406 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4013258D57009FB406 /* Default.png */; };
+		E2871E4313258DCA009FB406 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4213258DCA009FB406 /* Default-Portrait~ipad.png */; };
+		E2871E4513258DD6009FB406 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4413258DD6009FB406 /* Default-Landscape~ipad.png */; };
 		E2897142130705F0005483A6 /* WSDetailPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = E2897140130705F0005483A6 /* WSDetailPrep.m */; };
 		E2897143130705F0005483A6 /* WSDetailPrep.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2897141130705F0005483A6 /* WSDetailPrep.xib */; };
 		E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */; };
@@ -137,6 +140,9 @@
 		E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MealsTableViewDelegate.m; path = ../MealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E262E05B1300A1FC008D4E18 /* WSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDataManager.h; sourceTree = "<group>"; };
 		E262E05C1300A1FD008D4E18 /* WSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDataManager.m; sourceTree = "<group>"; };
+		E2871E4013258D57009FB406 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E2871E4213258DCA009FB406 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		E2871E4413258DD6009FB406 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		E289713F130705F0005483A6 /* WSDetailPrep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDetailPrep.h; path = Controllers/WSDetailPrep.h; sourceTree = "<group>"; };
 		E2897140130705F0005483A6 /* WSDetailPrep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSDetailPrep.m; path = Controllers/WSDetailPrep.m; sourceTree = "<group>"; };
 		E2897141130705F0005483A6 /* WSDetailPrep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSDetailPrep.xib; path = Classes/Controllers/WSDetailPrep.xib; sourceTree = "<group>"; };
@@ -261,6 +267,9 @@
 		E212BEB7130FD83A0009F2D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E2871E4413258DD6009FB406 /* Default-Landscape~ipad.png */,
+				E2871E4213258DCA009FB406 /* Default-Portrait~ipad.png */,
+				E2871E4013258D57009FB406 /* Default.png */,
 				E2CC48E813203A8E000B7138 /* 166-newspaper.png */,
 				E2B05BB713131B4B00D2E7CD /* 111-user.png */,
 				E212BEB5130FD8350009F2D2 /* 18-envelope.png */,
@@ -615,6 +624,9 @@
 				E2CC48E51320294D000B7138 /* WSCreditsController.xib in Resources */,
 				E2CC48E7132029CE000B7138 /* Credits.plist in Resources */,
 				E2CC48E913203A8E000B7138 /* 166-newspaper.png in Resources */,
+				E2871E4113258D57009FB406 /* Default.png in Resources */,
+				E2871E4313258DCA009FB406 /* Default-Portrait~ipad.png in Resources */,
+				E2871E4513258DD6009FB406 /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,7 +767,7 @@
 					src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -793,7 +805,7 @@
 					src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

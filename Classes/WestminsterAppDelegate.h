@@ -21,4 +21,10 @@
 
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
+-(void)updatePreps;
+/*-(void)setSignedOutTabs;
+-(void)setSignedInPupilsTabs;
+-(void)setSignedInParentsTabs;
+-(void)setSignedInTeachersTabs;
+*/
 @end

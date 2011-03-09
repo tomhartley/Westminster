@@ -9,6 +9,7 @@
 #import "WestminsterAppDelegate.h"
 #import "WSDataFetcher.h"
 #import "GANTracker.h"
+#import "WSDataManager.h"
 
 @implementation WestminsterAppDelegate
 
@@ -19,16 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	openedDate = [[NSDate date] retain];
-	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1"
-											   dispatchPeriod:10
-													 delegate:nil];
 	NSError *error;
 	if (![[GANTracker sharedTracker] trackEvent:@"state"
 										 action:@"opened"
 										  label:nil
 										  value:-1
 									  withError:&error]) {
-		NSLog(@"%@", error);
+		//NSLog(@"%@", error);
 	}
 			
 	
@@ -49,15 +47,17 @@
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];
 		[[WSDataFetcher sharedInstance] downloadAll];
 	}
-	tabBarController.selectedIndex = 1;
-	[NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(resetTab) userInfo:nil repeats:NO];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
 	[window makeKeyAndVisible];
+	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1" dispatchPeriod:60 delegate:nil];
     return YES;
 }
 
--(void)resetTab {
-	tabBarController.selectedIndex = 0;
+-(void)updatePreps {
+	NSArray *preps = [[WSDataManager sharedInstance] currentPrep];
+	[[[[tabBarController tabBar] items] objectAtIndex:1] setBadgeValue: [NSString stringWithFormat:@"%d",[preps count]]];
 }
+
 - (void)applicationWillTerminate:(UIApplication *)application {
 	[[GANTracker sharedTracker] trackEvent:@"state"
 									action:@"quit"

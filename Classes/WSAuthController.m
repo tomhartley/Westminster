@@ -41,7 +41,7 @@
 {
     [super viewDidAppear:animated];
 	CAGradientLayer *gradient = [CAGradientLayer layer];
-	gradient.frame = self.view.frame;
+	gradient.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 	gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor lightGrayColor] CGColor], nil];
 	[self.view.layer insertSublayer:gradient atIndex:0];
 	

@@ -8,6 +8,7 @@
 
 #import "WSCreditsController.h"
 #import <TapkuLibrary/TapkuLibrary.h>
+#import "GANTracker.h"
 
 
 @implementation WSCreditsController
@@ -50,6 +51,11 @@
 }
 
 #pragma mark - View lifecycle
+
+-(void)viewDidAppear:(BOOL)animated {
+	[[GANTracker sharedTracker] trackPageview:@"/creditsController"
+									withError:nil];
+}
 
 - (void)viewDidLoad
 {

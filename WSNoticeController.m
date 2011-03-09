@@ -9,6 +9,7 @@
 #import "WSNoticeController.h"
 #import "WSDataManager.h"
 #import "WSDataFetcher.h"
+#import "GANTracker.h"
 
 
 @implementation WSNoticeController
@@ -77,6 +78,11 @@
 
 #pragma mark - View lifecycle
 
+-(void)viewDidAppear:(BOOL)animated {
+	[[GANTracker sharedTracker] trackPageview:@"/noticeController"
+									withError:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -109,10 +115,14 @@
 	[notices retain];
 	//self.parentViewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",[notices count]];
 	[tableView reloadData];
-	NSLog(@"%@",[notices objectAtIndex:0]);
 }
 
 -(IBAction)refresh {
+	[[GANTracker sharedTracker] trackEvent:@"notices"
+									action:@"refresh"
+									 label:nil
+									 value:-1
+								 withError:nil];
 	[[WSDataFetcher sharedInstance] updateNotices];
 }
 
@@ -137,5 +147,10 @@
 	[tableView beginUpdates];
 	[tableView endUpdates];
 	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+	[[GANTracker sharedTracker] trackEvent:@"notices"
+									action:@"expanded"
+									 label:nil
+									 value:-1
+								 withError:nil];
 }
 @end

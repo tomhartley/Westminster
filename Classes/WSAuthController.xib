@@ -72,6 +72,7 @@
 							<int key="IBUIAutocorrectionType">1</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">3</int>
 					</object>
 					<object class="IBUILabel" id="845897973">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -155,6 +156,7 @@
 							<bool key="IBUISecureTextEntry">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">3</int>
 					</object>
 					<object class="IBUILabel" id="436800217">
 						<reference key="NSNextResponder" ref="191373211"/>
