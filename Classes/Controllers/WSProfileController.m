@@ -25,7 +25,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-	[[GANTracker sharedTracker] trackPageview:@"/prepDetailController"
+	[[GANTracker sharedTracker] trackPageview:@"/profileController"
 									withError:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:@"WSProfileUpdatedNotification" object:nil];

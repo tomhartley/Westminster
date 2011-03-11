@@ -282,9 +282,9 @@
 		E212BEB8130FD8570009F2D2 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				E228C899130F626600E135FF /* WSAboutController.xib */,
 				E2CC48E31320294D000B7138 /* WSCreditsController.xib */,
 				E212BEBB130FE8360009F2D2 /* WSProfileController.xib */,
-				E228C899130F626600E135FF /* WSAboutController.xib */,
 				E2897141130705F0005483A6 /* WSDetailPrep.xib */,
 				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
 				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
@@ -751,8 +751,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -778,8 +778,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "D95F39FC-843F-457A-AEBD-F845DC13B226";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D95F39FC-843F-457A-AEBD-F845DC13B226";
+				PROVISIONING_PROFILE = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -790,8 +790,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -816,8 +816,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "D95F39FC-843F-457A-AEBD-F845DC13B226";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D95F39FC-843F-457A-AEBD-F845DC13B226";
+				PROVISIONING_PROFILE = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

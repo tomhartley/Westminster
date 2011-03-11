@@ -27,6 +27,7 @@
 
 - (void)dealloc
 {
+	[helpers release];
     [super dealloc];
 }
 

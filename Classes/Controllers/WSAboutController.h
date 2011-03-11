@@ -12,7 +12,8 @@
 
 
 @interface WSAboutController : UIViewController <MFMailComposeViewControllerDelegate>{
-    
+	
+	IBOutlet UILabel *versionLabel;
 }
 - (IBAction)email:(id)sender;
 - (IBAction)credits:(id)sender;

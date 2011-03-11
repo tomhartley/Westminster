@@ -44,13 +44,16 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated	{
-	[[GANTracker sharedTracker] trackPageview:@"/prepDetailController"
+	NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+	versionLabel.text = [NSString stringWithFormat:@"Version: %@",version];
+	[[GANTracker sharedTracker] trackPageview:@"/aboutController"
 									withError:nil];
 		
 }
 
 - (void)viewDidUnload
 {
+    [versionLabel release];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
