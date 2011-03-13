@@ -50,23 +50,14 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+	
 	//Add a gradient in the background
     [super viewDidAppear:animated];
 	CAGradientLayer *gradient = [CAGradientLayer layer];
 	gradient.frame = self.view.frame;
 	gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor lightGrayColor] CGColor], nil];
 	[self.view.layer insertSublayer:gradient atIndex:0];
-	
-	//Set up text fields
-	initialsLabel.text = thePrep.teacherInitials;
-	navigationBar.topItem.title = thePrep.subject;
-	dueDate.text = [@"Due Date: " stringByAppendingString:[thePrep.dueDate stringWithFormat:@"dd/MM/yyyy"]];
-	privateLabel.text = thePrep.editable ? @"Private" : @"Public";
-	descriptionTextView.text = thePrep.descriptionText;
-	documentNameLabel.text = [thePrep containsDocument] ? ([thePrep.documentDescription isEqualToString:@""]? thePrep.documentFilename : thePrep.documentDescription) : @"No attachment";
-	downloadButton.enabled = [thePrep containsDocument];
-	[[GANTracker sharedTracker] trackPageview:@"/prepDetailController"
-									withError:nil];
+
 }
 
 
@@ -75,6 +66,17 @@
 	fileDownloaded = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	[self getProfile];
+	//Set up text fields
+	initialsLabel.text = thePrep.teacherInitials;
+	dueDate.text = [@"Due Date: " stringByAppendingString:[thePrep.dueDate stringWithFormat:@"dd/MM/yyyy"]];
+	privateLabel.text = thePrep.editable ? @"Private" : @"Public";
+	descriptionTextView.text = thePrep.descriptionText;
+	documentNameLabel.text = [thePrep containsDocument] ? ([thePrep.documentDescription isEqualToString:@""]? thePrep.documentFilename : thePrep.documentDescription) : @"No attachment";
+	downloadButton.enabled = [thePrep containsDocument];
+	[[GANTracker sharedTracker] trackPageview:@"/prepDetailController"
+									withError:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getProfile) name:@"WSProfileUpdatedNotification" object:nil];
 }
 
 - (void)viewDidUnload
@@ -177,4 +179,31 @@
 	[req release];
 	[self dismissModalViewControllerAnimated:YES];
 }
+
+-(void)getProfile {
+	[profile release];
+	profile = [[WSDataManager sharedInstance]currentProfile];
+	[profile retain];
+	navigationBar.tintColor = [profile primaryColor];
+	CGRect frame = CGRectMake(0, 0, [thePrep.subject sizeWithFont:[UIFont boldSystemFontOfSize:20.0]].width, 44);
+	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
+	label.backgroundColor = [UIColor clearColor];
+	label.font = [UIFont boldSystemFontOfSize:20.0];
+	label.shadowColor = [profile shadowColor];
+	if ([profile shadowOnTop]) {
+		label.shadowOffset = CGSizeMake(0, -1);
+	} else {
+		label.shadowOffset = CGSizeMake(0, 1);
+	}
+	if ([profile secondaryColor]) {
+		label.textColor = [profile secondaryColor];
+	} else {
+		label.textColor = [UIColor whiteColor];
+		label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+		label.shadowOffset = CGSizeMake(0, -1);
+	}
+	navigationBar.topItem.titleView = label;
+	label.text = thePrep.subject;
+}
+
 @end

@@ -12,6 +12,7 @@
 @interface WSProfileController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     WSProfile *profile;
 	IBOutlet UITableView *tableView;
+	IBOutlet UINavigationBar *navBar;
 }
 - (IBAction)signOut:(id)sender;
 - (IBAction)refresh:(id)sender;

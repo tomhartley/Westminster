@@ -78,7 +78,9 @@
 {
     [super viewDidLoad];
 	[self updatePreps];
+	[self getProfile];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getProfile) name:@"WSProfileUpdatedNotification" object:nil];
 	//self.tableView.backgroundColor = [UIColor blackColor];
 	self.tableView.separatorColor = [UIColor darkGrayColor];
 	self.tableView.rowHeight = 160.0;
@@ -215,14 +217,32 @@
 	 }
 #endif
 	[self presentModalViewController:[detail autorelease] animated:YES];
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+}
+
+-(void)getProfile {
+	[profile release];
+	profile = [[WSDataManager sharedInstance]currentProfile];
+	[profile retain];
+	[[((UINavigationController *)[self parentViewController]) navigationBar] setTintColor:[profile primaryColor]];
+	CGRect frame = CGRectMake(0, 0, [@"Prep Reminders" sizeWithFont:[UIFont boldSystemFontOfSize:20.0]].width, 44);
+	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
+	label.backgroundColor = [UIColor clearColor];
+	label.font = [UIFont boldSystemFontOfSize:20.0];
+	label.shadowColor = [profile shadowColor];
+	if ([profile shadowOnTop]) {
+		label.shadowOffset = CGSizeMake(0, -1);
+	} else {
+		label.shadowOffset = CGSizeMake(0, 1);
+	}
+	if ([profile secondaryColor]) {
+		label.textColor = [profile secondaryColor];
+	} else {
+		label.textColor = [UIColor whiteColor];
+		label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+		label.shadowOffset = CGSizeMake(0, -1);
+	}
+	self.navigationItem.titleView = label;
+	label.text = NSLocalizedString(@"Prep Reminders", @"");
 }
 
 @end

@@ -92,6 +92,7 @@
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[navBar release];
     [super dealloc];
 }
 
@@ -114,6 +115,8 @@
 - (void)viewDidUnload
 {
     [tableView release];
+	[navBar release];
+	navBar = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -157,6 +160,26 @@
 	[profile release];
 	profile = [[WSDataManager sharedInstance]currentProfile];
 	[profile retain];
+	navBar.tintColor = [profile primaryColor];
+	CGRect frame = CGRectMake(0, 0, [@"Profile" sizeWithFont:[UIFont boldSystemFontOfSize:20.0]].width, 44);
+	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
+	label.backgroundColor = [UIColor clearColor];
+	label.font = [UIFont boldSystemFontOfSize:20.0];
+	label.shadowColor = [profile shadowColor];
+	if ([profile shadowOnTop]) {
+		label.shadowOffset = CGSizeMake(0, -1);
+	} else {
+		label.shadowOffset = CGSizeMake(0, 1);
+	}
+	if ([profile secondaryColor]) {
+		label.textColor = [profile secondaryColor];
+	} else {
+		label.textColor = [UIColor whiteColor];
+		label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+		label.shadowOffset = CGSizeMake(0, -1);
+	}
+	navBar.topItem.titleView = label;
+	label.text = NSLocalizedString(@"Profile", @"");
 }
 
 @end

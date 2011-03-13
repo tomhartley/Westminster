@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "WSPrep.h"
-
+#import "WSProfile.h"
 
 @interface WSPrepController : UITableViewController {
     NSArray *preps;
+	WSProfile *profile;
 }
 
 -(void)updatePreps;
 -(IBAction)refresh;
 -(IBAction)signOut;
+-(void)getProfile;
 @end

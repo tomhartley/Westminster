@@ -11,6 +11,8 @@
 #import "WSPrep.h"
 #import "ASIHTTPRequest.h"
 #import "UILabel+VerticalAlign.h"
+#import "WSProfile.h"
+#import "WSDataManager.h"
 
 @interface WSDetailPrep : UIViewController <UIDocumentInteractionControllerDelegate, UIPrintInteractionControllerDelegate>{
     WSPrep *thePrep;
@@ -27,9 +29,11 @@
 	UITextView *descriptionTextView;
 	UIView *locationForProgressView;
 	ASIHTTPRequest *req;
+	WSProfile *profile;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil prep:(WSPrep *)prep;
+-(void)getProfile;
 
 @property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, retain) IBOutlet UIView *locationForProgressView;

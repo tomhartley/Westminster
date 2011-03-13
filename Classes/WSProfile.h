@@ -60,4 +60,9 @@ typedef enum {
 @property (nonatomic, retain) NSString *previousSchool;
 @property (nonatomic, retain) NSString *entryMethod;
 @property (nonatomic, retain) NSString *mobileNumber;
+
+-(UIColor *)primaryColor;
+-(UIColor *)secondaryColor;
+-(UIColor *)shadowColor;
+-(BOOL)shadowOnTop;
 @end

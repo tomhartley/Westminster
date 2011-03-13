@@ -11,4 +11,118 @@
 
 @implementation WSProfile
 @synthesize UWI,type,firstNames,surname,initials,preferredName,gender,dateOfBirth,email,dateOfArrival,scholarhsip,boarder,house,year,form,tutor,examID,examUCI,examName,previousSchool,entryMethod,mobileNumber;
+
+-(void)setHouse:(NSString *)thehouse {
+	house = thehouse;
+}
+
+-(UIColor *)primaryColor {
+	if ([self.house isEqualToString:@"Hakluyt's"]) {
+		return [UIColor colorWithRed:0 green:0 blue:0.7 alpha:1];	
+	} else if ([self.house isEqualToString:@"Grant's"]) {
+		return [UIColor colorWithRed:0.666 green:0.8666 blue:0.8666 alpha:1];
+	} else if ([self.house isEqualToString:@"Liddell's"]) {
+		return [UIColor colorWithRed:0.8 green:0.8 blue:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Wren's"]) {
+		return [UIColor colorWithWhite:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Dryden's"]) {
+		return [UIColor colorWithRed:0.7 green:0 blue:0 alpha:0];
+	} else if ([self.house isEqualToString:@"Rigaud's"]) {
+		return [UIColor colorWithRed:1 green:0.5 blue:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Busby's"]) {
+		return [UIColor colorWithRed:0.666 green:0 blue:0.2 alpha:1];
+	} else if ([self.house isEqualToString:@"Ashburnham"]) {
+		return [UIColor colorWithRed:0 green:0 blue:0.4 alpha:1];
+	} else if ([self.house isEqualToString:@"Milne's"]) {
+		return [UIColor colorWithRed:0.7 green:0 blue:0 alpha:0];
+	} else if ([self.house isEqualToString:@"Purcell's"]) {
+		return [UIColor colorWithRed:1 green:0.666 blue:0.666 alpha:1];
+	} else if ([self.house isEqualToString:@"College"]) {
+		return [UIColor colorWithRed:0 green:0.333 blue:0 alpha:1];
+	}
+	return nil;
+}
+
+
+-(UIColor *)secondaryColor {
+	if ([self.house isEqualToString:@"Hakluyt's"]) {
+		return [UIColor colorWithRed:1 green:1 blue:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Grant's"]) {
+		return [UIColor colorWithRed:0.643 green:0.094 blue:0.094 alpha:1];
+	} else if ([self.house isEqualToString:@"Liddell's"]) {
+		return [UIColor colorWithRed:0 green:0 blue:0.7 alpha:1];	
+	} else if ([self.house isEqualToString:@"Wren's"]) {
+		return [UIColor colorWithRed:1 green:0.4 blue:0.933 alpha:1];
+	} else if ([self.house isEqualToString:@"Dryden's"]) {
+		return [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+	} else if ([self.house isEqualToString:@"Rigaud's"]) {
+		return [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Busby's"]) {
+		return [UIColor colorWithRed:0.2 green:0 blue:0.666 alpha:1];
+	} else if ([self.house isEqualToString:@"Ashburnham"]) {
+		return [UIColor colorWithRed:0.3 green:1 blue:1 alpha:1];
+	} else if ([self.house isEqualToString:@"Milne's"]) {
+		return [UIColor colorWithRed:1 green:1 blue:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Purcell's"]) {
+		return [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+	} else if ([self.house isEqualToString:@"College"]) {
+		return [UIColor colorWithRed:0.666 green:0.8666 blue:0.8666 alpha:0];
+	}
+	return nil;
+}
+
+-(UIColor *)shadowColor {
+	if ([self.house isEqualToString:@"Hakluyt's"]) {
+		return [UIColor colorWithWhite:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Grant's"]) {
+		return [UIColor colorWithWhite:1.0 alpha:0.5];
+	} else if ([self.house isEqualToString:@"Liddell's"]) {
+		return [UIColor colorWithWhite:1.0 alpha:0.5];
+	} else if ([self.house isEqualToString:@"Wren's"]) {
+		return [UIColor colorWithWhite:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Dryden's"]) {
+		return [UIColor colorWithWhite:0 alpha:0.5];
+	} else if ([self.house isEqualToString:@"Rigaud's"]) {
+		return [UIColor colorWithWhite:1.0 alpha:0.5];
+	} else if ([self.house isEqualToString:@"Busby's"]) {
+		return [UIColor colorWithWhite:1.0 alpha:0.3];
+	} else if ([self.house isEqualToString:@"Ashburnham"]) {
+		return [UIColor colorWithWhite:0 alpha:1];
+	} else if ([self.house isEqualToString:@"Milne's"]) {
+		return [UIColor colorWithWhite:0 alpha:0.5];
+	} else if ([self.house isEqualToString:@"Purcell's"]) {
+		return [UIColor colorWithWhite:1.0 alpha:0.5];
+	} else if ([self.house isEqualToString:@"College"]) {
+		return [UIColor colorWithWhite:1.0 alpha:0];
+	}
+	return [UIColor colorWithWhite:1.0 alpha:0.5];
+}
+// Black on top, and white on bottom
+-(BOOL)shadowOnTop {
+	if ([self.house isEqualToString:@"Hakluyt's"]) {
+		return YES;
+	} else if ([self.house isEqualToString:@"Grant's"]) {
+		return NO;
+	} else if ([self.house isEqualToString:@"Liddell's"]) {
+		return NO;
+	} else if ([self.house isEqualToString:@"Wren's"]) {
+		return YES;
+	} else if ([self.house isEqualToString:@"Dryden's"]) {
+		return YES;
+	} else if ([self.house isEqualToString:@"Rigaud's"]) {
+		return NO;
+	} else if ([self.house isEqualToString:@"Busby's"]) {
+		return NO;
+	} else if ([self.house isEqualToString:@"Ashburnham"]) {
+		return YES;
+	} else if ([self.house isEqualToString:@"Milne's"]) {
+		return YES;
+	} else if ([self.house isEqualToString:@"Purcell's"]) {
+		return NO;
+	} else if ([self.house isEqualToString:@"College"]) {
+		return YES;
+	}
+	return NO;
+}
+
 @end
