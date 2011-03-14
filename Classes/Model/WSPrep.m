@@ -16,7 +16,7 @@
 -(BOOL)containsDocument {
 	
 	
-	return !documentID==nil;
+	return !(documentID==nil);
 }
 
 @end

@@ -36,7 +36,7 @@
 	//For each table view
 	for (int i = 0; i<7; i++) {
 		UITableView *tableView = [tableViews objectAtIndex:i];
-		MealsTableViewDelegate *delegate = tableView.delegate;
+		MealsTableViewDelegate *delegate = (MealsTableViewDelegate *) tableView.delegate;
 		//Set its delegate's food to the updated version
 		if ([weekFoods count]>i) {
 			delegate.foodDay = [weekFoods objectAtIndex:i];

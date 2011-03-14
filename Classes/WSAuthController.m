@@ -24,6 +24,8 @@
 
 - (void)dealloc
 {
+    [loginButton release];
+    [guestLoginButton release];
     [super dealloc];
 }
 
@@ -54,6 +56,10 @@
     [uNameField release];
     [pWordField release];
 	[keepLoggedInSwitch release];
+    [loginButton release];
+    loginButton = nil;
+    [guestLoginButton release];
+    guestLoginButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -79,9 +85,13 @@
 									 label:nil
 									 value:-1
 								 withError:nil];
+	loginButton.enabled = NO;
+	guestLoginButton.enabled = NO;
 }
 
 -(void)loginResponse:(NSString *)success {
+	loginButton.enabled = YES;
+	guestLoginButton.enabled = YES;
 	if ([success isEqualToString:@"YES"]) {
 		[self dismissModalViewControllerAnimated:YES];
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];

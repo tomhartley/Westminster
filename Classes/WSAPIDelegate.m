@@ -54,7 +54,11 @@
 -(void)profileFinished:(ASIHTTPRequest *)request {
 	WSProfile *profile = [[[[WSXMLDataParser alloc] init] autorelease] parseProfile:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentProfile:profile];
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:[NSString stringWithFormat:@"Hi %@",profile.preferredName]];
+	if ([profile.UWI isEqualToString:@"P09HAR01"]) {
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"All bow before you, esteemed master of the universe"];
+	} else {
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:[NSString stringWithFormat:@"Hi %@",profile.preferredName]];
+	}
 	NSLog(@"Downloaded Profile");
 }
 

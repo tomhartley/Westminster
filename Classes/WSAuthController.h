@@ -14,6 +14,8 @@
 	IBOutlet UITextField *pWordField;
 	IBOutlet UITextField *uNameField;
 	IBOutlet UISwitch *keepLoggedInSwitch;
+	IBOutlet UIButton *loginButton;
+	IBOutlet UIButton *guestLoginButton;
 }
 - (IBAction)login:(id)sender;
 - (IBAction)guestLogin:(id)sender;

@@ -17,6 +17,7 @@
 }
 
 -(UIColor *)primaryColor {
+	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.188 green:0.123 blue:0 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithRed:0 green:0 blue:0.7 alpha:1];	
 	} else if ([self.house isEqualToString:@"Grant's"]) {
@@ -45,6 +46,7 @@
 
 
 -(UIColor *)secondaryColor {
+	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.85 green:0.611 blue:0.16 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithRed:1 green:1 blue:0 alpha:1];
 	} else if ([self.house isEqualToString:@"Grant's"]) {
@@ -72,6 +74,7 @@
 }
 
 -(UIColor *)shadowColor {
+	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithWhite:0 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithWhite:0 alpha:1];
 	} else if ([self.house isEqualToString:@"Grant's"]) {
@@ -99,6 +102,7 @@
 }
 // Black on top, and white on bottom
 -(BOOL)shadowOnTop {
+	if ([UWI isEqualToString:@"P09HAR01"]) return YES;
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return YES;
 	} else if ([self.house isEqualToString:@"Grant's"]) {
