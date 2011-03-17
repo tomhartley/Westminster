@@ -30,9 +30,6 @@
 		NSLog(@"%@", error);
 	}
 			
-	
-	// Override point for customization after application launch.
-	// Add the tab bar controller's current view as a subview of the window
 	[window addSubview:tabBarController.view];
 	if ([[WSAuthManager sharedInstance] needsAuth]) {
 		WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];

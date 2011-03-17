@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WSProfile.h"
 
-
-@interface WSColouredNavigationBar : UIView {
-    
+@interface WSColouredNavigationBar : UINavigationBar {
+    WSProfile *profile;
 }
 
+-(void)updateColours;
 @end

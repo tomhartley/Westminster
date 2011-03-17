@@ -16,7 +16,12 @@
 	house = thehouse;
 }
 
+-(void)setEmail:(NSString *)theEmail {
+	email = theEmail;
+}
+
 -(UIColor *)primaryColor {
+	if ([email isEqualToString:@"william.wood@westminster.org.uk"]) return [UIColor colorWithRed:0.1 green:0.313 blue:0.431 alpha:1];
 	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.188 green:0.123 blue:0 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithRed:0 green:0 blue:0.7 alpha:1];	
@@ -46,6 +51,7 @@
 
 
 -(UIColor *)secondaryColor {
+	if ([email isEqualToString:@"william.wood@westminster.org.uk"]) return [UIColor colorWithRed:0.403 green:0.078 blue:0.372 alpha:1];
 	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.85 green:0.611 blue:0.16 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithRed:1 green:1 blue:0 alpha:1];
@@ -74,6 +80,7 @@
 }
 
 -(UIColor *)shadowColor {
+	if ([email isEqualToString:@"william.wood@westminster.org.uk"]) return [UIColor colorWithWhite:1 alpha:0.3];
 	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithWhite:0 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithWhite:0 alpha:1];
@@ -102,6 +109,7 @@
 }
 // Black on top, and white on bottom
 -(BOOL)shadowOnTop {
+	if ([email isEqualToString:@"william.wood@westminster.org.uk"]) return NO;
 	if ([UWI isEqualToString:@"P09HAR01"]) return YES;
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return YES;

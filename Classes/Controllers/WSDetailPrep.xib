@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">294</string>
+			<string key="NS.object.0">300</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -351,14 +351,6 @@
 					<int key="connectionID">28</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">navigationBar</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="151789765"/>
-					</object>
-					<int key="connectionID">34</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">dismiss:</string>
 						<reference key="source" ref="244365424"/>
@@ -381,6 +373,14 @@
 						<reference key="destination" ref="1070923701"/>
 					</object>
 					<int key="connectionID">39</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">navBar</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="151789765"/>
+					</object>
+					<int key="connectionID">40</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -502,6 +502,7 @@
 					<string>16.IBPluginDependency</string>
 					<string>16.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 					<string>29.IBPluginDependency</string>
+					<string>31.CustomClassName</string>
 					<string>31.IBPluginDependency</string>
 					<string>32.IBPluginDependency</string>
 					<string>33.IBPluginDependency</string>
@@ -521,6 +522,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="3"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>WSColouredNavigationBar</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -541,11 +543,19 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">39</int>
+			<int key="maxID">40</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">WSColouredNavigationBar</string>
+					<string key="superclassName">UINavigationBar</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WSColouredNavigationBar.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">WSDetailPrep</string>
 					<string key="superclassName">UIViewController</string>
@@ -592,6 +602,7 @@
 							<string>dueDate</string>
 							<string>initialsLabel</string>
 							<string>locationForProgressView</string>
+							<string>navBar</string>
 							<string>navigationBar</string>
 							<string>privateLabel</string>
 						</object>
@@ -604,6 +615,7 @@
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UIView</string>
+							<string>WSColouredNavigationBar</string>
 							<string>UINavigationBar</string>
 							<string>UILabel</string>
 						</object>
@@ -619,6 +631,7 @@
 							<string>dueDate</string>
 							<string>initialsLabel</string>
 							<string>locationForProgressView</string>
+							<string>navBar</string>
 							<string>navigationBar</string>
 							<string>privateLabel</string>
 						</object>
@@ -653,6 +666,10 @@
 								<string key="candidateClassName">UIView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">navBar</string>
+								<string key="candidateClassName">WSColouredNavigationBar</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">navigationBar</string>
 								<string key="candidateClassName">UINavigationBar</string>
 							</object>
@@ -677,6 +694,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">294</string>
+		<string key="IBCocoaTouchPluginVersion">300</string>
 	</data>
 </archive>

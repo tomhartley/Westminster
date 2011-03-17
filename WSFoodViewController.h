@@ -10,7 +10,6 @@
 #import "WSDayFood.h"
 #import "MealsTableViewDelegate.h"
 #import <QuartzCore/QuartzCore.h>
-#import "WSProfile.h"
 
 @interface WSFoodViewController : UIViewController <UIScrollViewDelegate> {
 	NSArray *weekFoods;
@@ -19,10 +18,8 @@
 	IBOutlet UIScrollView *scrollView;
 	IBOutlet UIPageControl *pageControl;
 	IBOutlet UILabel *dateLabel;
-	WSProfile *profile;
 	IBOutlet UINavigationBar *navBar;
 }
--(void)getProfile;
 - (void)updateTableViews;
 - (void)layoutSubviews;
 -(void)updateMeals;

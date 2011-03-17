@@ -22,6 +22,7 @@
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
+		E26DADCD1332737600B6B0EC /* WSColouredNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */; };
 		E276926A132D4133000302C2 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2769269132D4133000302C2 /* libTapkuLibrary.a */; };
 		E276926C132D415E000302C2 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276926B132D415E000302C2 /* TapkuLibrary.bundle */; };
 		E2871E4113258D57009FB406 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4013258D57009FB406 /* Default.png */; };
@@ -38,8 +39,6 @@
 		E29A26F41236C6F700C084B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F31236C6F700C084B7 /* main.m */; };
 		E29A26F71236C6F700C084B7 /* WestminsterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */; };
 		E29A26FA1236C6F700C084B7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A26F81236C6F700C084B7 /* MainWindow.xib */; };
-		E29A27141236C73600C084B7 /* WSAlmanackController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A27121236C73600C084B7 /* WSAlmanackController.m */; };
-		E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A27131236C73600C084B7 /* WSAlmanackController.xib */; };
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
 		E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D7449131A9C0800B05163 /* WSNoticeCell.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
@@ -123,6 +122,8 @@
 		E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MealsTableViewDelegate.m; path = ../MealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E262E05B1300A1FC008D4E18 /* WSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDataManager.h; sourceTree = "<group>"; };
 		E262E05C1300A1FD008D4E18 /* WSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDataManager.m; sourceTree = "<group>"; };
+		E26DADCB1332737600B6B0EC /* WSColouredNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSColouredNavigationBar.h; path = View/WSColouredNavigationBar.h; sourceTree = "<group>"; };
+		E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSColouredNavigationBar.m; path = View/WSColouredNavigationBar.m; sourceTree = "<group>"; };
 		E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = tapku/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		E2769269132D4133000302C2 /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTapkuLibrary.a; sourceTree = SOURCE_ROOT; };
 		E276926B132D415E000302C2 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = tapku/TapkuLibrary.bundle; sourceTree = "<group>"; };
@@ -146,9 +147,6 @@
 		E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WestminsterAppDelegate.h; sourceTree = "<group>"; };
 		E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WestminsterAppDelegate.m; sourceTree = "<group>"; };
 		E29A26F91236C6F700C084B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		E29A27111236C73600C084B7 /* WSAlmanackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSAlmanackController.h; path = Controllers/WSAlmanackController.h; sourceTree = "<group>"; };
-		E29A27121236C73600C084B7 /* WSAlmanackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSAlmanackController.m; path = Controllers/WSAlmanackController.m; sourceTree = "<group>"; };
-		E29A27131236C73600C084B7 /* WSAlmanackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAlmanackController.xib; path = Classes/Controllers/WSAlmanackController.xib; sourceTree = "<group>"; };
 		E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDataFetcher.h; path = Model/WSDataFetcher.h; sourceTree = "<group>"; };
 		E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSDataFetcher.m; path = Model/WSDataFetcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E29D7448131A9C0800B05163 /* WSNoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNoticeCell.h; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
 				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
 				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
-				E29A27131236C73600C084B7 /* WSAlmanackController.xib */,
 				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
 				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
 			);
@@ -276,14 +273,8 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E2CC48E11320294C000B7138 /* WSCreditsController.h */,
-				E2CC48E21320294C000B7138 /* WSCreditsController.m */,
-				E228C897130F626600E135FF /* WSAboutController.h */,
-				E228C898130F626600E135FF /* WSAboutController.m */,
-				E2D5A3D41304737000908FC4 /* WSPrepController.h */,
-				E2D5A3D51304737000908FC4 /* WSPrepController.m */,
-				E289713F130705F0005483A6 /* WSDetailPrep.h */,
-				E2897140130705F0005483A6 /* WSDetailPrep.m */,
+				E26DADCF133280EA00B6B0EC /* About */,
+				E26DADCE133280D200B6B0EC /* Preps */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
 				E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */,
 				E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */,
@@ -292,10 +283,6 @@
 				E212BEBA130FE8360009F2D2 /* WSProfileController.m */,
 				E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */,
 				E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */,
-				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
-				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
-				E29A27111236C73600C084B7 /* WSAlmanackController.h */,
-				E29A27121236C73600C084B7 /* WSAlmanackController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -317,6 +304,28 @@
 				E2D542EF1304878900C22202 /* WSPrep.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E26DADCE133280D200B6B0EC /* Preps */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5A3D41304737000908FC4 /* WSPrepController.h */,
+				E2D5A3D51304737000908FC4 /* WSPrepController.m */,
+				E289713F130705F0005483A6 /* WSDetailPrep.h */,
+				E2897140130705F0005483A6 /* WSDetailPrep.m */,
+			);
+			name = Preps;
+			sourceTree = "<group>";
+		};
+		E26DADCF133280EA00B6B0EC /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E2CC48E11320294C000B7138 /* WSCreditsController.h */,
+				E2CC48E21320294C000B7138 /* WSCreditsController.m */,
+				E228C897130F626600E135FF /* WSAboutController.h */,
+				E228C898130F626600E135FF /* WSAboutController.m */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 		E276925E132D40D3000302C2 /* Products */ = {
@@ -343,6 +352,8 @@
 		E29A26DD1236C6F700C084B7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
+				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
 				E2D5A3DA130473CE00908FC4 /* View */,
 				E2AE1C4B12FEC91800A5CE4E /* API */,
 				E225589E12FEC86E00D34090 /* Model */,
@@ -449,6 +460,8 @@
 		E2D5A3DA130473CE00908FC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E26DADCB1332737600B6B0EC /* WSColouredNavigationBar.h */,
+				E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */,
 				E2D5A3D7130473BB00908FC4 /* WSPrepViewCell.h */,
 				E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */,
 				E29D7448131A9C0800B05163 /* WSNoticeCell.h */,
@@ -590,7 +603,6 @@
 			files = (
 				E29A26F21236C6F700C084B7 /* InfoPlist.strings in Resources */,
 				E29A26FA1236C6F700C084B7 /* MainWindow.xib in Resources */,
-				E29A27151236C73600C084B7 /* WSAlmanackController.xib in Resources */,
 				E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */,
 				E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */,
 				E225589712FEBB7300D34090 /* icon.png in Resources */,
@@ -623,7 +635,6 @@
 			files = (
 				E29A26F41236C6F700C084B7 /* main.m in Sources */,
 				E29A26F71236C6F700C084B7 /* WestminsterAppDelegate.m in Sources */,
-				E29A27141236C73600C084B7 /* WSAlmanackController.m in Sources */,
 				E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */,
 				E2D05952125548AC00696D71 /* WSDayFood.m in Sources */,
 				E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */,
@@ -656,6 +667,7 @@
 				E212BED2130FEC910009F2D2 /* WSProfile.m in Sources */,
 				E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */,
 				E2CC48E41320294D000B7138 /* WSCreditsController.m in Sources */,
+				E26DADCD1332737600B6B0EC /* WSColouredNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,8 +758,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
+				PROVISIONING_PROFILE = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -782,8 +794,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68DBA142-C565-41C8-AF3B-FBD9AA4BCDEF";
+				PROVISIONING_PROFILE = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

@@ -12,6 +12,14 @@
 static WSAuthManager *sharedInstance = nil;
 
 @implementation WSAuthManager
+@synthesize loggedIn;
+
+-(id)init {
+	if ((self = [super init])) {
+		loggedIn = NO;
+	}
+	return self;
+}
 
 -(void)updateAPITokenUsername:(NSString *)uName password:(NSString *)pWord saveForNextTime:(BOOL)shouldSave progressDelegate:(id)progressDelegate delegate:(id)del selector:(SEL)sely {
 	NSLog(@"Login Started");
@@ -40,6 +48,7 @@ static WSAuthManager *sharedInstance = nil;
 	[prefs synchronize];
 	if ([[APIdict valueForKey:@"success"] isEqual:@"YES"]) {
 		[del performSelector:sely withObject:@"YES"];
+		loggedIn = YES;
 		return;
 	}
 	[del performSelector:sely withObject:@"NO"];
@@ -56,6 +65,7 @@ static WSAuthManager *sharedInstance = nil;
 -(void)loginAsGuest {
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setObject:[NSDictionary dictionaryWithObject:@"NO" forKey:@"success"] forKey:@"APIToken"];
+	loggedIn=NO;
 }
 
 -(BOOL)needsAuth {
@@ -64,6 +74,7 @@ static WSAuthManager *sharedInstance = nil;
 		return YES;
 	}
 	if ([self apiTokenIsValid:[[prefs dictionaryForKey:@"APIToken"]objectForKey:@"token"] ]) {
+		loggedIn =YES;
 		return NO;
 	} else {
 		return YES;
@@ -90,6 +101,8 @@ static WSAuthManager *sharedInstance = nil;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setObject:[NSDictionary dictionaryWithObject:@"NO" forKey:@"success"] forKey:@"APIToken"];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSDeletePersonalData" object:nil];
+	loggedIn = NO;
+	[self presentAuthController];
 }
 
 -(NSString *)apiToken {
@@ -99,7 +112,9 @@ static WSAuthManager *sharedInstance = nil;
 
 -(void)presentAuthController {
 	//TODO: Implement this
+	//[[[[UIApplication sharedApplication] keyWindow] rootViewController] presentModalViewController:<#(UIViewController *)#> animated:YES]; 
 }
+
 #pragma mark -
 #pragma mark Singleton methods
 

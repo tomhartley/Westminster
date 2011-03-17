@@ -13,6 +13,7 @@
 #import "WSDataFetcher.h"
 #import "WSDataManager.h"
 #import "GANTracker.h"
+
 @implementation WSProfileController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,7 +28,6 @@
 -(void)viewWillAppear:(BOOL)animated {
 	[[GANTracker sharedTracker] trackPageview:@"/profileController"
 									withError:nil];
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:@"WSProfileUpdatedNotification" object:nil];
 	[self update];
 }
@@ -36,9 +36,11 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return 13;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	TKLabelFieldCell *cell = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:nil];
 	switch (indexPath.row) {
@@ -78,6 +80,22 @@
 			cell.label.text = @"Form";
 			cell.field.text = profile.form;
 			break;
+		case 9:
+			cell.label.text = @"UWI";
+			cell.field.text = profile.UWI;
+			break;
+		case 10:
+			cell.label.text = @"Exam ID";
+			cell.field.text = profile.examID;
+			break;
+		case 11:
+			cell.label.text = @"Exam Name";
+			cell.field.text = profile.examName;
+			break;
+		case 12:
+			cell.label.text = @"Exam UCI";
+			cell.field.text = profile.examUCI;
+			break;
 		default:
 			break;
 	}
@@ -92,7 +110,6 @@
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[navBar release];
     [super dealloc];
 }
 
@@ -115,8 +132,6 @@
 - (void)viewDidUnload
 {
     [tableView release];
-	[navBar release];
-	navBar = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -136,7 +151,10 @@
 
 - (IBAction)signOut:(id)sender {
 	[[WSAuthManager sharedInstance] signOut];
-	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
+	
+	if ([[WSAuthManager sharedInstance] loggedIn]) {
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
+	}
 	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -154,32 +172,17 @@
 -(void)update {
 	[self getProfile];
 	[tableView reloadData];
+	if ([[WSAuthManager sharedInstance] loggedIn]) {
+		signButton.title = @"Sign Out";
+	} else {
+		signButton.title = @"Sign In";
+	}
 }
 
 -(void)getProfile {
 	[profile release];
 	profile = [[WSDataManager sharedInstance]currentProfile];
 	[profile retain];
-	navBar.tintColor = [profile primaryColor];
-	CGRect frame = CGRectMake(0, 0, [@"Profile" sizeWithFont:[UIFont boldSystemFontOfSize:20.0]].width, 44);
-	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
-	label.backgroundColor = [UIColor clearColor];
-	label.font = [UIFont boldSystemFontOfSize:20.0];
-	label.shadowColor = [profile shadowColor];
-	if ([profile shadowOnTop]) {
-		label.shadowOffset = CGSizeMake(0, -1);
-	} else {
-		label.shadowOffset = CGSizeMake(0, 1);
-	}
-	if ([profile secondaryColor]) {
-		label.textColor = [profile secondaryColor];
-	} else {
-		label.textColor = [UIColor whiteColor];
-		label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
-		label.shadowOffset = CGSizeMake(0, -1);
-	}
-	navBar.topItem.titleView = label;
-	label.text = NSLocalizedString(@"Profile", @"");
 }
 
 @end

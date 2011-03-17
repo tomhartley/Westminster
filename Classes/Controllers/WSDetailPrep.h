@@ -11,8 +11,8 @@
 #import "WSPrep.h"
 #import "ASIHTTPRequest.h"
 #import "UILabel+VerticalAlign.h"
-#import "WSProfile.h"
 #import "WSDataManager.h"
+#import "WSColouredNavigationBar.h"
 
 @interface WSDetailPrep : UIViewController <UIDocumentInteractionControllerDelegate, UIPrintInteractionControllerDelegate>{
     WSPrep *thePrep;
@@ -25,15 +25,13 @@
 	TKProgressBarView *prog;
 	BOOL fileDownloaded;
 	UIDocumentInteractionController *docControl;
-	UINavigationBar *navigationBar;
 	UITextView *descriptionTextView;
 	UIView *locationForProgressView;
 	ASIHTTPRequest *req;
-	WSProfile *profile;
+	IBOutlet WSColouredNavigationBar *navBar;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil prep:(WSPrep *)prep;
--(void)getProfile;
 
 @property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, retain) IBOutlet UIView *locationForProgressView;

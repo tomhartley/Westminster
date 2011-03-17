@@ -6,13 +6,13 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
 #import "WSXMLDataParser.h"
 #import <TapkuLibrary/TapkuLibrary.h>
 
 @interface WSAuthManager : NSObject {
-    
+    BOOL loggedIn;
 }
 
 + (WSAuthManager *)sharedInstance;
@@ -25,4 +25,6 @@
 -(void)signOut;
 -(NSString *)apiToken;
 -(void)presentAuthController;
+
+@property (readwrite,nonatomic) BOOL loggedIn;
 @end
