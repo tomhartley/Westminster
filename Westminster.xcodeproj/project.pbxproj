@@ -273,8 +273,8 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E26DADCF133280EA00B6B0EC /* About */,
 				E26DADCE133280D200B6B0EC /* Preps */,
+				E26DADCF133280EA00B6B0EC /* About */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
 				E2AE1C7012FF3CA200A5CE4E /* WSNoticeController.m */,
 				E2AE1C4F12FED04500A5CE4E /* WSAuthController.h */,
@@ -734,8 +734,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Westminster School";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Westminster School";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -747,7 +747,7 @@
 					tapku/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -758,8 +758,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
+				PROVISIONING_PROFILE = "42B5C075-3CAA-4EA1-BF49-F7E581BE1524";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42B5C075-3CAA-4EA1-BF49-F7E581BE1524";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -771,8 +771,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Westminster School";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Westminster School";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -783,7 +783,7 @@
 					tapku/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -794,8 +794,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
+				PROVISIONING_PROFILE = "42B5C075-3CAA-4EA1-BF49-F7E581BE1524";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42B5C075-3CAA-4EA1-BF49-F7E581BE1524";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

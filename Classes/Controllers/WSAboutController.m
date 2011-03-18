@@ -75,7 +75,7 @@
 	MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
 	controller.mailComposeDelegate = self;
 	[controller setSubject:@"Westminster app feedback"];
-	[controller setToRecipients:[NSArray arrayWithObject:@"tom.hartley@westminster.org.uk"]];
+	[controller setToRecipients:[NSArray arrayWithObject:@"app@westminster.org.uk"]];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		controller.modalPresentationStyle = UIModalPresentationFormSheet;

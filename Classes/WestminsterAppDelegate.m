@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	openedDate = [[NSDate date] retain];
 	NSError *error;
-	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1" dispatchPeriod:60 delegate:nil];
+	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-22079240-1" dispatchPeriod:60 delegate:nil];
 	if (![[GANTracker sharedTracker] trackEvent:@"state"
 										 action:@"opened"
 										  label:nil
