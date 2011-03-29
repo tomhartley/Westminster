@@ -70,6 +70,7 @@
 
 - (void)dealloc
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[profile release];
     [super dealloc];
 }

@@ -29,7 +29,7 @@
 -(void)updateProfile;
 -(void)updateNotices;
 -(void)updateClasses;
-
+-(void)updateTimetable;
 
 
 

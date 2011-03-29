@@ -15,6 +15,8 @@
 	UIWindow *window;
 	UITabBarController *tabBarController;
 	NSDate *openedDate;
+	NSArray *viewControllers;
+	int prepTabBarIndex;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -22,9 +24,9 @@
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
 -(void)updatePreps;
-/*-(void)setSignedOutTabs;
+-(void)setSignedOutTabs;
 -(void)setSignedInPupilsTabs;
 -(void)setSignedInParentsTabs;
 -(void)setSignedInTeachersTabs;
-*/
+
 @end

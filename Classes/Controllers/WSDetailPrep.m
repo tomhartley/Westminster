@@ -132,7 +132,7 @@
 
 - (BOOL) documentInteractionController: (UIDocumentInteractionController *) controller canPerformAction: (SEL) action {
 	if (action == @selector (print:) &&
-		[UIPrintInteractionController canPrintURL: controller.URL]) {
+		[NSClassFromString(@"UIPrintInteractionController") canPrintURL: controller.URL]) {
 		return YES;
 	} else {
 		return NO;
@@ -158,13 +158,18 @@
 -(void)documentDownloaded:(ASIHTTPRequest *)reqy {
 	//NSLog(req.downloadDestinationPath);
 	docControl = [NSClassFromString(@"UIDocumentInteractionController") interactionControllerWithURL:[NSURL fileURLWithPath:req.downloadDestinationPath]];
-	docControl.delegate = self;
-	[docControl retain];
-	fileDownloaded = YES;
-	[downloadButton setTitle:@"Open File" forState:UIControlStateNormal];
-	[downloadButton setTitle:@"Open File" forState:UIControlStateHighlighted];
-	downloadButton.hidden = NO;
-	[prog removeFromSuperview];
+	if (docControl) {
+		docControl.delegate = self;
+		[docControl retain];
+		fileDownloaded = YES;
+		[downloadButton setTitle:@"Open File" forState:UIControlStateNormal];
+		[downloadButton setTitle:@"Open File" forState:UIControlStateHighlighted];
+		downloadButton.hidden = NO;
+		[prog removeFromSuperview];
+	} else {
+		downloadButton.enabled = false;
+		[downloadButton setTitle:@"Upgrade to iOS 4.0" forState:UIControlStateDisabled];
+	}
 }
 
 - (UIViewController *) documentInteractionControllerViewControllerForPreview: (UIDocumentInteractionController *) controller {

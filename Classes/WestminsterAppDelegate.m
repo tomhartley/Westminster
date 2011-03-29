@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	openedDate = [[NSDate date] retain];
 	NSError *error;
+	//Beta testing:UA-21371417-1 Production: UA-22079240-1
 	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1" dispatchPeriod:60 delegate:nil];
 	if (![[GANTracker sharedTracker] trackEvent:@"state"
 										 action:@"opened"
@@ -47,12 +48,15 @@
 	}
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
 	[window makeKeyAndVisible];
+	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
     return YES;
 }
 
 -(void)updatePreps {
 	NSArray *preps = [[WSDataManager sharedInstance] currentPrep];
-	[[[[tabBarController tabBar] items] objectAtIndex:1] setBadgeValue: [NSString stringWithFormat:@"%d",[preps count]]];
+	if (prepTabBarIndex >= 0) {
+		[[[[tabBarController tabBar] items] objectAtIndex:prepTabBarIndex] setBadgeValue: [NSString stringWithFormat:@"%d",[preps count]]];
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -64,6 +68,46 @@
 	[[GANTracker sharedTracker] stopTracker];
 	// Save data if appropriate.
 }
+
+/*
+ For Managing which tabs are displayed for which visitors
+*/
+
+-(void)setSignedOutTabs {
+	[tabBarController setViewControllers:[NSArray arrayWithObjects:
+										  [viewControllers objectAtIndex:1],
+										  [viewControllers objectAtIndex:3],
+										  [viewControllers objectAtIndex:4], 
+										  nil] animated:YES];
+	prepTabBarIndex = -1;
+}
+
+-(void)setSignedInPupilsTabs {
+	[tabBarController setViewControllers:viewControllers animated:YES];
+	prepTabBarIndex = 0;
+}
+
+-(void)setSignedInParentsTabs {
+	[tabBarController setViewControllers:[NSArray arrayWithObjects:
+										  [viewControllers objectAtIndex:1],
+										  [viewControllers objectAtIndex:2],
+										  [viewControllers objectAtIndex:3],
+										  [viewControllers objectAtIndex:4], 
+										  nil] animated:YES];
+	prepTabBarIndex = -1;
+}
+
+-(void)setSignedInTeachersTabs {
+	[tabBarController setViewControllers:[NSArray arrayWithObjects:
+										  [viewControllers objectAtIndex:1],
+										  [viewControllers objectAtIndex:2],
+										  [viewControllers objectAtIndex:3],
+										  [viewControllers objectAtIndex:4], 
+										  nil] animated:YES];
+	prepTabBarIndex = -1;
+}
+
+
 
 - (void)dealloc {
 

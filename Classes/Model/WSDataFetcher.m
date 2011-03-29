@@ -23,6 +23,7 @@ static WSDataFetcher *sharedInstance = nil;
 	[self updatePreps];
 	[self updateProfile];
     [self updateNotices];
+	//[self updateTimetable];
 }
 
 -(void)downloadAllAuthFree {
@@ -56,6 +57,17 @@ static WSDataFetcher *sharedInstance = nil;
 	[APIreq autorelease];
 	[APIreq setDidFinishSelector:@selector(prepsFinished:)];
 	[APIreq setDidFailSelector:@selector(prepsFailed:)];
+	APIreq.delegate=delegate;
+	[networkQueue addOperation:APIreq];
+	[networkQueue go];
+}
+
+-(void)updateTimetable {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.westminster.org.uk/api1/1/timetable.asp?token=%@",[[[WSAuthManager sharedInstance] apiToken] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
+	ASIHTTPRequest *APIreq = [[ASIHTTPRequest alloc] initWithURL:url];
+	[APIreq autorelease];
+	[APIreq setDidFinishSelector:@selector(timetableFinished:)];
+	[APIreq setDidFailSelector:@selector(timetableFailed:)];
 	APIreq.delegate=delegate;
 	[networkQueue addOperation:APIreq];
 	[networkQueue go];

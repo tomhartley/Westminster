@@ -7,7 +7,7 @@
 //
 
 #import "WSDataManager.h"
-
+#import "WestminsterAppDelegate.h"
 static WSDataManager *sharedInstance  = nil;
 
 @implementation WSDataManager;
@@ -55,6 +55,15 @@ static WSDataManager *sharedInstance  = nil;
 	currentProfile = profile;
 	[currentProfile retain];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSProfileUpdatedNotification" object:nil];
+	if (profile == nil) {
+		[(WestminsterAppDelegate *)[[UIApplication sharedApplication] delegate] setSignedOutTabs];
+	} else if ([profile.type isEqualToString:@"Pupil"]) {
+		[(WestminsterAppDelegate *)[[UIApplication sharedApplication] delegate] setSignedInPupilsTabs];
+	} else if ([profile.type isEqualToString:@"Parent"]) {
+		[(WestminsterAppDelegate *)[[UIApplication sharedApplication] delegate] setSignedInParentsTabs];
+	} else {
+		[(WestminsterAppDelegate *)[[UIApplication sharedApplication] delegate] setSignedInTeachersTabs];
+	}
 }
 
 //WSDeletePersonalData

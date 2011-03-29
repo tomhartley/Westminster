@@ -58,6 +58,7 @@
     WSNoticeCell *cell = (WSNoticeCell*)[aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
 		cell = [[WSNoticeCell alloc] init];
+		[cell autorelease];
 		//CAGradientLayer *gradient = [CAGradientLayer layer];
 		//gradient.frame = CGRectMake(0, 0, 1200, 160);
 		//gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor lightGrayColor] CGColor], nil];

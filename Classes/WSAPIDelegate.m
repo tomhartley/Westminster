@@ -9,6 +9,7 @@
 #import "WSAPIDelegate.h"
 #import "WSDataManager.h"
 #import "WSProfile.h"
+#import "WestminsterAppDelegate.h"
 
 @implementation WSAPIDelegate
 
