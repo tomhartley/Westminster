@@ -66,6 +66,7 @@ static WSAuthManager *sharedInstance = nil;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setObject:[NSDictionary dictionaryWithObject:@"NO" forKey:@"success"] forKey:@"APIToken"];
 	loggedIn=NO;
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSDeletePersonalData" object:nil];
 }
 
 -(BOOL)needsAuth {
