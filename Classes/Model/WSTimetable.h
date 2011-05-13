@@ -15,6 +15,9 @@ typedef enum {
 
 
 @interface WSTimetable : NSObject {
+    NSMutableArray *days;
 }
+
+
 
 @end

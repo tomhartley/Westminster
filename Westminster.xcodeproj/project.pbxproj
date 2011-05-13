@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84CC9764137D7F3100321E64 /* WSClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC9763137D7F3100321E64 /* WSClass.m */; };
 		84EE92241374439A0088EBA4 /* WSTimetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE92231374439A0088EBA4 /* WSTimetable.m */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
 		E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */; };
@@ -99,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84CC9762137D7F3100321E64 /* WSClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSClass.h; path = Model/WSClass.h; sourceTree = "<group>"; };
+		84CC9763137D7F3100321E64 /* WSClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSClass.m; path = Model/WSClass.m; sourceTree = "<group>"; };
 		84EE9222137443990088EBA4 /* WSTimetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSTimetable.h; path = Model/WSTimetable.h; sourceTree = "<group>"; };
 		84EE92231374439A0088EBA4 /* WSTimetable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSTimetable.m; path = Model/WSTimetable.m; sourceTree = "<group>"; };
 		D88062FE1305AC87002774C7 /* WSNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNotice.h; path = Model/WSNotice.h; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
 				E212BED0130FEC910009F2D2 /* WSProfile.h */,
 				E212BED1130FEC910009F2D2 /* WSProfile.m */,
+				84CC9762137D7F3100321E64 /* WSClass.h */,
+				84CC9763137D7F3100321E64 /* WSClass.m */,
 				84EE9222137443990088EBA4 /* WSTimetable.h */,
 				84EE92231374439A0088EBA4 /* WSTimetable.m */,
 				D88062FE1305AC87002774C7 /* WSNotice.h */,
@@ -674,6 +679,7 @@
 				E2CC48E41320294D000B7138 /* WSCreditsController.m in Sources */,
 				E26DADCD1332737600B6B0EC /* WSColouredNavigationBar.m in Sources */,
 				84EE92241374439A0088EBA4 /* WSTimetable.m in Sources */,
+				84CC9764137D7F3100321E64 /* WSClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
