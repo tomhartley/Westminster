@@ -32,13 +32,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class TKWindow;
+//@class TKWindow;
 
 @interface TKAppDelegate : NSObject <UIApplicationDelegate> {
-	TKWindow *window;
+	UIWindow *window;
 }
 
-@property (nonatomic,retain) TKWindow *window;
+@property (nonatomic,retain) UIWindow *window;
 
 
 // For subclassing, default implentation does nothing.

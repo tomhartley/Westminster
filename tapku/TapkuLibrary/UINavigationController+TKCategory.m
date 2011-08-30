@@ -40,7 +40,7 @@
 	if(self.navigationBar.barStyle == UIBarStyleDefault && [self.viewControllers count] > 0 && viewController.navigationItem.leftBarButtonItem == nil && [self.topViewController isKindOfClass:NSClassFromString(@"TKViewController")]){
 		TKViewController *vc = (TKViewController*)self.topViewController;
 		if(vc.tkBackButton){
-			[vc.tkBackButton setStyle:TKBarButtonItemStyleBack];
+			//[vc.tkBackButton setStyle:TKBarButtonItemStyleBack];
 			[vc.tkBackButton setTarget:self.topViewController.navigationController action:@selector(popViewControllerAnimated:)];
 			viewController.navigationItem.leftBarButtonItem = vc.tkBackButton;
 		}
