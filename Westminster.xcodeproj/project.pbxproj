@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82085B713595A70002A83FF /* WSTimetableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82085B513595A70002A83FF /* WSTimetableController.m */; };
+		D82085B913595B98002A83FF /* WSTimetableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82085B813595B98002A83FF /* WSTimetableController.xib */; };
+		D8406FF41403D2EE0087A3CD /* WSClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FF21403D2EE0087A3CD /* WSClassCell.m */; };
+		D8406FF51403D2EE0087A3CD /* WSClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8406FF31403D2EE0087A3CD /* WSClassCell.xib */; };
+		D8406FF814044FDC0087A3CD /* WSTimetableDay.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FF714044FDA0087A3CD /* WSTimetableDay.m */; };
+		D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FFA140450AA0087A3CD /* WSLesson.m */; };
+		D840700C1405A75A0087A3CD /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
 		E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */; };
 		E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E212BEB5130FD8350009F2D2 /* 18-envelope.png */; };
@@ -74,7 +81,6 @@
 		E2FECD0512FDF85F0028A348 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0412FDF85F0028A348 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E2FECD0712FDF8720028A348 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */; };
 		E2FECD0912FDF87B0028A348 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */; };
-		E2FECD0B12FDF8960028A348 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */; };
 		E2FECD0E12FDFE5A0028A348 /* WSXMLDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FECD0D12FDFE5A0028A348 /* WSXMLDataParser.m */; };
 		E2FECD1212FE03F80028A348 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FECD1112FE03F80028A348 /* GDataXMLNode.m */; };
 		E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD1512FE07130028A348 /* libxml2.dylib */; };
@@ -98,6 +104,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D82085B513595A70002A83FF /* WSTimetableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTimetableController.m; sourceTree = "<group>"; };
+		D82085B613595A70002A83FF /* WSTimetableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTimetableController.h; sourceTree = "<group>"; };
+		D82085B813595B98002A83FF /* WSTimetableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSTimetableController.xib; path = Classes/WSTimetableController.xib; sourceTree = "<group>"; };
+		D8406FF11403D2EE0087A3CD /* WSClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSClassCell.h; path = View/WSClassCell.h; sourceTree = "<group>"; };
+		D8406FF21403D2EE0087A3CD /* WSClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSClassCell.m; path = View/WSClassCell.m; sourceTree = "<group>"; };
+		D8406FF31403D2EE0087A3CD /* WSClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSClassCell.xib; path = Classes/View/WSClassCell.xib; sourceTree = "<group>"; };
+		D8406FF614044FD90087A3CD /* WSTimetableDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSTimetableDay.h; path = Model/WSTimetableDay.h; sourceTree = "<group>"; };
+		D8406FF714044FDA0087A3CD /* WSTimetableDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSTimetableDay.m; path = Model/WSTimetableDay.m; sourceTree = "<group>"; };
+		D8406FF9140450A90087A3CD /* WSLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLesson.h; path = Model/WSLesson.h; sourceTree = "<group>"; };
+		D8406FFA140450AA0087A3CD /* WSLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSLesson.m; path = Model/WSLesson.m; sourceTree = "<group>"; };
+		D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		D88062FE1305AC87002774C7 /* WSNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNotice.h; path = Model/WSNotice.h; sourceTree = "<group>"; };
 		D88062FF1305AC87002774C7 /* WSNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNotice.m; path = Model/WSNotice.m; sourceTree = "<group>"; };
 		E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+VerticalAlign.h"; path = "../UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
@@ -206,7 +223,6 @@
 		E2FECD0412FDF85F0028A348 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		E2FECD0C12FDFE5A0028A348 /* WSXMLDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSXMLDataParser.h; sourceTree = "<group>"; };
 		E2FECD0D12FDFE5A0028A348 /* WSXMLDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSXMLDataParser.m; sourceTree = "<group>"; };
 		E2FECD1012FE03F80028A348 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
@@ -219,13 +235,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D840700C1405A75A0087A3CD /* libz.1.2.5.dylib in Frameworks */,
 				E276926A132D4133000302C2 /* libTapkuLibrary.a in Frameworks */,
 				E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */,
 				E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
 				E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */,
 				E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */,
-				E2FECD0B12FDF8960028A348 /* libz.1.2.3.dylib in Frameworks */,
 				E2FECD0912FDF87B0028A348 /* MobileCoreServices.framework in Frameworks */,
 				E2FECD0712FDF8720028A348 /* SystemConfiguration.framework in Frameworks */,
 				E2FECD0512FDF85F0028A348 /* CFNetwork.framework in Frameworks */,
@@ -266,6 +282,8 @@
 				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
 				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
 				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
+				D82085B813595B98002A83FF /* WSTimetableController.xib */,
+				D8406FF31403D2EE0087A3CD /* WSClassCell.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -273,6 +291,8 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D82085B513595A70002A83FF /* WSTimetableController.m */,
+				D82085B613595A70002A83FF /* WSTimetableController.h */,
 				E26DADCE133280D200B6B0EC /* Preps */,
 				E26DADCF133280EA00B6B0EC /* About */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
@@ -294,6 +314,10 @@
 				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
 				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
 				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+				D8406FF614044FD90087A3CD /* WSTimetableDay.h */,
+				D8406FF714044FDA0087A3CD /* WSTimetableDay.m */,
+				D8406FF9140450A90087A3CD /* WSLesson.h */,
+				D8406FFA140450AA0087A3CD /* WSLesson.m */,
 				E212BED0130FEC910009F2D2 /* WSProfile.h */,
 				E212BED1130FEC910009F2D2 /* WSProfile.m */,
 				D88062FE1305AC87002774C7 /* WSNotice.h */,
@@ -342,6 +366,7 @@
 		E29A26D61236C6F700C084B7 = {
 			isa = PBXGroup;
 			children = (
+				D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */,
 				E29A26DD1236C6F700C084B7 /* Classes */,
 				E29A26DE1236C6F700C084B7 /* Other Sources */,
 				E29A26DF1236C6F700C084B7 /* Resources */,
@@ -398,7 +423,6 @@
 				E2FECD1512FE07130028A348 /* libxml2.dylib */,
 				E2AE1C6D12FF046700A5CE4E /* QuartzCore.framework */,
 				E2AE1C6912FF02B600A5CE4E /* MapKit.framework */,
-				E2FECD0A12FDF8960028A348 /* libz.1.2.3.dylib */,
 				E2FECD0812FDF87B0028A348 /* MobileCoreServices.framework */,
 				E2FECD0612FDF8720028A348 /* SystemConfiguration.framework */,
 				E2FECD0412FDF85F0028A348 /* CFNetwork.framework */,
@@ -466,6 +490,8 @@
 				E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */,
 				E29D7448131A9C0800B05163 /* WSNoticeCell.h */,
 				E29D7449131A9C0800B05163 /* WSNoticeCell.m */,
+				D8406FF11403D2EE0087A3CD /* WSClassCell.h */,
+				D8406FF21403D2EE0087A3CD /* WSClassCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -623,6 +649,8 @@
 				E2871E4313258DCA009FB406 /* Default-Portrait~ipad.png in Resources */,
 				E2871E4513258DD6009FB406 /* Default-Landscape~ipad.png in Resources */,
 				E276926C132D415E000302C2 /* TapkuLibrary.bundle in Resources */,
+				D82085B913595B98002A83FF /* WSTimetableController.xib in Resources */,
+				D8406FF51403D2EE0087A3CD /* WSClassCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +696,10 @@
 				E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */,
 				E2CC48E41320294D000B7138 /* WSCreditsController.m in Sources */,
 				E26DADCD1332737600B6B0EC /* WSColouredNavigationBar.m in Sources */,
+				D82085B713595A70002A83FF /* WSTimetableController.m in Sources */,
+				D8406FF41403D2EE0087A3CD /* WSClassCell.m in Sources */,
+				D8406FF814044FDC0087A3CD /* WSTimetableDay.m in Sources */,
+				D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

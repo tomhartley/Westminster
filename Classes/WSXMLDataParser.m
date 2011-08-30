@@ -244,7 +244,7 @@
 			NSLog(@"%@",exception);
 		}
 		@try {
-			profile.scholarhsip= [[[root elementsForName:@"scholarhsip"] objectAtIndex:0] stringValue];
+			profile.scholarhsip= [[[root elementsForName:@"scholarship"] objectAtIndex:0] stringValue];
 		}
 		@catch (NSException *exception) {
 			NSLog(@"%@",exception);

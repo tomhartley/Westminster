@@ -43,7 +43,7 @@
 	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		//[authController setModalPresentationStyle:UIModalPresentationFormSheet];
+		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
 	[self.parentViewController.parentViewController presentModalViewController:authController animated:YES];
