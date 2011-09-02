@@ -49,6 +49,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
 	[window makeKeyAndVisible];
 	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
+	tabBarController.customizableViewControllers = [NSArray array];
     return YES;
 }
 
@@ -80,6 +81,10 @@
 										  [viewControllers objectAtIndex:4], 
 										  nil] animated:YES];
 	prepTabBarIndex = -1;
+}
+
+-(void)setTabsForProfileType:(WSProfileType)type {
+	
 }
 
 -(void)setSignedInPupilsTabs {

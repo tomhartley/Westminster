@@ -29,4 +29,6 @@
 -(void)setSignedInParentsTabs;
 -(void)setSignedInTeachersTabs;
 
+-(void)setTabsForProfileType:(WSProfileType)type;
+
 @end

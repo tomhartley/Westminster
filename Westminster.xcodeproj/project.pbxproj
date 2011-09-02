@@ -69,6 +69,7 @@
 		E2D5A3D9130473BB00908FC4 /* WSPrepViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */; };
 		E2D5A3DC1304745100908FC4 /* WSPrepViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */; };
 		E2D5A3DE130479CB00908FC4 /* 117-todo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D5A3DD130479CB00908FC4 /* 117-todo.png */; };
+		E2EC32F9140E679100197BBE /* UINavigationBar+ProfileColours.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EC32F8140E679100197BBE /* UINavigationBar+ProfileColours.m */; };
 		E2F88BAB12FDEA5B00D5D078 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */; };
 		E2F88BAC12FDEA5B00D5D078 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5D12FDEA5B00D5D078 /* ASIDataCompressor.m */; };
 		E2F88BAD12FDEA5B00D5D078 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F88B5F12FDEA5B00D5D078 /* ASIDataDecompressor.m */; };
@@ -198,6 +199,8 @@
 		E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPrepViewCell.m; sourceTree = "<group>"; };
 		E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSPrepViewCell.xib; sourceTree = "<group>"; };
 		E2D5A3DD130479CB00908FC4 /* 117-todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "117-todo.png"; sourceTree = "<group>"; };
+		E2EC32F7140E679100197BBE /* UINavigationBar+ProfileColours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+ProfileColours.h"; path = "View/UINavigationBar+ProfileColours.h"; sourceTree = "<group>"; };
+		E2EC32F8140E679100197BBE /* UINavigationBar+ProfileColours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+ProfileColours.m"; path = "View/UINavigationBar+ProfileColours.m"; sourceTree = "<group>"; };
 		E2F88B5912FDEA5B00D5D078 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		E2F88B5A12FDEA5B00D5D078 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		E2F88B5B12FDEA5B00D5D078 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 		E2D5A3DA130473CE00908FC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2EC32F7140E679100197BBE /* UINavigationBar+ProfileColours.h */,
+				E2EC32F8140E679100197BBE /* UINavigationBar+ProfileColours.m */,
 				E26DADCB1332737600B6B0EC /* WSColouredNavigationBar.h */,
 				E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */,
 				E2D5A3D7130473BB00908FC4 /* WSPrepViewCell.h */,
@@ -700,6 +705,7 @@
 				D8406FF41403D2EE0087A3CD /* WSClassCell.m in Sources */,
 				D8406FF814044FDC0087A3CD /* WSTimetableDay.m in Sources */,
 				D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */,
+				E2EC32F9140E679100197BBE /* UINavigationBar+ProfileColours.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

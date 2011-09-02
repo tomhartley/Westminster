@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
+	WSProfileTypeNone,
+	WSProfileTypePupil,
+	WSProfileTypeParent,
+	WSProfileTypeTeacher,
+} WSProfileType;
+
+typedef enum {
 	WSGenderMale,
 	WSGenderFemale
 } WSGender;
