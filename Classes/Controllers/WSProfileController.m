@@ -42,7 +42,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	TKLabelFieldCell *cell = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:nil];
+    TKLabelFieldCell *cell = [[TKLabelFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 	switch (indexPath.row) {
 		case 0:
 			cell.label.text = @"First Name";

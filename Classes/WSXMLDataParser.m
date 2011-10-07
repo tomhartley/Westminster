@@ -18,7 +18,8 @@
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 	NSError *error;
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
-														   options:0 error:&error];
+														   options:0 
+                                                             error:&error];
 	[doc autorelease];
 	if (doc == nil) { return nil; }
 	//NSLog(@"%@", doc.rootElement);
@@ -323,4 +324,7 @@
 	return profile;
 }
 
+-(WSProfile *)parseTimetable:(NSData *)xmlData {
+    
+}
 @end

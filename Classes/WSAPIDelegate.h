@@ -25,4 +25,8 @@
 
 -(void)profileFinished:(ASIHTTPRequest *)request;
 -(void)profileFailed:(ASIHTTPRequest *)request;
+
+-(void)timetableFinished:(ASIHTTPRequest *)request;
+-(void)timetableFailed:(ASIHTTPRequest *)request;
+
 @end

@@ -56,7 +56,7 @@
 	WSProfile *profile = [[[[WSXMLDataParser alloc] init] autorelease] parseProfile:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentProfile:profile];
 	if ([profile.UWI isEqualToString:@"P09HAR01"]) {
-		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"All bow before you, esteemed master of the universe"];
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Hi"];
 	} else {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:[NSString stringWithFormat:@"Hi %@",profile.preferredName]];
 	}
@@ -67,6 +67,14 @@
 	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Profile Failed"];
 	NSError *error = [request error];
 	NSLog(@"Profile download error: %@", error);
+}
+
+-(void)timetableFinished:(ASIHTTPRequest *)request {
+    NSArray *timetable = [[[[WSXMLDataParser alloc] init] autorelease] p
+}
+
+-(void)timetableFailed:(ASIHTTPRequest *)request {
+    
 }
 
 @end

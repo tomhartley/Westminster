@@ -369,7 +369,6 @@
 		E29A26D61236C6F700C084B7 = {
 			isa = PBXGroup;
 			children = (
-				D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */,
 				E29A26DD1236C6F700C084B7 /* Classes */,
 				E29A26DE1236C6F700C084B7 /* Other Sources */,
 				E29A26DF1236C6F700C084B7 /* Resources */,
@@ -417,6 +416,7 @@
 		E29A26E01236C6F700C084B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */,
 				E276926B132D415E000302C2 /* TapkuLibrary.bundle */,
 				E2769269132D4133000302C2 /* libTapkuLibrary.a */,
 				E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */,

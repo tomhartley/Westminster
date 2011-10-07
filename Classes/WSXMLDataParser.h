@@ -20,4 +20,5 @@
 -(NSArray *)parsePreps:(NSData *)xmlData;
 -(NSArray *)parseNotices:(NSData *)xmlData;
 -(WSProfile *)parseProfile:(NSData *)xmlData;
+-(WSProfile *)parseTimetable:(NSData *)xmlData;
 @end

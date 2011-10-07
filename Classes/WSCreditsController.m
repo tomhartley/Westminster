@@ -45,7 +45,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	TKLabelFieldCell *cell = [[TKLabelFieldCell alloc] initWithFrame:CGRectZero reuseIdentifier:nil];
+	TKLabelFieldCell *cell = [[TKLabelFieldCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:nil];
 	cell.label.text = [[helpers objectAtIndex:indexPath.row] objectForKey:@"Name"];
 	cell.field.text = [[helpers objectAtIndex:indexPath.row] objectForKey:@"Job"];
 	return [cell autorelease];
