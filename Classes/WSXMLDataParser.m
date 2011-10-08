@@ -324,7 +324,7 @@
 	return profile;
 }
 
--(WSProfile *)parseTimetable:(NSData *)xmlData {
+-(NSArray *)parseTimetable:(NSData *)xmlData {
     
 }
 @end

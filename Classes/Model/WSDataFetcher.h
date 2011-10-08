@@ -31,10 +31,6 @@
 -(void)updateClasses;
 -(void)updateTimetable;
 
-
-
 + (WSDataFetcher *)sharedInstance;
-
-
 
 @end
