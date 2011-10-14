@@ -325,6 +325,19 @@
 }
 
 -(NSArray *)parseTimetable:(NSData *)xmlData {
+    NSMutableArray *days = [NSMutableArray arrayWithCapacity:6];
     
+    NSError *error;
+    
+    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
+	if (doc == nil) { return nil; }
+    
+    NSArray *lessonsToParse = [doc.rootElement elementsForName:@"period"];
+    
+    for (GDataXMLNode in lessonsToParse) {
+        //dostuffs
+    }
 }
+
+
 @end
