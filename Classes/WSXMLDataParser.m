@@ -334,9 +334,33 @@
     
     NSArray *lessonsToParse = [doc.rootElement elementsForName:@"period"];
     
-    for (GDataXMLNode in lessonsToParse) {
+    for (GDataXMLElement* node in lessonsToParse) {
         //dostuffs
+        NSString *day = [[node elementsForName:@"day"] objectAtIndex:0];
+        
+        int dayInt;
+        
+        if ([day isEqualToString:@"Monday"]) {
+            dayInt = 0;
+        } else if ([day isEqualToString:@"Tuesday"]) {
+            dayInt = 1;
+        } else if ([day isEqualToString:@"Wednesday"]) {
+            dayInt = 2;
+        } else if ([day isEqualToString:@"Thursday"]) {
+            dayInt = 3;
+        } else if ([day isEqualToString:@"Friday"]) {
+            dayInt = 4;
+        } else if ([day isEqualToString:@"Saturday"]) {
+            dayInt = 5;
+            
+        }
+        NSString *periodNumber = [[node elementsForName:@"day"] objectAtIndex:0];
+        NSString *subject = [[node elementsForName:@"day"] objectAtIndex:0];
+        NSString *teacher = [[node elementsForName:@"day"] objectAtIndex:0];
+        NSString *room = [[node elementsForName:@"day"] objectAtIndex:0];
     }
+    
+    return days;
 }
 
 
