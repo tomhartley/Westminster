@@ -25,7 +25,7 @@
 
 -(void)setLesson:(WSLesson *)theLesson {
     lesson=theLesson;
-    subjectLabel.text=lesson.class;
+    subjectLabel.text=lesson.subject;
     timeStartLabel.text=[NSString stringWithFormat:@"%d:%d",lesson.startTime.hours,lesson.startTime.minutes];
     timeEndLabel.text=[NSString stringWithFormat:@"%d:%d",lesson.endTime.hours,lesson.endTime.minutes];
     locationLabel.text=lesson.location;

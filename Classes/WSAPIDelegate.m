@@ -74,7 +74,9 @@
 }
 
 -(void)timetableFailed:(ASIHTTPRequest *)request {
-    
+	[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Timetable Failed"];
+	NSError *error = [request error];
+	NSLog(@"Timetable download error: %@", error);
 }
 
 @end

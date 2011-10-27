@@ -18,7 +18,7 @@ typedef struct WSTime WSTime;
     NSInteger period;
     NSString *location;
     NSString *teacher;
-    NSString *class;
+    NSString *subject;
     WSTime startTime;
     WSTime endTime;
 }
@@ -28,7 +28,7 @@ typedef struct WSTime WSTime;
 @property (nonatomic, readonly) NSInteger period;
 @property (nonatomic, retain) NSString *location;
 @property (nonatomic, retain) NSString *teacher;
-@property (nonatomic, retain) NSString *class;
+@property (nonatomic, retain) NSString *subject;
 @property (nonatomic) WSTime startTime;
 @property (nonatomic) WSTime endTime;
 @end

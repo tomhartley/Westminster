@@ -10,7 +10,7 @@
 
 @implementation WSLesson
 
-@synthesize period,location,teacher,class,startTime,endTime;
+@synthesize period,location,teacher,subject,startTime,endTime;
 
 - (id)initWithPeriod:(NSInteger)periodNumber {
     self = [super init];

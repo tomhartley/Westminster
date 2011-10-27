@@ -26,12 +26,12 @@
 		E228C89A130F626600E135FF /* WSAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E228C898130F626600E135FF /* WSAboutController.m */; };
 		E228C89B130F626600E135FF /* WSAboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E228C899130F626600E135FF /* WSAboutController.xib */; };
 		E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E228C89D130F731D00E135FF /* MessageUI.framework */; };
+		E237B3B81458935D0033B38A /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E237B3B71458935D0033B38A /* TapkuLibrary.bundle */; };
+		E237B3BA145893E90033B38A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E237B3B9145893E90033B38A /* libTapkuLibrary.a */; };
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
 		E26DADCD1332737600B6B0EC /* WSColouredNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */; };
-		E276926A132D4133000302C2 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2769269132D4133000302C2 /* libTapkuLibrary.a */; };
-		E276926C132D415E000302C2 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276926B132D415E000302C2 /* TapkuLibrary.bundle */; };
 		E2871E4113258D57009FB406 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4013258D57009FB406 /* Default.png */; };
 		E2871E4313258DCA009FB406 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4213258DCA009FB406 /* Default-Portrait~ipad.png */; };
 		E2871E4513258DD6009FB406 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4413258DD6009FB406 /* Default-Landscape~ipad.png */; };
@@ -87,23 +87,6 @@
 		E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD1512FE07130028A348 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E2769265132D40D3000302C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = TapkuLibrary;
-		};
-		E2769267132D40D3000302C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B6EDD521154791900E454DA;
-			remoteInfo = TapkuLibraryExtra;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		D82085B513595A70002A83FF /* WSTimetableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTimetableController.m; sourceTree = "<group>"; };
 		D82085B613595A70002A83FF /* WSTimetableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTimetableController.h; sourceTree = "<group>"; };
@@ -134,6 +117,8 @@
 		E228C898130F626600E135FF /* WSAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSAboutController.m; path = Controllers/WSAboutController.m; sourceTree = "<group>"; };
 		E228C899130F626600E135FF /* WSAboutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAboutController.xib; path = Classes/Controllers/WSAboutController.xib; sourceTree = "<group>"; };
 		E228C89D130F731D00E135FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E237B3B71458935D0033B38A /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = tapku/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		E237B3B9145893E90033B38A /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTapkuLibrary.a; path = "tapku/src/build/Release-iphoneos/libTapkuLibrary.a"; sourceTree = "<group>"; };
 		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "../NSDate+Helper.h"; sourceTree = "<group>"; };
 		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "../NSDate+Helper.m"; sourceTree = "<group>"; };
 		E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealsTableViewDelegate.h; path = ../MealsTableViewDelegate.h; sourceTree = "<group>"; };
@@ -142,9 +127,7 @@
 		E262E05C1300A1FD008D4E18 /* WSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDataManager.m; sourceTree = "<group>"; };
 		E26DADCB1332737600B6B0EC /* WSColouredNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSColouredNavigationBar.h; path = View/WSColouredNavigationBar.h; sourceTree = "<group>"; };
 		E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSColouredNavigationBar.m; path = View/WSColouredNavigationBar.m; sourceTree = "<group>"; };
-		E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = tapku/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
-		E2769269132D4133000302C2 /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTapkuLibrary.a; sourceTree = SOURCE_ROOT; };
-		E276926B132D415E000302C2 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = tapku/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = tapku/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		E2871E4013258D57009FB406 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E2871E4213258DCA009FB406 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		E2871E4413258DD6009FB406 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -238,8 +221,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E237B3BA145893E90033B38A /* libTapkuLibrary.a in Frameworks */,
 				D840700C1405A75A0087A3CD /* libz.1.2.5.dylib in Frameworks */,
-				E276926A132D4133000302C2 /* libTapkuLibrary.a in Frameworks */,
 				E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */,
 				E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
@@ -315,8 +298,12 @@
 			children = (
 				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
 				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
+				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
+				E262E05C1300A1FD008D4E18 /* WSDataManager.m */,
 				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
 				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+				E2D05950125548AC00696D71 /* WSDayFood.h */,
+				E2D05951125548AC00696D71 /* WSDayFood.m */,
 				D8406FF614044FD90087A3CD /* WSTimetableDay.h */,
 				D8406FF714044FDA0087A3CD /* WSTimetableDay.m */,
 				D8406FF9140450A90087A3CD /* WSLesson.h */,
@@ -325,10 +312,6 @@
 				E212BED1130FEC910009F2D2 /* WSProfile.m */,
 				D88062FE1305AC87002774C7 /* WSNotice.h */,
 				D88062FF1305AC87002774C7 /* WSNotice.m */,
-				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
-				E262E05C1300A1FD008D4E18 /* WSDataManager.m */,
-				E2D05950125548AC00696D71 /* WSDayFood.h */,
-				E2D05951125548AC00696D71 /* WSDayFood.m */,
 				E2D542EE1304878800C22202 /* WSPrep.h */,
 				E2D542EF1304878900C22202 /* WSPrep.m */,
 			);
@@ -355,15 +338,6 @@
 				E228C898130F626600E135FF /* WSAboutController.m */,
 			);
 			name = About;
-			sourceTree = "<group>";
-		};
-		E276925E132D40D3000302C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E2769266132D40D3000302C2 /* libTapkuLibrary.a */,
-				E2769268132D40D3000302C2 /* libTapkuLibraryExtra.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E29A26D61236C6F700C084B7 = {
@@ -416,9 +390,9 @@
 		E29A26E01236C6F700C084B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E237B3B9145893E90033B38A /* libTapkuLibrary.a */,
 				D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */,
-				E276926B132D415E000302C2 /* TapkuLibrary.bundle */,
-				E2769269132D4133000302C2 /* libTapkuLibrary.a */,
+				E237B3B71458935D0033B38A /* TapkuLibrary.bundle */,
 				E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */,
 				E228C89D130F731D00E135FF /* MessageUI.framework */,
 				E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */,
@@ -597,35 +571,12 @@
 			mainGroup = E29A26D61236C6F700C084B7;
 			productRefGroup = E29A26E61236C6F700C084B7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E276925E132D40D3000302C2 /* Products */;
-					ProjectRef = E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E29A26E41236C6F700C084B7 /* Westminster */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E2769266132D40D3000302C2 /* libTapkuLibrary.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTapkuLibrary.a;
-			remoteRef = E2769265132D40D3000302C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E2769268132D40D3000302C2 /* libTapkuLibraryExtra.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTapkuLibraryExtra.a;
-			remoteRef = E2769267132D40D3000302C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E29A26E31236C6F700C084B7 /* Resources */ = {
@@ -653,9 +604,9 @@
 				E2871E4113258D57009FB406 /* Default.png in Resources */,
 				E2871E4313258DCA009FB406 /* Default-Portrait~ipad.png in Resources */,
 				E2871E4513258DD6009FB406 /* Default-Landscape~ipad.png in Resources */,
-				E276926C132D415E000302C2 /* TapkuLibrary.bundle in Resources */,
 				D82085B913595B98002A83FF /* WSTimetableController.xib in Resources */,
 				D8406FF51403D2EE0087A3CD /* WSClassCell.xib in Resources */,
+				E237B3B81458935D0033B38A /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,7 +733,7 @@
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					tapku/,
+					tapku/src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
@@ -818,7 +769,7 @@
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					tapku/,
+					tapku/src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;

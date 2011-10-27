@@ -14,6 +14,7 @@
 	NSArray *currentPrep;
 	WSProfile *currentProfile;
 	NSArray *currentNotices;
+	NSArray *currentTimetable;
 }
 -(void)deletePersonalInformation;
 + (WSDataManager *)sharedInstance;
@@ -22,6 +23,7 @@
 @property (nonatomic, retain) NSArray *currentPrep;
 @property (nonatomic, retain) WSProfile *currentProfile;
 @property (nonatomic, retain) NSArray *currentNotices;
+@property (nonatomic, retain) NSArray *currentTimetable;
 
 
 @end

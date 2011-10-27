@@ -11,6 +11,9 @@
 #import "WSPrep.h"
 #import "WSDayFood.h"
 #import "WSNotice.h"
+#import "WSTimetableDay.h"
+#import "WSLesson.h"
+
 
 @implementation WSXMLDataParser
 
@@ -327,6 +330,12 @@
 -(NSArray *)parseTimetable:(NSData *)xmlData {
     NSMutableArray *days = [NSMutableArray arrayWithCapacity:6];
     
+	for (int i = 0; i<6; i++) {
+		WSTimetableDay *newDay = [[WSTimetableDay alloc] initWithDay:i];
+		[newDay autorelease];
+		[days addObject:newDay];
+	}
+	
     NSError *error;
     
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
@@ -352,14 +361,18 @@
             dayInt = 4;
         } else if ([day isEqualToString:@"Saturday"]) {
             dayInt = 5;
-            
         }
-        NSString *periodNumber = [[node elementsForName:@"day"] objectAtIndex:0];
+        int periodNumber = [[[node elementsForName:@"day"] objectAtIndex:0] intValue];
         NSString *subject = [[node elementsForName:@"day"] objectAtIndex:0];
         NSString *teacher = [[node elementsForName:@"day"] objectAtIndex:0];
         NSString *room = [[node elementsForName:@"day"] objectAtIndex:0];
+		WSLesson *newLesson = [[WSLesson alloc] initWithPeriod:periodNumber];
+		newLesson.subject=subject;
+		newLesson.teacher=teacher;
+		newLesson.location=room;
+		[[days objectAtIndex:dayInt] addLesson:newLesson];
     }
-    
+	[doc autorelease];
     return days;
 }
 

@@ -66,6 +66,18 @@ static WSDataManager *sharedInstance  = nil;
 	}
 }
 
+-(NSArray *)currentTimetable {
+	return currentTimetable;
+}
+
+-(void)setCurrentTimetable:(NSArray *)timetable {
+	[currentTimetable release];
+	currentTimetable=timetable;
+	[currentTimetable retain];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSTimetableUpdatedNotification" object:nil];
+}
+
+
 //WSDeletePersonalData
 
 -(void)deletePersonalInformation {

@@ -14,8 +14,6 @@
 @synthesize teacherInitials,dueDate,descriptionText,subject,editable,documentID,documentDescription, documentFilename;
 
 -(BOOL)containsDocument {
-	
-	
 	return !(documentID==nil);
 }
 

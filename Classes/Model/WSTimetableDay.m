@@ -63,7 +63,7 @@ BOOL dayIsShort(int day) {
 }
 
 - (NSDictionary *)lessons {
-    return lessons; //Actually an NSMutableDictipnary, but don't tell anyone
+    return lessons; //Actually an NSMutableDictionary, but don't tell anyone
 }
 
 - (void)addTimeForPeriod:(NSInteger)period {
