@@ -14,7 +14,7 @@
 	IBOutlet UITableView *tableView;
 	IBOutlet UIBarButtonItem *signButton;
 }
-- (IBAction)signOut:(id)sender;
+
 - (IBAction)refresh:(id)sender;
 -(void)update;
 -(void)getProfile;

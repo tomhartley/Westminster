@@ -77,8 +77,8 @@
 -(void)setSignedOutTabs {
 	[tabBarController setViewControllers:[NSArray arrayWithObjects:
 										  [viewControllers objectAtIndex:1],
-										  [viewControllers objectAtIndex:3],
-										  [viewControllers objectAtIndex:4], 
+										  //[viewControllers objectAtIndex:3],
+										  [viewControllers objectAtIndex:5], 
 										  nil] animated:YES];
 	prepTabBarIndex = -1;
 }
@@ -97,7 +97,7 @@
 										  [viewControllers objectAtIndex:1],
 										  [viewControllers objectAtIndex:2],
 										  [viewControllers objectAtIndex:3],
-										  [viewControllers objectAtIndex:4], 
+										  [viewControllers objectAtIndex:5], 
 										  nil] animated:YES];
 	prepTabBarIndex = -1;
 }
@@ -107,7 +107,7 @@
 										  [viewControllers objectAtIndex:1],
 										  [viewControllers objectAtIndex:2],
 										  [viewControllers objectAtIndex:3],
-										  [viewControllers objectAtIndex:4], 
+										  [viewControllers objectAtIndex:5], 
 										  nil] animated:YES];
 	prepTabBarIndex = -1;
 }

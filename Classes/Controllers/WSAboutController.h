@@ -17,5 +17,7 @@
 }
 - (IBAction)email:(id)sender;
 - (IBAction)credits:(id)sender;
+- (IBAction)signOut:(id)sender;
 
+- (void)update;
 @end

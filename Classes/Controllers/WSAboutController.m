@@ -10,6 +10,8 @@
 #import <TapkuLibrary/TapkuLibrary.h>
 #import "GANTracker.h"
 #import "WSCreditsController.h"
+#import "WSAuthManager.h"
+#import "WSAuthController.h"
 
 @implementation WSAboutController
 
@@ -18,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:@"WSProfileUpdatedNotification" object:nil];
     }
     return self;
 }
@@ -94,8 +97,25 @@
 #endif
 	if (controller) [self presentModalViewController:controller animated:YES];
 	[controller autorelease];
-
+	[self update];
 }
+
+- (IBAction)signOut:(id)sender {
+	[[WSAuthManager sharedInstance] signOut];
+	
+	if ([[WSAuthManager sharedInstance] loggedIn]) {
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
+	}
+	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
+	}
+#endif
+	[self.parentViewController presentModalViewController:authController animated:YES];
+	[authController autorelease];
+}
+
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller  
           didFinishWithResult:(MFMailComposeResult)result 
@@ -107,4 +127,11 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+-(void)update {
+	if ([[WSAuthManager sharedInstance] loggedIn]) {
+		self.navigationController.navigationBar.topItem.rightBarButtonItem.title = @"Sign Out";
+	} else {
+		self.navigationController.navigationBar.topItem.rightBarButtonItem.title = @"Sign In";
+	}
+}
 @end

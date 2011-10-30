@@ -147,23 +147,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
-- (IBAction)signOut:(id)sender {
-	[[WSAuthManager sharedInstance] signOut];
-	
-	if ([[WSAuthManager sharedInstance] loggedIn]) {
-		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
-	}
-	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
-	}
-#endif
-	[self.parentViewController presentModalViewController:authController animated:YES];
-	[authController autorelease];
-}
-
 - (IBAction)refresh:(id)sender {
 	[[WSDataFetcher sharedInstance] updateProfile];
 }
@@ -171,11 +154,6 @@
 -(void)update {
 	[self getProfile];
 	[tableView reloadData];
-	if ([[WSAuthManager sharedInstance] loggedIn]) {
-		signButton.title = @"Sign Out";
-	} else {
-		signButton.title = @"Sign In";
-	}
 }
 
 -(void)getProfile {

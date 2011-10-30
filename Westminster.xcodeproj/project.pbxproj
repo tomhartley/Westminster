@@ -87,6 +87,23 @@
 		E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECD1512FE07130028A348 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E235BA6E1459B5E700D1294F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		E235BA701459B5E700D1294F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D82085B513595A70002A83FF /* WSTimetableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTimetableController.m; sourceTree = "<group>"; };
 		D82085B613595A70002A83FF /* WSTimetableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTimetableController.h; sourceTree = "<group>"; };
@@ -118,7 +135,7 @@
 		E228C899130F626600E135FF /* WSAboutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSAboutController.xib; path = Classes/Controllers/WSAboutController.xib; sourceTree = "<group>"; };
 		E228C89D130F731D00E135FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E237B3B71458935D0033B38A /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = tapku/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
-		E237B3B9145893E90033B38A /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTapkuLibrary.a; path = "tapku/src/build/Release-iphoneos/libTapkuLibrary.a"; sourceTree = "<group>"; };
+		E237B3B9145893E90033B38A /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTapkuLibrary.a; path = "tapku/src/build/Release-iphoneos/libTapkuLibrary.a"; sourceTree = "<group>"; };
 		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "../NSDate+Helper.h"; sourceTree = "<group>"; };
 		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "../NSDate+Helper.m"; sourceTree = "<group>"; };
 		E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealsTableViewDelegate.h; path = ../MealsTableViewDelegate.h; sourceTree = "<group>"; };
@@ -316,6 +333,15 @@
 				E2D542EF1304878900C22202 /* WSPrep.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E235BA6A1459B5E700D1294F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E235BA6F1459B5E700D1294F /* libTapkuLibrary.a */,
+				E235BA711459B5E700D1294F /* LogicTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E26DADCE133280D200B6B0EC /* Preps */ = {
@@ -561,6 +587,9 @@
 /* Begin PBXProject section */
 		E29A26D81236C6F700C084B7 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = E29A26DB1236C6F700C084B7 /* Build configuration list for PBXProject "Westminster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -571,12 +600,35 @@
 			mainGroup = E29A26D61236C6F700C084B7;
 			productRefGroup = E29A26E61236C6F700C084B7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E235BA6A1459B5E700D1294F /* Products */;
+					ProjectRef = E276925D132D40D3000302C2 /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E29A26E41236C6F700C084B7 /* Westminster */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E235BA6F1459B5E700D1294F /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = E235BA6E1459B5E700D1294F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E235BA711459B5E700D1294F /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = E235BA701459B5E700D1294F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E29A26E31236C6F700C084B7 /* Resources */ = {
@@ -695,9 +747,8 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_LDFLAGS = "-lxml2";
-				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -713,9 +764,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
-				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
