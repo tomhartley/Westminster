@@ -97,7 +97,6 @@
 #endif
 	if (controller) [self presentModalViewController:controller animated:YES];
 	[controller autorelease];
-	[self update];
 }
 
 - (IBAction)signOut:(id)sender {

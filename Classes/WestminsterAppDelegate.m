@@ -49,6 +49,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
 	[window makeKeyAndVisible];
 	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
+    NSLog(@"%@",viewControllers);
 	tabBarController.customizableViewControllers = [NSArray array];
     return YES;
 }
@@ -78,8 +79,9 @@
 	[tabBarController setViewControllers:[NSArray arrayWithObjects:
 										  [viewControllers objectAtIndex:1],
 										  //[viewControllers objectAtIndex:3],
-										  [viewControllers objectAtIndex:5], 
+										  [viewControllers objectAtIndex:5],
 										  nil] animated:YES];
+    NSLog(@"%@",[[viewControllers objectAtIndex:5] topViewController]);
 	prepTabBarIndex = -1;
 }
 

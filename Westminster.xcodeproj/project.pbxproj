@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8466990A146D41E9004BC05C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84669909146D41E9004BC05C /* libz.dylib */; };
 		D82085B713595A70002A83FF /* WSTimetableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82085B513595A70002A83FF /* WSTimetableController.m */; };
 		D82085B913595B98002A83FF /* WSTimetableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82085B813595B98002A83FF /* WSTimetableController.xib */; };
 		D8406FF41403D2EE0087A3CD /* WSClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FF21403D2EE0087A3CD /* WSClassCell.m */; };
 		D8406FF51403D2EE0087A3CD /* WSClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8406FF31403D2EE0087A3CD /* WSClassCell.xib */; };
 		D8406FF814044FDC0087A3CD /* WSTimetableDay.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FF714044FDA0087A3CD /* WSTimetableDay.m */; };
 		D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FFA140450AA0087A3CD /* WSLesson.m */; };
-		D840700C1405A75A0087A3CD /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
 		E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */; };
 		E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E212BEB5130FD8350009F2D2 /* 18-envelope.png */; };
@@ -105,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84669909146D41E9004BC05C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D82085B513595A70002A83FF /* WSTimetableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTimetableController.m; sourceTree = "<group>"; };
 		D82085B613595A70002A83FF /* WSTimetableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTimetableController.h; sourceTree = "<group>"; };
 		D82085B813595B98002A83FF /* WSTimetableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSTimetableController.xib; path = Classes/WSTimetableController.xib; sourceTree = "<group>"; };
@@ -238,8 +239,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8466990A146D41E9004BC05C /* libz.dylib in Frameworks */,
 				E237B3BA145893E90033B38A /* libTapkuLibrary.a in Frameworks */,
-				D840700C1405A75A0087A3CD /* libz.1.2.5.dylib in Frameworks */,
 				E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */,
 				E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
@@ -532,6 +533,7 @@
 		E2F88BD012FDF2B400D5D078 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				84669909146D41E9004BC05C /* libz.dylib */,
 				E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */,
 				E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */,
 				E2AE1C4A12FEC90400A5CE4E /* NSDate+Helper */,
@@ -773,14 +775,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					tapku/src/,
@@ -797,8 +800,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
+				PROVISIONING_PROFILE = "27DAECE8-FD39-4BCE-8749-F823A952FF07";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27DAECE8-FD39-4BCE-8749-F823A952FF07";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -810,13 +813,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jehangir Ghandhi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jehangir Ghandhi (YBPJJEXZ2Q)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					tapku/src/,
@@ -833,8 +837,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = Westminster;
-				PROVISIONING_PROFILE = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "99E9C8E8-49A8-4AD5-966E-6D5DE0CB140A";
+				PROVISIONING_PROFILE = "27DAECE8-FD39-4BCE-8749-F823A952FF07";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27DAECE8-FD39-4BCE-8749-F823A952FF07";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
