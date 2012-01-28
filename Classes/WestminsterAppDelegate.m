@@ -50,6 +50,8 @@
 	[window makeKeyAndVisible];
 	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
     NSLog(@"%@",viewControllers);
+    NSLog(@"%@",[[viewControllers objectAtIndex:5] topViewController]);
+    NSLog(@"LOOK UP THERE ^^^ PERSON");
 	tabBarController.customizableViewControllers = [NSArray array];
     return YES;
 }
@@ -82,6 +84,7 @@
 										  [viewControllers objectAtIndex:5],
 										  nil] animated:YES];
     NSLog(@"%@",[[viewControllers objectAtIndex:5] topViewController]);
+    NSLog(@"LOOK UP THERE ^^^ PERSON");
 	prepTabBarIndex = -1;
 }
 
