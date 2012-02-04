@@ -27,6 +27,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"Ok I'm at the dealloc command");
     [super dealloc];
 }
 
@@ -100,19 +101,23 @@
 }
 
 - (IBAction)signOut:(id)sender {
-	[[WSAuthManager sharedInstance] signOut];
-	
 	if ([[WSAuthManager sharedInstance] loggedIn]) {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
 	}
+
+	[[WSAuthManager sharedInstance] signOut];
+	
 	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
-	[self.parentViewController presentModalViewController:authController animated:YES];
+    NSLog(@"%@",authController);
+	[self presentModalViewController:authController animated:YES];
 	[authController autorelease];
+    [self retain];
+    [self retain];
 }
 
 
