@@ -32,28 +32,32 @@
 	}
 			
 	[window addSubview:tabBarController.view];
-	if ([[WSAuthManager sharedInstance] needsAuth]) {
+    [self performSelector:@selector(presentAuth) withObject:nil afterDelay:1];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
+	[window makeKeyAndVisible];
+	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
+	tabBarController.customizableViewControllers = [NSArray array];
+    NSLog(@"%@",viewControllers);
+    for (UINavigationController *temp in viewControllers) {
+        NSLog(@"%@",[temp topViewController]);
+    }
+    return YES;
+}
+
+-(void)presentAuth {
+    if ([[WSAuthManager sharedInstance] needsAuth]) {
 		WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             [authController setModalPresentationStyle:UIModalPresentationFormSheet];
         }
 #endif
-
-		[tabBarController presentModalViewController:authController animated:YES];
+        [tabBarController presentModalViewController:authController animated:YES];
 		[authController autorelease];
-	} else {
+    } else {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Login Successful"];
 		[[WSDataFetcher sharedInstance] downloadAll];
 	}
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
-	[window makeKeyAndVisible];
-	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
-    NSLog(@"%@",viewControllers);
-    NSLog(@"%@",[[viewControllers objectAtIndex:5] topViewController]);
-    NSLog(@"LOOK UP THERE ^^^ PERSON");
-	tabBarController.customizableViewControllers = [NSArray array];
-    return YES;
 }
 
 -(void)updatePreps {
@@ -78,14 +82,17 @@
 */
 
 -(void)setSignedOutTabs {
+    NSLog(@"%@",viewControllers);
+    for (UINavigationController *temp in viewControllers) {
+        NSLog(@"%@",[temp topViewController]);
+    }
+    /*NSLog(@"LOOK UP THERE ^^^ PERSON");
 	[tabBarController setViewControllers:[NSArray arrayWithObjects:
 										  [viewControllers objectAtIndex:1],
 										  //[viewControllers objectAtIndex:3],
 										  [viewControllers objectAtIndex:5],
 										  nil] animated:YES];
-    NSLog(@"%@",[[viewControllers objectAtIndex:5] topViewController]);
-    NSLog(@"LOOK UP THERE ^^^ PERSON");
-	prepTabBarIndex = -1;
+	prepTabBarIndex = -1;*/
 }
 
 -(void)setTabsForProfileType:(WSProfileType)type {

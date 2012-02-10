@@ -148,7 +148,7 @@
 		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
-    [self.parentViewController presentModalViewController:authController animated:YES];
+    [self.parentViewController.parentViewController presentModalViewController:authController animated:YES];
 	[authController autorelease];
 }
 

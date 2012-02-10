@@ -85,7 +85,7 @@
 		controller.modalPresentationStyle = UIModalPresentationFormSheet;
 	}
 #endif
-	if (controller) [self presentModalViewController:controller animated:YES];
+	if (controller) [self.parentViewController.parentViewController presentModalViewController:controller animated:YES];
 	[controller release];
 }
 
@@ -96,28 +96,27 @@
 		controller.modalPresentationStyle = UIModalPresentationFormSheet;
 	}
 #endif
-	if (controller) [self presentModalViewController:controller animated:YES];
+	if (controller) [self.parentViewController.parentViewController presentModalViewController:controller animated:YES];
 	[controller autorelease];
 }
 
 - (IBAction)signOut:(id)sender {
+    NSLog(@"%@",self.parentViewController);
 	if ([[WSAuthManager sharedInstance] loggedIn]) {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Signed Out"];
 	}
-
+    
 	[[WSAuthManager sharedInstance] signOut];
-	
+	/*
 	WSAuthController *authController = [[WSAuthController alloc] initWithNibName:@"WSAuthController" bundle:nil];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[authController setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
-    NSLog(@"%@",authController);
-	[self presentModalViewController:authController animated:YES];
+	[self.parentViewController.parentViewController presentModalViewController:authController animated:YES];
 	[authController autorelease];
-    [self retain];
-    [self retain];
+     */
 }
 
 

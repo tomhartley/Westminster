@@ -214,7 +214,7 @@
 		 [detail setModalPresentationStyle:UIModalPresentationFormSheet];
 	 }
 #endif
-	[self presentModalViewController:[detail autorelease] animated:YES];
+	[self.parentViewController.parentViewController presentModalViewController:[detail autorelease] animated:YES];
 }
 
 @end
