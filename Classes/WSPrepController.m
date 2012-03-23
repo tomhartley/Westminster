@@ -21,7 +21,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         // Custom initialization
     }
@@ -55,7 +55,7 @@
 	[preps release];
 	preps = [[WSDataManager sharedInstance] currentPrep];
 	[preps retain];
-	self.parentViewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",[preps count]];
+	//self.parentViewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",[preps count]];
 	[self.tableView reloadData];
 }
 
