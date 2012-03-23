@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WSDayFood.h"
-#import "MealsTableViewDelegate.h"
+#import "WSMealsTableViewDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 #import "THPagedScrollView.h"
 

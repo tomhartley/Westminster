@@ -34,7 +34,7 @@
 	//For each table view
 	for (int i = 0; i<7; i++) {
 		UITableView *tableView = [tableViews objectAtIndex:i];
-		MealsTableViewDelegate *delegate = (MealsTableViewDelegate *) tableView.delegate;
+		WSMealsTableViewDelegate *delegate = (WSMealsTableViewDelegate *) tableView.delegate;
 		//Set its delegate's food to the updated version
 		if ([weekFoods count]>i) {
 			delegate.foodDay = [weekFoods objectAtIndex:i];
@@ -55,7 +55,7 @@
 			tableView.separatorColor = [UIColor lightGrayColor];
 			tableView.backgroundColor = [UIColor darkGrayColor];
 			tableView.layer.cornerRadius=7;
-			MealsTableViewDelegate *delegate = [[MealsTableViewDelegate alloc] init];
+			WSMealsTableViewDelegate *delegate = [[WSMealsTableViewDelegate alloc] init];
 			delegate.foodDay = [weekFoods objectAtIndex:i]; 
 			tableView.dataSource = delegate;
 			tableView.delegate = delegate;

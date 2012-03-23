@@ -31,7 +31,7 @@
 		E237B3B81458935D0033B38A /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E237B3B71458935D0033B38A /* TapkuLibrary.bundle */; };
 		E237B3BA145893E90033B38A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E237B3B9145893E90033B38A /* libTapkuLibrary.a */; };
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
-		E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */; };
+		E2612CF312F4823200BB13E5 /* WSMealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* WSMealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
 		E26DADCD1332737600B6B0EC /* WSColouredNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */; };
 		E2871E4113258D57009FB406 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E2871E4013258D57009FB406 /* Default.png */; };
@@ -144,8 +144,8 @@
 		E237B3B9145893E90033B38A /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTapkuLibrary.a; path = "tapku/src/build/Release-iphoneos/libTapkuLibrary.a"; sourceTree = "<group>"; };
 		E25723C5125E78E000B0380C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "../NSDate+Helper.h"; sourceTree = "<group>"; };
 		E25723C6125E78E000B0380C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "../NSDate+Helper.m"; sourceTree = "<group>"; };
-		E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealsTableViewDelegate.h; path = ../MealsTableViewDelegate.h; sourceTree = "<group>"; };
-		E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MealsTableViewDelegate.m; path = ../MealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E2612CF112F4823200BB13E5 /* WSMealsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; name = WSMealsTableViewDelegate.h; path = ../WSMealsTableViewDelegate.h; sourceTree = "<group>"; };
+		E2612CF212F4823200BB13E5 /* WSMealsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSMealsTableViewDelegate.m; path = ../WSMealsTableViewDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E262E05B1300A1FC008D4E18 /* WSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDataManager.h; sourceTree = "<group>"; };
 		E262E05C1300A1FD008D4E18 /* WSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDataManager.m; sourceTree = "<group>"; };
 		E26DADCB1332737600B6B0EC /* WSColouredNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSColouredNavigationBar.h; path = View/WSColouredNavigationBar.h; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 			children = (
 				E2D05950125548AC00696D71 /* WSDayFood.h */,
 				E2D05951125548AC00696D71 /* WSDayFood.m */,
-				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
-				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+				E2612CF112F4823200BB13E5 /* WSMealsTableViewDelegate.h */,
+				E2612CF212F4823200BB13E5 /* WSMealsTableViewDelegate.m */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -691,7 +691,7 @@
 				E2D05952125548AC00696D71 /* WSDayFood.m in Sources */,
 				E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */,
 				E29437BC1263B5CF00CFF0C0 /* WSFoodViewController.m in Sources */,
-				E2612CF312F4823200BB13E5 /* MealsTableViewDelegate.m in Sources */,
+				E2612CF312F4823200BB13E5 /* WSMealsTableViewDelegate.m in Sources */,
 				E2F88BAB12FDEA5B00D5D078 /* ASIAuthenticationDialog.m in Sources */,
 				E2F88BAC12FDEA5B00D5D078 /* ASIDataCompressor.m in Sources */,
 				E2F88BAD12FDEA5B00D5D078 /* ASIDataDecompressor.m in Sources */,
