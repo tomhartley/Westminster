@@ -394,7 +394,6 @@
 				E29A26DD1236C6F700C084B7 /* Classes */,
 				E29A26DE1236C6F700C084B7 /* Other Sources */,
 				E29A26DF1236C6F700C084B7 /* Resources */,
-				E2B61C7412F46ED900F314A5 /* iPad */,
 				E29A26E01236C6F700C084B7 /* Frameworks */,
 				E29A26E61236C6F700C084B7 /* Products */,
 			);
@@ -497,13 +496,6 @@
 				E2FECD0D12FDFE5A0028A348 /* WSXMLDataParser.m */,
 			);
 			name = API;
-			sourceTree = "<group>";
-		};
-		E2B61C7412F46ED900F314A5 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 		E2D5A3DA130473CE00908FC4 /* View */ = {

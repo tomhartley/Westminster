@@ -27,7 +27,7 @@
 	[weekFoods retain];
 	tableViews = [[NSMutableArray alloc] init];
 	delegates = [[NSMutableArray alloc] init];
-	[NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(layoutSubviews) userInfo:nil repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(createTableViews) userInfo:nil repeats:NO];
 }
 
 -(void)updateTableViews {
@@ -47,41 +47,28 @@
 	[self updateDate];
 }
 
--(void)layoutSubviews {
+-(void)createTableViews {
 	//Create table views if neccesary
-	if ([tableViews count]==0) {
+	if (![tableViews count]) {
 		for (int i = 0; i<7; i++) {
 			UITableView *tableView =[[UITableView alloc] init];
 			tableView.separatorColor = [UIColor lightGrayColor];
 			tableView.backgroundColor = [UIColor darkGrayColor];
 			tableView.layer.cornerRadius=7;
 			MealsTableViewDelegate *delegate = [[MealsTableViewDelegate alloc] init];
+			delegate.foodDay = [weekFoods objectAtIndex:i]; 
 			tableView.dataSource = delegate;
 			tableView.delegate = delegate;
             tableView.allowsSelection = NO;
 			[tableViews addObject:tableView];
 			[delegates addObject:delegate];
-			[scrollView addSubview:tableView];
 			[tableView release];
 			[delegate release];
 		}
 	}
-	[self updateTableViews];
-	//Get values for setting up
-	int w = scrollView.frame.size.width;
-	int h = scrollView.frame.size.height;
-	int margins = w/20;
-	scrollView.contentSize = CGSizeMake(w*7, h);
-	
-	for (int i = 0; i<7; i++) {
-		//Get table view
-		UITableView *tableView = [tableViews objectAtIndex:i];
-		//Resize it
-		tableView.frame = CGRectMake(w*i+margins,0,w-(margins*2),h);
-	}
-	//Scroll back to correct page
-	int page = pageControl.currentPage;
-	[self scrollToPage:page];
+	[self updateDate];
+	[pagedScrollView setViews:tableViews];
+	pagedScrollView.delegate = self;
 }
 
 -(void)updateMeals {
@@ -91,26 +78,21 @@
 	[self updateTableViews];
 
 }
-
+/*
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
 	[self layoutSubviews];
 }
-
+*/
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	[self layoutSubviews];
 	[[GANTracker sharedTracker] trackPageview:@"/foodController"
 									withError:nil];
 }
 
-- (IBAction)pageControlChanged:(UIPageControl *)sender {
-	[self scrollToPage:sender.currentPage];
-}
-
 - (void)updateDate {
 	@try {
-		dateLabel.text = [[weekFoods objectAtIndex:pageControl.currentPage] dateDescription];
+		dateLabel.text = [[weekFoods objectAtIndex:pagedScrollView.currentPage] dateDescription];
 
 	}
 	@catch (NSException *exception) {
@@ -118,16 +100,7 @@
 	}
 }
 
-- (void)scrollToPage:(int)pageNumber {
-	int w = scrollView.frame.size.width;
-	int h = scrollView.frame.size.height;
-	[scrollView scrollRectToVisible:CGRectMake(w*pageNumber,0,w,h) animated:YES];
-	[self updateDate];
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)theScrollView {
-	int x = scrollView.contentOffset.x;
-	pageControl.currentPage = x/scrollView.frame.size.width;
+-(void)pagedScrollView:(THPagedScrollView *)pagedScrollView didScrollToPageIndex:(NSUInteger)index {
 	[self updateDate];
 }
 
@@ -159,20 +132,15 @@
 }
 
 - (void)viewDidUnload {
-	[navBar release];
-	navBar = nil;
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
 }
 
 
 - (void)dealloc {
-    [scrollView release];
-    [pageControl release];
     [dateLabel release];
 	[tableViews release];
 	[delegates release];
-	[navBar release];
     [super dealloc];
 }
 

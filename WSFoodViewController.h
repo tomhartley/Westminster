@@ -10,24 +10,18 @@
 #import "WSDayFood.h"
 #import "MealsTableViewDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import "THPagedScrollView.h"
 
-@interface WSFoodViewController : UIViewController <UIScrollViewDelegate> {
+@interface WSFoodViewController : UIViewController <THPagedScrollViewDelegate> {
 	NSArray *weekFoods;
 	NSMutableArray *tableViews;
 	NSMutableArray *delegates;
-	IBOutlet UIScrollView *scrollView;
-	IBOutlet UIPageControl *pageControl;
+	IBOutlet THPagedScrollView *pagedScrollView;
 	IBOutlet UILabel *dateLabel;
-	IBOutlet UINavigationBar *navBar;
 }
 - (void)updateTableViews;
-- (void)layoutSubviews;
--(void)updateMeals;
-- (IBAction)pageControlChanged:(UIPageControl *)sender;
+- (void)updateMeals;
 - (void)updateDate;
-- (void)scrollToPage:(int)pageNumber;
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
-
 
 - (IBAction)refreshFood:(id)sender;
 
