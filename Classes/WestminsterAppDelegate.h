@@ -10,12 +10,13 @@
 #import <TapkuLibrary/TapkuLibrary.h>
 #import "WSAuthManager.h"
 #import "WSAuthController.h"
+#import "WSTabBarController.h"
 
 @interface WestminsterAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	UIWindow *window;
 	UITabBarController *tabBarController;
 	NSDate *openedDate;
-	NSArray *viewControllers;
+	WSTabBarController *TBC;
 	int prepTabBarIndex;
 }
 
@@ -25,6 +26,7 @@
 
 
 -(void)presentAuth;
+-(void)setUpTabs;
 -(void)updatePreps;
 -(void)setSignedOutTabs;
 -(void)setSignedInPupilsTabs;

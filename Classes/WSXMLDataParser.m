@@ -345,7 +345,7 @@
     
     for (GDataXMLElement* node in lessonsToParse) {
         //dostuffs
-        NSString *day = [[node elementsForName:@"day"] objectAtIndex:0];
+        NSString *day = [[[node elementsForName:@"day"] objectAtIndex:0] stringValue];
         
         int dayInt;
         
@@ -362,10 +362,10 @@
         } else if ([day isEqualToString:@"Saturday"]) {
             dayInt = 5;
         }
-        int periodNumber = [[[node elementsForName:@"day"] objectAtIndex:0] intValue];
-        NSString *subject = [[node elementsForName:@"day"] objectAtIndex:0];
-        NSString *teacher = [[node elementsForName:@"day"] objectAtIndex:0];
-        NSString *room = [[node elementsForName:@"day"] objectAtIndex:0];
+        int periodNumber = [[[[node elementsForName:@"periodnumber"] objectAtIndex:0] stringValue] intValue];
+        NSString *subject = [[[node elementsForName:@"subject"] objectAtIndex:0] stringValue];
+        NSString *teacher = [[[node elementsForName:@"teacher"] objectAtIndex:0] stringValue];
+        NSString *room = [[[node elementsForName:@"room"] objectAtIndex:0] stringValue];
 		WSLesson *newLesson = [[WSLesson alloc] initWithPeriod:periodNumber];
 		newLesson.subject=subject;
 		newLesson.teacher=teacher;
@@ -373,6 +373,7 @@
 		[[days objectAtIndex:dayInt] addLesson:newLesson];
     }
 	[doc autorelease];
+    //NSLog(@"%@",days);
     return days;
 }
 

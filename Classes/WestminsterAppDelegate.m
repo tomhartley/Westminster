@@ -19,8 +19,15 @@
 @synthesize tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.window.rootViewController = self.tabBarController;
+
 	openedDate = [[NSDate date] retain];
 	NSError *error;
+    
+    
 	//Beta testing:UA-21371417-1 Production: UA-22079240-1
 	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-21371417-1" dispatchPeriod:60 delegate:nil];
 	if (![[GANTracker sharedTracker] trackEvent:@"state"
@@ -30,18 +37,17 @@
 									  withError:&error]) {
 		NSLog(@"%@", error);
 	}
-			
-	[window addSubview:tabBarController.view];
-    [self performSelector:@selector(presentAuth) withObject:nil afterDelay:1];
+    
+    
+    [self performSelector:@selector(presentAuth) withObject:nil afterDelay:0];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
-	[window makeKeyAndVisible];
-	viewControllers = [[NSArray alloc] initWithArray:tabBarController.viewControllers];
-	tabBarController.customizableViewControllers = [NSArray array];
-    NSLog(@"%@",viewControllers);
-    for (UINavigationController *temp in viewControllers) {
-        NSLog(@"%@",[temp topViewController]);
-    }
+    [self performSelector:@selector(setUpTabs) withObject:nil afterDelay:0];
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)setUpTabs {
+    TBC = [[WSTabBarController alloc] initWithTabBar:tabBarController];
 }
 
 -(void)presentAuth {
@@ -61,10 +67,10 @@
 }
 
 -(void)updatePreps {
-	NSArray *preps = [[WSDataManager sharedInstance] currentPrep];
+	/*NSArray *preps = [[WSDataManager sharedInstance] currentPrep];
 	if (prepTabBarIndex >= 0) {
 		[[[[tabBarController tabBar] items] objectAtIndex:prepTabBarIndex] setBadgeValue: [NSString stringWithFormat:@"%d",[preps count]]];
-	}
+	}*/
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -82,17 +88,8 @@
 */
 
 -(void)setSignedOutTabs {
-    NSLog(@"%@",viewControllers);
-    for (UINavigationController *temp in viewControllers) {
-        NSLog(@"%@",[temp topViewController]);
-    }
-    /*NSLog(@"LOOK UP THERE ^^^ PERSON");
-	[tabBarController setViewControllers:[NSArray arrayWithObjects:
-										  [viewControllers objectAtIndex:1],
-										  //[viewControllers objectAtIndex:3],
-										  [viewControllers objectAtIndex:5],
-										  nil] animated:YES];
-	prepTabBarIndex = -1;*/
+    //prepTabBarIndex = -1;
+    [TBC setSignedOutTabs];
 }
 
 -(void)setTabsForProfileType:(WSProfileType)type {
@@ -100,28 +97,28 @@
 }
 
 -(void)setSignedInPupilsTabs {
-	[tabBarController setViewControllers:viewControllers animated:YES];
-	prepTabBarIndex = 0;
+	[TBC setSignedInPupilsTabs];
+	//prepTabBarIndex = 0;
 }
 
 -(void)setSignedInParentsTabs {
-	[tabBarController setViewControllers:[NSArray arrayWithObjects:
+	/*[tabBarController setViewControllers:[NSArray arrayWithObjects:
 										  [viewControllers objectAtIndex:1],
 										  [viewControllers objectAtIndex:2],
 										  [viewControllers objectAtIndex:3],
 										  [viewControllers objectAtIndex:5], 
 										  nil] animated:YES];
-	prepTabBarIndex = -1;
+	prepTabBarIndex = -1;*/
 }
 
 -(void)setSignedInTeachersTabs {
-	[tabBarController setViewControllers:[NSArray arrayWithObjects:
+	/*[tabBarController setViewControllers:[NSArray arrayWithObjects:
 										  [viewControllers objectAtIndex:1],
 										  [viewControllers objectAtIndex:2],
 										  [viewControllers objectAtIndex:3],
 										  [viewControllers objectAtIndex:5], 
 										  nil] animated:YES];
-	prepTabBarIndex = -1;
+	prepTabBarIndex = -1;*/
 }
 
 

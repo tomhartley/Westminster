@@ -43,7 +43,7 @@ static WSDataManager *sharedInstance  = nil;
 	currentPrep=prep;
 	[currentPrep retain];
 	[[UIApplication sharedApplication] setApplicationIconBadgeNumber:[currentPrep count]];
-	//[[NSNotificationCenter defaultCenter] postNotificationName:@"WSPrepUpdatedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WSPrepUpdatedNotification" object:nil];
 }
 
 -(WSProfile *)currentProfile {

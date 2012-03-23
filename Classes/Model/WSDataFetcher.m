@@ -23,7 +23,7 @@ static WSDataFetcher *sharedInstance = nil;
 	[self updatePreps];
 	[self updateProfile];
     [self updateNotices];
-	//[self updateTimetable];
+	[self updateTimetable];
 }
 
 -(void)downloadAllAuthFree {

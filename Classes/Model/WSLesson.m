@@ -20,4 +20,7 @@
     return self;
 }
 
+-(NSString *)description {
+    return [NSString stringWithFormat:@"Period: %d\nLocation: %@\nTeacher:%@\nSubject:%@\n",period,location,teacher,subject];
+}
 @end

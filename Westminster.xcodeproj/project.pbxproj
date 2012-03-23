@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8466990A146D41E9004BC05C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84669909146D41E9004BC05C /* libz.dylib */; };
+		8470646A151899A3000536D8 /* THPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84706469151899A3000536D8 /* THPagedScrollView.m */; };
+		84851FA114F3A05100AF0B98 /* WSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84851FA014F3A05100AF0B98 /* WSTabBarController.m */; };
 		D82085B713595A70002A83FF /* WSTimetableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82085B513595A70002A83FF /* WSTimetableController.m */; };
 		D82085B913595B98002A83FF /* WSTimetableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82085B813595B98002A83FF /* WSTimetableController.xib */; };
 		D8406FF41403D2EE0087A3CD /* WSClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FF21403D2EE0087A3CD /* WSClassCell.m */; };
@@ -45,7 +47,6 @@
 		E29A26F21236C6F700C084B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E29A26F01236C6F700C084B7 /* InfoPlist.strings */; };
 		E29A26F41236C6F700C084B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F31236C6F700C084B7 /* main.m */; };
 		E29A26F71236C6F700C084B7 /* WestminsterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */; };
-		E29A26FA1236C6F700C084B7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29A26F81236C6F700C084B7 /* MainWindow.xib */; };
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
 		E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D7449131A9C0800B05163 /* WSNoticeCell.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
@@ -106,6 +107,10 @@
 
 /* Begin PBXFileReference section */
 		84669909146D41E9004BC05C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		84706468151899A3000536D8 /* THPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THPagedScrollView.h; path = View/THPagedScrollView.h; sourceTree = "<group>"; };
+		84706469151899A3000536D8 /* THPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THPagedScrollView.m; path = View/THPagedScrollView.m; sourceTree = "<group>"; };
+		84851F9F14F3A05100AF0B98 /* WSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSTabBarController.h; path = Model/WSTabBarController.h; sourceTree = "<group>"; };
+		84851FA014F3A05100AF0B98 /* WSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSTabBarController.m; path = Model/WSTabBarController.m; sourceTree = "<group>"; };
 		D82085B513595A70002A83FF /* WSTimetableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTimetableController.m; sourceTree = "<group>"; };
 		D82085B613595A70002A83FF /* WSTimetableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTimetableController.h; sourceTree = "<group>"; };
 		D82085B813595B98002A83FF /* WSTimetableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSTimetableController.xib; path = Classes/WSTimetableController.xib; sourceTree = "<group>"; };
@@ -165,7 +170,6 @@
 		E29A26F31236C6F700C084B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WestminsterAppDelegate.h; sourceTree = "<group>"; };
 		E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WestminsterAppDelegate.m; sourceTree = "<group>"; };
-		E29A26F91236C6F700C084B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		E29A271D1236CDAB00C084B7 /* WSDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDataFetcher.h; path = Model/WSDataFetcher.h; sourceTree = "<group>"; };
 		E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = WSDataFetcher.m; path = Model/WSDataFetcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E29D7448131A9C0800B05163 /* WSNoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNoticeCell.h; sourceTree = "<group>"; };
@@ -259,6 +263,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		847064661518932F000536D8 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				D8406FF614044FD90087A3CD /* WSTimetableDay.h */,
+				D8406FF714044FDA0087A3CD /* WSTimetableDay.m */,
+				D8406FF9140450A90087A3CD /* WSLesson.h */,
+				D8406FFA140450AA0087A3CD /* WSLesson.m */,
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		8470646715189339000536D8 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				E2D05950125548AC00696D71 /* WSDayFood.h */,
+				E2D05951125548AC00696D71 /* WSDayFood.m */,
+				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
+				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
+			);
+			name = Food;
+			sourceTree = "<group>";
+		};
 		E212BEB7130FD83A0009F2D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +310,6 @@
 				E2D5A3DB1304745100908FC4 /* WSPrepViewCell.xib */,
 				E2AE1C5112FED04500A5CE4E /* WSAuthController.xib */,
 				E29437BB1263B5CF00CFF0C0 /* WSFoodViewController.xib */,
-				E29A26F81236C6F700C084B7 /* MainWindow.xib */,
 				E2AE1C7112FF3CA200A5CE4E /* WSNoticeController.xib */,
 				D82085B813595B98002A83FF /* WSTimetableController.xib */,
 				D8406FF31403D2EE0087A3CD /* WSClassCell.xib */,
@@ -295,8 +320,6 @@
 		E225589D12FEC86400D34090 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D82085B513595A70002A83FF /* WSTimetableController.m */,
-				D82085B613595A70002A83FF /* WSTimetableController.h */,
 				E26DADCE133280D200B6B0EC /* Preps */,
 				E26DADCF133280EA00B6B0EC /* About */,
 				E2AE1C6F12FF3CA200A5CE4E /* WSNoticeController.h */,
@@ -307,6 +330,8 @@
 				E212BEBA130FE8360009F2D2 /* WSProfileController.m */,
 				E29437B91263B5CF00CFF0C0 /* WSFoodViewController.h */,
 				E29437BA1263B5CF00CFF0C0 /* WSFoodViewController.m */,
+				D82085B513595A70002A83FF /* WSTimetableController.m */,
+				D82085B613595A70002A83FF /* WSTimetableController.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -314,18 +339,14 @@
 		E225589E12FEC86E00D34090 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8470646715189339000536D8 /* Food */,
+				847064661518932F000536D8 /* Timetable */,
 				E29A26F51236C6F700C084B7 /* WestminsterAppDelegate.h */,
 				E29A26F61236C6F700C084B7 /* WestminsterAppDelegate.m */,
+				84851F9F14F3A05100AF0B98 /* WSTabBarController.h */,
+				84851FA014F3A05100AF0B98 /* WSTabBarController.m */,
 				E262E05B1300A1FC008D4E18 /* WSDataManager.h */,
 				E262E05C1300A1FD008D4E18 /* WSDataManager.m */,
-				E2612CF112F4823200BB13E5 /* MealsTableViewDelegate.h */,
-				E2612CF212F4823200BB13E5 /* MealsTableViewDelegate.m */,
-				E2D05950125548AC00696D71 /* WSDayFood.h */,
-				E2D05951125548AC00696D71 /* WSDayFood.m */,
-				D8406FF614044FD90087A3CD /* WSTimetableDay.h */,
-				D8406FF714044FDA0087A3CD /* WSTimetableDay.m */,
-				D8406FF9140450A90087A3CD /* WSLesson.h */,
-				D8406FFA140450AA0087A3CD /* WSLesson.m */,
 				E212BED0130FEC910009F2D2 /* WSProfile.h */,
 				E212BED1130FEC910009F2D2 /* WSProfile.m */,
 				D88062FE1305AC87002774C7 /* WSNotice.h */,
@@ -492,6 +513,8 @@
 				E2EC32F8140E679100197BBE /* UINavigationBar+ProfileColours.m */,
 				E26DADCB1332737600B6B0EC /* WSColouredNavigationBar.h */,
 				E26DADCC1332737600B6B0EC /* WSColouredNavigationBar.m */,
+				84706468151899A3000536D8 /* THPagedScrollView.h */,
+				84706469151899A3000536D8 /* THPagedScrollView.m */,
 				E2D5A3D7130473BB00908FC4 /* WSPrepViewCell.h */,
 				E2D5A3D8130473BB00908FC4 /* WSPrepViewCell.m */,
 				E29D7448131A9C0800B05163 /* WSNoticeCell.h */,
@@ -638,7 +661,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29A26F21236C6F700C084B7 /* InfoPlist.strings in Resources */,
-				E29A26FA1236C6F700C084B7 /* MainWindow.xib in Resources */,
 				E29437BD1263B5CF00CFF0C0 /* WSFoodViewController.xib in Resources */,
 				E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */,
 				E225589712FEBB7300D34090 /* icon.png in Resources */,
@@ -711,6 +733,8 @@
 				D8406FF814044FDC0087A3CD /* WSTimetableDay.m in Sources */,
 				D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */,
 				E2EC32F9140E679100197BBE /* UINavigationBar+ProfileColours.m in Sources */,
+				84851FA114F3A05100AF0B98 /* WSTabBarController.m in Sources */,
+				8470646A151899A3000536D8 /* THPagedScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,14 +747,6 @@
 				E29A26F11236C6F700C084B7 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E29A26F81236C6F700C084B7 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E29A26F91236C6F700C084B7 /* en */,
-			);
-			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

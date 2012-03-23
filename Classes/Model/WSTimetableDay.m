@@ -161,4 +161,8 @@ BOOL dayIsShort(int day) {
     theLesson.endTime=endTime;
 }
 
+-(NSString *)description {
+    return [NSString stringWithFormat:@"%d \n %@", day, lessons];
+}
+
 @end
