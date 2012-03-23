@@ -70,7 +70,7 @@
 }
 
 -(void)timetableFinished:(ASIHTTPRequest *)request {
-    NSArray *timetable = [[[[WSXMLDataParser alloc] init] autorelease] parseTimetable:[request responseData]];
+    //NSArray *timetable = [[[[WSXMLDataParser alloc] init] autorelease] parseTimetable:[request responseData]];
 }
 
 -(void)timetableFailed:(ASIHTTPRequest *)request {

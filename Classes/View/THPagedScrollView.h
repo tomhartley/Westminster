@@ -29,7 +29,7 @@
     NSObject <THPagedScrollViewDelegate> *delegate;
 }
 
-@property (nonatomic, assign) id <THPagedScrollViewDelegate> delegate;
+@property (nonatomic, assign) NSObject <THPagedScrollViewDelegate> *delegate;
 @property (nonatomic, retain) NSArray *views;
 @property (nonatomic) NSUInteger currentPage; //Animated by default, if you want to disable them use the setCurrentPage:animated: method
 @property (nonatomic) BOOL showsPageControl;
