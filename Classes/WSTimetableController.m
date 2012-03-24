@@ -43,7 +43,7 @@
 			//tableView.separatorColor = [UIColor lightGrayColor];
 			//tableView.backgroundColor = [UIColor darkGrayColor];
 			tableView.layer.cornerRadius=7;
-			tableView.rowHeight = 145.0;
+			tableView.rowHeight = 94.0;
 			WSTimetableTableViewDelegate *delegate = [[WSTimetableTableViewDelegate alloc] init];
 			delegate.timetableDay= [timetableDays objectAtIndex:i]; 
 			tableView.dataSource = delegate;
