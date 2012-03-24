@@ -19,7 +19,8 @@
 -(BOOL)addLesson:(WSLesson *)lesson;
 -(BOOL)removeLessonForPeriod:(NSInteger)period;
 - (void)addTimeForPeriod:(NSInteger)period;
-
+-(NSString *)dateDescription;
+-(BOOL)isShort;
 @property (nonatomic,readonly) NSInteger day;
 @property (nonatomic,retain,readonly) NSDictionary *lessons; //Keys are NSNumber encoded period numbers
 

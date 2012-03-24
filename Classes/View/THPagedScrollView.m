@@ -61,7 +61,7 @@
 	int w = scrollView.frame.size.width;
 	int h = scrollView.frame.size.height;
 	int margins = w/20;
-	scrollView.contentSize = CGSizeMake(w*7, h);
+	scrollView.contentSize = CGSizeMake(w*[views count], h);
 	
 	for (int i = 0; i<[views count]; i++) {
 		//Get view

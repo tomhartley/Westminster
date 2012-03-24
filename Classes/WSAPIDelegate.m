@@ -56,7 +56,7 @@
 	WSProfile *profile = [[[[WSXMLDataParser alloc] init] autorelease] parseProfile:[request responseData]];
 	[[WSDataManager sharedInstance] setCurrentProfile:profile];
 	if ([profile.UWI isEqualToString:@"P09HAR01"]) {
-		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Hi"];
+		[[TKAlertCenter defaultCenter] postAlertWithMessage:@"Hi Tom!"];
 	} else {
 		[[TKAlertCenter defaultCenter] postAlertWithMessage:[NSString stringWithFormat:@"Hi %@",profile.preferredName]];
 	}
@@ -70,7 +70,8 @@
 }
 
 -(void)timetableFinished:(ASIHTTPRequest *)request {
-    //NSArray *timetable = [[[[WSXMLDataParser alloc] init] autorelease] parseTimetable:[request responseData]];
+    NSArray *timetable = [[[[WSXMLDataParser alloc] init] autorelease] parseTimetable:[request responseData]];
+	[[WSDataManager sharedInstance] setCurrentTimetable:timetable];
 }
 
 -(void)timetableFailed:(ASIHTTPRequest *)request {

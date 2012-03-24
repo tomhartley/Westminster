@@ -84,6 +84,7 @@ static WSDataManager *sharedInstance  = nil;
 	self.currentPrep = nil;
 	self.currentProfile = nil;
 	self.currentNotices = nil;
+	self.currentTimetable = nil;
 }
 
 //Singleton methods

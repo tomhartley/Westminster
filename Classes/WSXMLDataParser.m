@@ -362,7 +362,11 @@
         } else if ([day isEqualToString:@"Saturday"]) {
             dayInt = 5;
         }
-        int periodNumber = [[[[node elementsForName:@"periodnumber"] objectAtIndex:0] stringValue] intValue];
+        NSString *periodString = [[[node elementsForName:@"periodnumber"] objectAtIndex:0] stringValue];
+		if ([periodString isEqualToString:@"Station"]) {
+			continue;
+		}
+		int periodNumber = [periodString intValue];
         NSString *subject = [[[node elementsForName:@"subject"] objectAtIndex:0] stringValue];
         NSString *teacher = [[[node elementsForName:@"teacher"] objectAtIndex:0] stringValue];
         NSString *room = [[[node elementsForName:@"room"] objectAtIndex:0] stringValue];

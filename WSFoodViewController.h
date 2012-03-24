@@ -20,6 +20,7 @@
 	IBOutlet UILabel *dateLabel;
 }
 - (void)updateTableViews;
+- (void)createTableViews;
 - (void)updateMeals;
 - (void)updateDate;
 

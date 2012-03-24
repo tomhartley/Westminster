@@ -18,12 +18,12 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        self.colourView.layer.cornerRadius = 5.0;
     }
     return self;
 }
 
 -(void)setLesson:(WSLesson *)theLesson {
+	self.colourView.layer.cornerRadius = 5.0;
     lesson=theLesson;
     subjectLabel.text=lesson.subject;
     timeStartLabel.text=[NSString stringWithFormat:@"%d:%d",lesson.startTime.hours,lesson.startTime.minutes];
@@ -31,7 +31,7 @@
     locationLabel.text=lesson.location;
     teacherLabel.text=lesson.teacher;
     periodNumberLabel.text=[NSString stringWithFormat:@"%d",lesson.period];
-    colourView.backgroundColor=[UIColor greenColor]; //FIXME
+    colourView.backgroundColor=[UIColor clearColor]; //FIXME
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

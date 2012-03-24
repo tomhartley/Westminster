@@ -20,8 +20,6 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	self.view.autoresizesSubviews = YES; 
-	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMeals) name:@"WSFoodUpdatedNotification" object:nil];
 	weekFoods = [[WSDataManager sharedInstance] currentFood];
 	[weekFoods retain];
@@ -76,7 +74,6 @@
 	weekFoods = [[WSDataManager sharedInstance] currentFood];
 	[weekFoods retain];
 	[self updateTableViews];
-
 }
 /*
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {

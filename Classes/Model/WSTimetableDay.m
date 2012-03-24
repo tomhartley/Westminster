@@ -7,6 +7,7 @@
 //
 
 #import "WSTimetableDay.h"
+#import "NSDate+Helper.h"
 
 @implementation WSTimetableDay
 
@@ -32,10 +33,11 @@ BOOL dayIsShort(int day) {
     return NO;
 }
 
-- (id)initWithDay:(NSInteger)day {
+- (id)initWithDay:(NSInteger)dayOfWeek {
     self = [super init];
     if (self) {
         // Initialization code here.
+		day = dayOfWeek;
         lessons = [[NSMutableDictionary alloc] initWithCapacity:6];
     }
     
@@ -163,6 +165,14 @@ BOOL dayIsShort(int day) {
 
 -(NSString *)description {
     return [NSString stringWithFormat:@"%d \n %@", day, lessons];
+}
+
+-(NSString *)dateDescription {
+	return [NSDate weekdayNameFromInt:day+2];
+}
+
+-(BOOL)isShort {
+	return dayIsShort(day);
 }
 
 @end
