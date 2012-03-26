@@ -58,6 +58,7 @@
 	[self updateDate];
 	[pagedScrollView setViews:tableViews];
 	pagedScrollView.delegate = self;
+    [self scrollToToday:self];
 }
 
 - (void)updateTimetable {
@@ -74,6 +75,20 @@
 	@catch (NSException *exception) {
 		dateLabel.text = @"";
 	}
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self scrollToToday:self];
+}
+
+-(IBAction)scrollToToday:(id)sender {
+    NSCalendar *gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    int weekday = [comps weekday]-2;
+    if (weekday>-1) {
+        pagedScrollView.currentPage = weekday;
+    }
+    [self updateDate];
 }
 
 -(void)pagedScrollView:(THPagedScrollView *)pagedScrollView didScrollToPageIndex:(NSUInteger)index {

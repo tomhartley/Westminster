@@ -18,6 +18,7 @@
     self = [super init];
     if (self) {
         // Initialization code
+        self.clipsToBounds = YES;
 		description = [[UILabel alloc] init];
 		title = [[UILabel alloc] init];
 		titleBGView = [[UIView alloc] init];
@@ -52,11 +53,12 @@
 		title.frame = CGRectMake(SIDEMARGINS, 15, width, titleSize.height);
 		titleBGView.frame = CGRectMake(0, 5, width+SIDEMARGINS*2, titleSize.height+20);
 		//description.hidden=NO;
+		description.frame=CGRectMake(SIDEMARGINS, title.frame.size.height+10+20, descriptionSize.width, descriptionSize.height);
+        [description setAlpha:0.0];
         [UIView setAnimationsEnabled:YES];
         [UIView beginAnimations:@"alpha" context:nil];
         [UIView setAnimationDuration:0.3];
         [description setAlpha:1];
-		description.frame=CGRectMake(SIDEMARGINS, title.frame.size.height+10+20, descriptionSize.width, descriptionSize.height);
         [UIView commitAnimations];
 	} else {
 		//Layout for non-expanded version
@@ -65,8 +67,8 @@
         [UIView setAnimationsEnabled:YES];
         [UIView beginAnimations:@"alpha" context:nil];
         [UIView setAnimationDuration:0.3];
-        [description setAlpha:0];
-		description.frame=CGRectMake(SIDEMARGINS, title.frame.size.height+10+20, width, 0);
+        [description setAlpha:0.0];
+		//description.frame=CGRectMake(SIDEMARGINS, title.frame.size.height+10+20, width, 0);
         [UIView commitAnimations];
 		//description.hidden=YES;
 		title.frame=CGRectMake(SIDEMARGINS, 15, width, titleSize.height);

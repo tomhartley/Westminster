@@ -54,7 +54,9 @@
 			tableView.backgroundColor = [UIColor darkGrayColor];
 			tableView.layer.cornerRadius=7;
 			WSMealsTableViewDelegate *delegate = [[WSMealsTableViewDelegate alloc] init];
-			delegate.foodDay = [weekFoods objectAtIndex:i]; 
+            if ([weekFoods count]>i) {
+                delegate.foodDay = [weekFoods objectAtIndex:i];                
+            }
 			tableView.dataSource = delegate;
 			tableView.delegate = delegate;
             tableView.allowsSelection = NO;

@@ -69,7 +69,7 @@
 		//Resize it
 		v.frame = CGRectMake(w*i+margins,0,w-(margins*2),h);
 	}
-
+    [self setCurrentPage:currentPage animated:NO];
 }
 
 -(void)setCurrentPage:(NSUInteger)newCurrentPage {

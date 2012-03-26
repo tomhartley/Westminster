@@ -26,8 +26,8 @@
 	self.colourView.layer.cornerRadius = 5.0;
     lesson=theLesson;
     subjectLabel.text=lesson.subject;
-    timeStartLabel.text=[NSString stringWithFormat:@"%d:%d",lesson.startTime.hours,lesson.startTime.minutes];
-    timeEndLabel.text=[NSString stringWithFormat:@"%d:%d",lesson.endTime.hours,lesson.endTime.minutes];
+    timeStartLabel.text=[NSString stringWithFormat:@"%02d:%02d",lesson.startTime.hours,lesson.startTime.minutes];
+    timeEndLabel.text=[NSString stringWithFormat:@"%02d:%02d",lesson.endTime.hours,lesson.endTime.minutes];
     locationLabel.text=lesson.location;
     teacherLabel.text=lesson.teacher;
     periodNumberLabel.text=[NSString stringWithFormat:@"%d",lesson.period];
