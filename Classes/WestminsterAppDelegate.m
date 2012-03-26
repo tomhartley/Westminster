@@ -19,7 +19,8 @@
 @synthesize tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    [TestFlight takeOff:@"02dfea111e830eded7eb92c865e3fbdd_Mzc4NDIwMTItMDMtMjYgMTQ6MzQ6MzMuMzc3OTY1"];
+	self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.window.rootViewController = self.tabBarController;

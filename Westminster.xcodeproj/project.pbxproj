@@ -29,7 +29,6 @@
 		E228C89B130F626600E135FF /* WSAboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E228C899130F626600E135FF /* WSAboutController.xib */; };
 		E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E228C89D130F731D00E135FF /* MessageUI.framework */; };
 		E237B3B81458935D0033B38A /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E237B3B71458935D0033B38A /* TapkuLibrary.bundle */; };
-		E237B3BA145893E90033B38A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E237B3B9145893E90033B38A /* libTapkuLibrary.a */; };
 		E25723C7125E78E000B0380C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E25723C6125E78E000B0380C /* NSDate+Helper.m */; };
 		E2612CF312F4823200BB13E5 /* WSMealsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2612CF212F4823200BB13E5 /* WSMealsTableViewDelegate.m */; };
 		E262E05D1300A1FF008D4E18 /* WSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E262E05C1300A1FD008D4E18 /* WSDataManager.m */; };
@@ -50,6 +49,10 @@
 		E29A271F1236CDAB00C084B7 /* WSDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A271E1236CDAB00C084B7 /* WSDataFetcher.m */; };
 		E29D744A131A9C0800B05163 /* WSNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D7449131A9C0800B05163 /* WSNoticeCell.m */; };
 		E2A3710112F477C700061B2D /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A3710012F477C700061B2D /* 48-fork-and-knife.png */; };
+		E2A77DB51520EF5700B46720 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A77DB11520EF5700B46720 /* libTestFlight.a */; };
+		E2A77DB61520EF5700B46720 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2A77DB21520EF5700B46720 /* README.txt */; };
+		E2A77DB71520EF5700B46720 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2A77DB31520EF5700B46720 /* release_notes.txt */; };
+		E2A77DBF1520FDC400B46720 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E237B3B9145893E90033B38A /* libTapkuLibrary.a */; };
 		E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */; };
 		E2AE1C5212FED04500A5CE4E /* WSAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1C5012FED04500A5CE4E /* WSAuthController.m */; };
@@ -176,6 +179,11 @@
 		E29D7448131A9C0800B05163 /* WSNoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNoticeCell.h; sourceTree = "<group>"; };
 		E29D7449131A9C0800B05163 /* WSNoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNoticeCell.m; sourceTree = "<group>"; };
 		E2A3710012F477C700061B2D /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
+		E2A77DB11520EF5700B46720 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		E2A77DB21520EF5700B46720 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		E2A77DB31520EF5700B46720 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		E2A77DB41520EF5700B46720 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		E2A77DBA1520F5A700B46720 /* Westminster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Westminster.entitlements; sourceTree = "<group>"; };
 		E2A95F1913076360009CE9ED /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
 		E2A95F1A13076360009CE9ED /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		E2A95F1C130763CE009CE9ED /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -247,9 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8466990A146D41E9004BC05C /* libz.dylib in Frameworks */,
-				E237B3BA145893E90033B38A /* libTapkuLibrary.a in Frameworks */,
 				E228C89E130F731D00E135FF /* MessageUI.framework in Frameworks */,
 				E2A95F1D130763CE009CE9ED /* libsqlite3.0.dylib in Frameworks */,
+				E2A77DBF1520FDC400B46720 /* libTapkuLibrary.a in Frameworks */,
 				E2AE1C6E12FF046800A5CE4E /* QuartzCore.framework in Frameworks */,
 				E2AE1C6A12FF02B700A5CE4E /* MapKit.framework in Frameworks */,
 				E2FECD1612FE07130028A348 /* libxml2.dylib in Frameworks */,
@@ -260,6 +268,7 @@
 				E29A26EB1236C6F700C084B7 /* Foundation.framework in Frameworks */,
 				E29A26ED1236C6F700C084B7 /* CoreGraphics.framework in Frameworks */,
 				E2A95F1B13076360009CE9ED /* libGoogleAnalytics.a in Frameworks */,
+				E2A77DB51520EF5700B46720 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 			children = (
 				E29A26EF1236C6F700C084B7 /* Westminster_Prefix.pch */,
 				E29A26F31236C6F700C084B7 /* main.m */,
+				E2A77DBA1520F5A700B46720 /* Westminster.entitlements */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -468,6 +478,18 @@
 				E29A26E51236C6F700C084B7 /* Westminster.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E2A77DB01520EF5700B46720 /* TestFlightSDK0.8.3 */ = {
+			isa = PBXGroup;
+			children = (
+				E2A77DB11520EF5700B46720 /* libTestFlight.a */,
+				E2A77DB21520EF5700B46720 /* README.txt */,
+				E2A77DB31520EF5700B46720 /* release_notes.txt */,
+				E2A77DB41520EF5700B46720 /* TestFlight.h */,
+			);
+			name = TestFlightSDK0.8.3;
+			path = ../TestFlightSDK0.8.3;
 			sourceTree = "<group>";
 		};
 		E2A95F1813076345009CE9ED /* GAnalytics */ = {
@@ -553,6 +575,7 @@
 		E2F88BD012FDF2B400D5D078 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E2A77DB01520EF5700B46720 /* TestFlightSDK0.8.3 */,
 				84669909146D41E9004BC05C /* libz.dylib */,
 				E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */,
 				E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */,
@@ -680,6 +703,8 @@
 				D82085B913595B98002A83FF /* WSTimetableController.xib in Resources */,
 				D8406FF51403D2EE0087A3CD /* WSClassCell.xib in Resources */,
 				E237B3B81458935D0033B38A /* TapkuLibrary.bundle in Resources */,
+				E2A77DB61520EF5700B46720 /* README.txt in Resources */,
+				E2A77DB71520EF5700B46720 /* release_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,7 +778,10 @@
 		E29A27071236C6F700C084B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -761,7 +789,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-lxml2";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
 				SDKROOT = iphoneos;
@@ -771,13 +800,17 @@
 		E29A27081236C6F700C084B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
@@ -789,6 +822,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -803,10 +837,12 @@
 					tapku/src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Classes/TestFlightSDK0.8.3\"",
+					"\"$(SRCROOT)/tapku/src\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -817,6 +853,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
@@ -827,9 +864,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -840,10 +878,12 @@
 					tapku/src/,
 				);
 				INFOPLIST_FILE = "Westminster-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Classes/TestFlightSDK0.8.3\"",
+					"\"$(SRCROOT)/tapku/src\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -854,12 +894,76 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		E2A77DB81520F4DA00B46720 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jehangir Ghandhi";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lxml2";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FCC6B102-E2CB-419A-8283-19A2B6BDC47A";
+				SDKROOT = iphoneos;
+			};
+			name = "Ad hoc";
+		};
+		E2A77DB91520F4DA00B46720 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Westminster.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Westminster_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					tapku/src/,
+				);
+				INFOPLIST_FILE = "Westminster-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Classes/TestFlightSDK0.8.3\"",
+					"\"$(SRCROOT)/tapku/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = Westminster;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv6 armv7 i386";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad hoc";
 		};
 /* End XCBuildConfiguration section */
 
@@ -869,6 +973,7 @@
 			buildConfigurations = (
 				E29A27071236C6F700C084B7 /* Debug */,
 				E29A27081236C6F700C084B7 /* Release */,
+				E2A77DB81520F4DA00B46720 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -878,6 +983,7 @@
 			buildConfigurations = (
 				E29A270A1236C6F700C084B7 /* Debug */,
 				E29A270B1236C6F700C084B7 /* Release */,
+				E2A77DB91520F4DA00B46720 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
