@@ -49,6 +49,7 @@
 			tableView.dataSource = delegate;
 			tableView.delegate = delegate;
             tableView.allowsSelection = NO;
+			delegate.tableView = tableView;
 			[tableViews addObject:tableView];
 			[delegates addObject:delegate];
 			[tableView release];
@@ -88,6 +89,15 @@
     if (weekday>-1) {
         pagedScrollView.currentPage = weekday;
     }
+	for (int i = 0; i<[delegates count]; i++) {
+		if (weekday==i) {
+			[[delegates objectAtIndex:i] setIsToday:YES];
+		} else {
+			[[delegates objectAtIndex:i] setIsToday:NO];
+		}
+		[[delegates objectAtIndex:i] updateCurrentLesson:nil];
+		[[delegates objectAtIndex:i] scrollToCurrentLesson];
+	}
     [self updateDate];
 }
 

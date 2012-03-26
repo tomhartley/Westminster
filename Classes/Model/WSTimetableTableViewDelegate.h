@@ -13,8 +13,16 @@
 
 @interface WSTimetableTableViewDelegate : NSObject <UITableViewDelegate, UITableViewDataSource> {
 	WSTimetableDay *timetableDay;
+	NSInteger currentLesson;
+	NSTimer *timer;
+	BOOL isToday;
+	UITableView *tableView;
 }
 
-@property (nonatomic, retain) WSTimetableDay *timetableDay;
+-(void)updateCurrentLesson:(NSTimer *)aTimer;
+-(void)scrollToCurrentLesson;
 
+@property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) WSTimetableDay *timetableDay;
+@property (nonatomic) BOOL isToday;
 @end

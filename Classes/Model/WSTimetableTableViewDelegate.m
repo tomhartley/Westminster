@@ -9,9 +9,25 @@
 #import "WSTimetableTableViewDelegate.h"
 
 @implementation WSTimetableTableViewDelegate
-@synthesize timetableDay;
+@synthesize timetableDay, isToday, tableView;
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(id)init {
+	[super init];
+	
+	currentLesson = -1;
+	timer = [[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateCurrentLesson:) userInfo:nil repeats:YES] retain];
+	[self updateCurrentLesson:nil];
+	return self;
+}
+
+-(void)setTimetableDay:(WSTimetableDay *)newTimetableDay {
+	[timetableDay autorelease];
+	[newTimetableDay retain];
+	timetableDay = newTimetableDay;
+	[self updateCurrentLesson:nil];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"ClassCell";
     
     WSClassCell *cell = (WSClassCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -21,6 +37,10 @@
 		cell = (WSClassCell*)temporaryController.view;
 		[temporaryController release];
 	}
+	if (indexPath.row == currentLesson) {
+		cell.contentView.backgroundColor = [UIColor colorWithRed:0.7 green:1 blue:0.7 alpha:1];
+	}
+	
 	
 	NSDictionary *dict = [timetableDay lessons];
 	WSLesson *lesson = [dict objectForKey:[NSNumber numberWithInteger:indexPath.row+1]];
@@ -42,4 +62,46 @@
 			break;
 	}
 }
+
+-(void)updateCurrentLesson:(NSTimer *)aTimer { //Super ugly, needs to be rewritten to work with NSDate, NSCalendar and NSDateComponents...
+	currentLesson = -1;
+	if (isToday) {
+		NSDate *today = [NSDate date];
+		NSCalendar *gregorian = [[NSCalendar alloc]
+								 initWithCalendarIdentifier:NSGregorianCalendar];
+		NSDateComponents *components =
+		[gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:today];
+		
+		NSInteger hour = [components hour];
+		NSInteger minute = [components minute];
+		[gregorian autorelease];
+		NSInteger currentMinute = hour*60+minute;
+		for (int i = 0; i<[[timetableDay lessons] count]; i++) {
+			WSLesson *lesson = [[timetableDay lessons] objectForKey:[NSNumber numberWithInteger:i+1]];
+			WSTime startTime = lesson.startTime;
+			WSTime endTime = lesson.endTime;
+			NSInteger startMinute = startTime.hours*60+startTime.minutes;
+			NSInteger endMinute = endTime.hours*60+endTime.minutes;
+			WSClassCell *cell = (WSClassCell*)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+			cell.contentView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+			if (currentMinute>startMinute && currentMinute<endMinute) {
+				currentLesson = i;
+				cell.contentView.backgroundColor = [UIColor colorWithRed:0.7 green:1 blue:0.7 alpha:1];
+				break;
+			}
+		}
+	}
+}
+
+-(void)scrollToCurrentLesson {
+	if (currentLesson>-1) {
+		[tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:currentLesson inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+	}
+}
+
+-(void)dealloc {
+	[timer invalidate];
+	[super dealloc];
+}
+
 @end
