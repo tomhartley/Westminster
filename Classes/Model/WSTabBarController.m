@@ -47,6 +47,11 @@
     [preps setTabBarItem:prepsTabBarItem];
     [prepsTabBarItem release];
     
+	UIBarButtonItem *refreshPrepsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:[viewControllersContents objectAtIndex:0] action:@selector(refresh)];
+    preps.navigationItem.rightBarButtonItem = refreshPrepsButton;
+	[refreshPrepsButton autorelease];
+
+	
     //FOOD
     WSFoodViewController *food = [[WSFoodViewController alloc] initWithNibName:@"WSFoodViewController" bundle:nil];
     
@@ -61,6 +66,10 @@
     [foodTabBarItem setTitle:@"Menu"];
     [foodTabBarItem release];
     
+	UIBarButtonItem *refreshFoodButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:[viewControllersContents objectAtIndex:1] action:@selector(refreshFood:)];
+    food.navigationItem.rightBarButtonItem = refreshFoodButton;
+	[refreshFoodButton autorelease];
+	
     //NOTICES
     WSNoticeController *notices = [[WSNoticeController alloc] initWithNibName:@"WSNoticeController" bundle:nil];
     
@@ -75,6 +84,10 @@
     [notices setTabBarItem:noticesTabBarItem];
     [noticesTabBarItem release];
 
+	UIBarButtonItem *refreshNoticesButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:[viewControllersContents objectAtIndex:2] action:@selector(refresh)];
+    notices.navigationItem.rightBarButtonItem = refreshNoticesButton;
+	[refreshNoticesButton autorelease];
+	
     //TIMETABLE
     WSTimetableController *timetable = [[WSTimetableController alloc] initWithNibName:@"WSTimetableController" bundle:nil];
 
@@ -84,10 +97,14 @@
 
     [timetable setTitle:@"Timetable"];
     UITabBarItem *timetableTabBarItem = [[UITabBarItem alloc] init];
-    [timetableTabBarItem setImage:[UIImage imageNamed:@"117-fork-and-knife.png"]];
+    [timetableTabBarItem setImage:[UIImage imageNamed:@"11-clock.png"]];
     [timetableTabBarItem setTitle:@"Timetable"];
     [timetable setTabBarItem:timetableTabBarItem];
     [timetableTabBarItem release];
+
+	UIBarButtonItem *refreshTimetableButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:[viewControllersContents objectAtIndex:3] action:@selector(refresh)];
+    timetable.navigationItem.rightBarButtonItem = refreshTimetableButton;
+	[refreshTimetableButton autorelease];
 
     //PROFILE
     WSProfileController *profile = [[WSProfileController alloc] initWithNibName:@"WSProfileController" bundle:nil];
@@ -103,6 +120,11 @@
     [profile setTabBarItem:profileTabBarItem];
     [profileTabBarItem release];
     
+	/*UIBarButtonItem *refreshProfileButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:[viewControllersContents objectAtIndex:4] action:@selector(refresh:)];
+    profile.navigationItem.rightBarButtonItem = refreshProfileButton;
+	[refreshProfileButton autorelease];*/
+
+	
     //ABOUT
     WSAboutController *about = [[WSAboutController alloc] initWithNibName:@"WSAboutController" bundle:nil];
     

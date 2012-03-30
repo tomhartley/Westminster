@@ -29,9 +29,14 @@
 	cell.textLabel.textColor=[UIColor whiteColor];
 	cell.textLabel.shadowColor = [UIColor blackColor];
 	cell.textLabel.shadowOffset = CGSizeMake(0,1);
-	cell.textLabel.backgroundColor = [UIColor darkGrayColor];
 	cell.textLabel.adjustsFontSizeToFitWidth=YES;
-	cell.contentView.backgroundColor=[UIColor darkGrayColor];
+	if (index.row%2) {
+		cell.contentView.backgroundColor=[UIColor colorWithWhite:0.2 alpha:1];
+		cell.textLabel.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1];
+	} else {
+		cell.contentView.backgroundColor=[UIColor colorWithWhite:0.15 alpha:1];
+		cell.textLabel.backgroundColor = [UIColor colorWithWhite:0.15 alpha:1];
+	}
 	
 	int section = index.section;
 	int row = index.row;

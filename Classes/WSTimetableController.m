@@ -7,7 +7,7 @@
 //
 
 #import "WSTimetableController.h"
-
+#import "WSDataFetcher.h"
 
 @implementation WSTimetableController
 
@@ -103,6 +103,10 @@
 
 -(void)pagedScrollView:(THPagedScrollView *)pagedScrollView didScrollToPageIndex:(NSUInteger)index {
 	[self updateDate];
+}
+
+-(void)refresh {
+	[[WSDataFetcher sharedInstance] updateTimetable];
 }
 
 - (void)dealloc

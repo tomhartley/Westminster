@@ -38,7 +38,7 @@
 		[temporaryController release];
 	}
 	if (indexPath.row == currentLesson) {
-		cell.contentView.backgroundColor = [UIColor colorWithRed:0.7 green:1 blue:0.7 alpha:1];
+		cell.contentView.backgroundColor = [UIColor colorWithRed:1 green:0.941 blue:0.647 alpha:1];
 	}
 	
 	
@@ -80,13 +80,13 @@
 			WSLesson *lesson = [[timetableDay lessons] objectForKey:[NSNumber numberWithInteger:i+1]];
 			WSTime startTime = lesson.startTime;
 			WSTime endTime = lesson.endTime;
-			NSInteger startMinute = startTime.hours*60+startTime.minutes;
+			NSInteger startMinute = startTime.hours*60+startTime.minutes-5;
 			NSInteger endMinute = endTime.hours*60+endTime.minutes;
 			WSClassCell *cell = (WSClassCell*)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
 			cell.contentView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
-			if (currentMinute>startMinute && currentMinute<endMinute) {
+			if (currentMinute>startMinute && currentMinute<=endMinute) {
 				currentLesson = i;
-				cell.contentView.backgroundColor = [UIColor colorWithRed:0.7 green:1 blue:0.7 alpha:1];
+				cell.contentView.backgroundColor = [UIColor colorWithRed:1 green:0.941 blue:0.647 alpha:1];
 				break;
 			}
 		}

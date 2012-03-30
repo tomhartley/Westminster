@@ -22,7 +22,7 @@
 
 -(UIColor *)primaryColor {
 	if ([UWI isEqualToString:@"P09WOO02"]) return [UIColor colorWithRed:0.1 green:0.313 blue:0.431 alpha:1];
-	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.188 green:0.123 blue:0 alpha:1];
+	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.557 green:0.157 blue:0 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithRed:0 green:0 blue:0.7 alpha:1];	
 	} else if ([self.house isEqualToString:@"Grant's"]) {
@@ -52,7 +52,7 @@
 
 -(UIColor *)secondaryColor {
 	if ([UWI isEqualToString:@"P09WOO02"]) return [UIColor colorWithRed:0.403 green:0.078 blue:0.372 alpha:1];
-	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:0.85 green:0.611 blue:0.16 alpha:1];
+	if ([UWI isEqualToString:@"P09HAR01"]) return [UIColor colorWithRed:1 green:0.941 blue:0.647 alpha:1];
 	if ([self.house isEqualToString:@"Hakluyt's"]) {
 		return [UIColor colorWithRed:1 green:1 blue:0 alpha:1];
 	} else if ([self.house isEqualToString:@"Grant's"]) {
