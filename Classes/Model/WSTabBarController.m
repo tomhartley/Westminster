@@ -46,11 +46,11 @@
     [prepsTabBarItem setTitle:@"Prep"];
     [preps setTabBarItem:prepsTabBarItem];
     [prepsTabBarItem release];
-    
+    /*
 	UIBarButtonItem *refreshPrepsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:[viewControllersContents objectAtIndex:0] action:@selector(refresh)];
     preps.navigationItem.rightBarButtonItem = refreshPrepsButton;
 	[refreshPrepsButton autorelease];
-
+     */
 	
     //FOOD
     WSFoodViewController *food = [[WSFoodViewController alloc] initWithNibName:@"WSFoodViewController" bundle:nil];
@@ -143,7 +143,7 @@
 
 
     [tabBar setViewControllers:viewControllers];
-    
+    [tabBar setCustomizableViewControllers:nil];
     return self;
 }
 
@@ -159,6 +159,7 @@
     //[signOutButton autorelease];
     [viewControllers addObject: nav2];
     [tabBar setViewControllers:viewControllers animated:YES];
+    [tabBar setCustomizableViewControllers:nil];
 }
 
 -(void)setSignedInPupilsTabs {
@@ -168,6 +169,7 @@
         [viewControllers addObject:nav];
     }
     [tabBar setViewControllers:viewControllers animated:YES];
+    [tabBar setCustomizableViewControllers:nil];
 }
 
 -(void)setSignedInParentsTabs {

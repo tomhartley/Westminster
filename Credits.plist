@@ -26,25 +26,31 @@
 			<key>Name</key>
 			<string>Mr. Hindley</string>
 			<key>Job</key>
-			<string>Creation of API to access intranet data</string>
+			<string>API to access intranet data</string>
 		</dict>
 		<dict>
 			<key>Name</key>
 			<string>Ben Copsey</string>
 			<key>Job</key>
-			<string>Created ASIHTTP Library used in app</string>
+			<string>ASIHTTP Library used in app</string>
 		</dict>
 		<dict>
 			<key>Name</key>
 			<string>Devin Ross</string>
 			<key>Job</key>
-			<string>Created Tapku Library used in app</string>
+			<string>Tapku Library used in app</string>
 		</dict>
 		<dict>
 			<key>Name</key>
 			<string>Joseph Wain</string>
 			<key>Job</key>
-			<string>Creation of Glyphish icons used within app</string>
+			<string>Glyphish icons used within app</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Leah Culver</string>
+			<key>Job</key>
+			<string>PullToRefresh class used in app</string>
 		</dict>
 		<dict>
 			<key>Name</key>

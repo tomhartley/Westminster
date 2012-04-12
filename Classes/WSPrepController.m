@@ -28,7 +28,7 @@
     return self;
 }
 
--(IBAction)refresh {
+-(void)refresh {
 	[[GANTracker sharedTracker] trackEvent:@"prep"
 									action:@"refresh"
 									 label:nil
@@ -57,6 +57,7 @@
 	[preps retain];
 	//self.parentViewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",[preps count]];
 	[self.tableView reloadData];
+    [self stopLoading];
 }
 
 - (void)dealloc

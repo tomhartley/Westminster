@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "WSPrep.h"
+#import "PullRefreshTableViewController.h"
 
-@interface WSPrepController : UITableViewController {
+@interface WSPrepController : PullRefreshTableViewController {
     NSArray *preps;
 }
 
 -(void)updatePreps;
--(IBAction)refresh;
 -(IBAction)signOut;
 @end

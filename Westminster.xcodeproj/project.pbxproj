@@ -16,6 +16,8 @@
 		D8406FF51403D2EE0087A3CD /* WSClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8406FF31403D2EE0087A3CD /* WSClassCell.xib */; };
 		D8406FF814044FDC0087A3CD /* WSTimetableDay.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FF714044FDA0087A3CD /* WSTimetableDay.m */; };
 		D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FFA140450AA0087A3CD /* WSLesson.m */; };
+		D856E6461537665000D8464C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D856E6451537665000D8464C /* arrow.png */; };
+		D856E6491537666C00D8464C /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D856E6481537666C00D8464C /* PullRefreshTableViewController.m */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
 		E20C8BEA130AEB3C002AE235 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */; };
 		E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E212BEB5130FD8350009F2D2 /* 18-envelope.png */; };
@@ -133,6 +135,9 @@
 		D8406FF9140450A90087A3CD /* WSLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLesson.h; path = Model/WSLesson.h; sourceTree = "<group>"; };
 		D8406FFA140450AA0087A3CD /* WSLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSLesson.m; path = Model/WSLesson.m; sourceTree = "<group>"; };
 		D840700B1405A75A0087A3CD /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		D856E6451537665000D8464C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		D856E6471537666C00D8464C /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
+		D856E6481537666C00D8464C /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		D88062FE1305AC87002774C7 /* WSNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNotice.h; path = Model/WSNotice.h; sourceTree = "<group>"; };
 		D88062FF1305AC87002774C7 /* WSNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNotice.m; path = Model/WSNotice.m; sourceTree = "<group>"; };
 		E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+VerticalAlign.h"; path = "../UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
@@ -311,6 +316,16 @@
 				E2612CF212F4823200BB13E5 /* WSMealsTableViewDelegate.m */,
 			);
 			name = Food;
+			sourceTree = "<group>";
+		};
+		D856E644153765FC00D8464C /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				D856E6471537666C00D8464C /* PullRefreshTableViewController.h */,
+				D856E6481537666C00D8464C /* PullRefreshTableViewController.m */,
+				D856E6451537665000D8464C /* arrow.png */,
+			);
+			name = PullToRefresh;
 			sourceTree = "<group>";
 		};
 		E212BEB7130FD83A0009F2D2 /* Images */ = {
@@ -596,6 +611,7 @@
 		E2F88BD012FDF2B400D5D078 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D856E644153765FC00D8464C /* PullToRefresh */,
 				E2A77DB01520EF5700B46720 /* TestFlightSDK0.8.3 */,
 				84669909146D41E9004BC05C /* libz.dylib */,
 				E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */,
@@ -733,6 +749,7 @@
 				E21801FF152265B9000510F2 /* 111-user@2x.png in Resources */,
 				E2180201152265CC000510F2 /* 117-todo@2x.png in Resources */,
 				E2180203152265E3000510F2 /* 166-newspaper@2x.png in Resources */,
+				D856E6461537665000D8464C /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +803,7 @@
 				84851FA114F3A05100AF0B98 /* WSTabBarController.m in Sources */,
 				8470646A151899A3000536D8 /* THPagedScrollView.m in Sources */,
 				E2CB4BA1151D426E004766EB /* WSTimetableTableViewDelegate.m in Sources */,
+				D856E6491537666C00D8464C /* PullRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,6 +868,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -892,6 +911,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -955,6 +975,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Westminster.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
