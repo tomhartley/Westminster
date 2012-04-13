@@ -56,7 +56,7 @@
 	preps = [[WSDataManager sharedInstance] currentPrep];
 	[preps retain];
 	//self.parentViewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",[preps count]];
-	[self.tableView reloadData];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self stopLoading];
 }
 

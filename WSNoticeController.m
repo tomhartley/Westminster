@@ -150,7 +150,7 @@
 	[(WSNoticeCell *)[aTableView cellForRowAtIndexPath:indexPath] setExpanded:[[notices objectAtIndex:indexPath.row] expanded]];
 	[tableView beginUpdates];
 	[tableView endUpdates];
-	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 	[[GANTracker sharedTracker] trackEvent:@"notices"
 									action:@"expanded"
 									 label:nil
