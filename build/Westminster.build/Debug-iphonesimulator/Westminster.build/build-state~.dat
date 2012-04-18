@@ -1,426 +1,0 @@
-TWestminster
-v7
-r0
-t307581966.153963
-cCheck dependencies
-cProcessInfoPlistFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Info.plist Westminster-Info.plist
-cProcessPCH /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch.gch Westminster_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/main.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WestminsterAppDelegate.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSAlmanackController.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDataFetcher.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLNode.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLParser.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDayFood.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster normal i386
-cGenerateDSYMFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app.dSYM /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster
-cCopyStringsFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
-cCompileXIB /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib
-cCompileXIB /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib
-cTouch /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
-c000000004C3B8FB70000000000000132
-t1278971831
-s306
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004BFDFE39000000000027C7D0
-t1274936889
-s2607056
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004BFDFE7C000000000029D5D0
-t1274936956
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004BFDFE6E0000000000001466
-t1274936942
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004C0470BB00000000000009CD
-t1275359419
-s2509
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004C0471620000000001D47210
-t1275359586
-s30700048
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/Availability.h
-c000000004BF4CBF90000000000001A3B
-t1274334201
-s6715
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml/HTMLparser.h
-c000000004BFDFE030000000000002401
-t1274936835
-s9217
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.h
-c000000004C8695E5000000000000011A
-t1283888613
-s282
-i<UIKit/UIKit.h>
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m
-c000000004C868FB500000000000005B2
-t1283887029
-s1458
-i"WSAlmanackController.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib
-c000000004C8695E80000000000001A7B
-t1283888616
-s6779
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.h
-c000000004CA51C71000000000000011D
-t1285889137
-s285
-i<Foundation/Foundation.h>
-i"HTMLParser.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m
-c000000004CA51BD9000000000000032A
-t1285888985
-s810
-i"WSDataFetcher.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.h
-c000000004CA5145E0000000000000212
-t1285887070
-s530
-i<Foundation/Foundation.h>
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m
-c000000004CA5112B00000000000000CB
-t1285886251
-s203
-i"WSDayFood.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.h
-c000000004C868F7700000000000001E6
-t1283886967
-s486
-i<UIKit/UIKit.h>
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m
-c000000004C868F7700000000000004B8
-t1283886967
-s1208
-i"WestminsterAppDelegate.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.h
-c000000004CA51BBB0000000000000800
-t1285888955
-s2048
-i<Foundation/Foundation.h>
-i<libxml/HTMLparser.h>
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m
-c000000004CA51C5C0000000000002A8F
-t1285889116
-s10895
-i"HTMLNode.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.h
-c000000004C3FB256000000000000026B
-t1279242838
-s619
-i<Foundation/Foundation.h>
-i<libxml/HTMLparser.h>
-i"HTMLNode.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m
-c000000004C3FB256000000000000082C
-t1279242838
-s2092
-i"HTMLParser.h"
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Westminster_Prefix.pch
-c000000004C868F770000000000000142
-t1283886967
-s322
-i<Availability.h>
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app
-t1285889166
-s238
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app.dSYM
-t1285889159
-s102
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Info.plist
-t1285889157
-s598
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/PkgInfo
-t1285889157
-s8
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/WSAlmanackController.nib
-t1285889166
-s1759
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster
-t1285889159
-s33376
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj/InfoPlist.strings
-t1285889160
-s126
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj/MainWindow.nib
-t1285889166
-s2540
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLNode.o
-t1285889158
-s35460
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLParser.o
-t1285889158
-s18092
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSAlmanackController.o
-t1285889158
-s34860
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDataFetcher.o
-t1285889158
-s11464
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDayFood.o
-t1285889158
-s5840
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/Westminster.LinkFileList
-c000000004CA51C850000000000000438
-t1285889157
-s1080
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WestminsterAppDelegate.o
-t1285889158
-s49304
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/main.o
-t1285889158
-s6336
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/InfoPlist.strings
-c000000004C868F770000000000000066
-t1283886967
-s102
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib
-c000000004C86934D0000000000002818
-t1283887949
-s10264
-
-N/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m
-c000000004C868F770000000000000162
-t1283886967
-s354
-i<UIKit/UIKit.h>
-
-N/usr/lib/libxml2.2.7.3.dylib
-c000000004AB82E0E00000000003958C0
-t1253584398
-s3758272
-
-N/var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch.gch
-t1285889158
-s15272976
-
-NWestminster-Info.plist
-c000000004C868F770000000000000386
-t1283886967
-s902
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies307581956#307581957#0(0"0(0#1#0"8623034208#0"0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLNode.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.635081
-e307581958.818267
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLNode.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m: In function '-[HTMLNode rawContents]':
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m:456: warning: control reaches end of non-void function
-lSLF07#2@124"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m307581958#307581958#0(329"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m: In function '-[HTMLNode rawContents]':/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m:456: warning: control reaches end of non-void function1(22@40"Control reaches end of non-void function307581958#157#172#0(6@116"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m307581916#456#0#456#0#40"control reaches end of non-void function0(0#0#116"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m8616990880#2332"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLNode.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLNode.o0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLParser.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.768564
-e307581958.931803
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLParser.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@126"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m307581958#307581958#0(0"0(0#0#118"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m8625461888#2336"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/zootreeves-Objective-C-HMTL-Parser-23f861d/HTMLParser.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/HTMLParser.o0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSAlmanackController.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.570587
-e307581958.634957
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSAlmanackController.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@105"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m307581958#307581958#0(0"0(0#0#97"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m8623779104#2325"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSAlmanackController.o0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDataFetcher.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.591162
-e307581958.768479
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDataFetcher.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@92"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m307581958#307581958#0(0"0(0#0#84"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m8623082720#2305"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Model/WSDataFetcher.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDataFetcher.o0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDayFood.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.818367
-e307581958.894313
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDayFood.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dateString' requires method '-dateString' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dateString' requires the method 'setDateString:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'breakfastItems' requires method '-breakfastItems' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'breakfastItems' requires the method 'setBreakfastItems:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'lunchItems' requires method '-lunchItems' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'lunchItems' requires the method 'setLunchItems:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dinnerItems' requires method '-dinnerItems' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dinnerItems' requires the method 'setDinnerItems:' to be defined - use @synthesize, @dynamic or provide a method implementation
-lSLF07#2@82"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307581958#307581958#0(1784"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dateString' requires method '-dateString' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dateString' requires the method 'setDateString:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'breakfastItems' requires method '-breakfastItems' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'breakfastItems' requires the method 'setBreakfastItems:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'lunchItems' requires method '-lunchItems' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'lunchItems' requires the method 'setLunchItems:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dinnerItems' requires method '-dinnerItems' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m:14: warning: property 'dinnerItems' requires the method 'setDinnerItems:' to be defined - use @synthesize, @dynamic or provide a method implementation8(22@128"Property 'dateString' requires method '-dateString' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#0#217#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@135"Property 'dateString' requires the method 'setDateString:' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#217#224#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@136"Property 'breakfastItems' requires method '-breakfastItems' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#441#225#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@143"Property 'breakfastItems' requires the method 'setBreakfastItems:' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#666#232#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@128"Property 'lunchItems' requires method '-lunchItems' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#898#217#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@135"Property 'lunchItems' requires the method 'setLunchItems:' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#1115#224#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@130"Property 'dinnerItems' requires method '-dinnerItems' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#1339#219#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(22@137"Property 'dinnerItems' requires the method 'setDinnerItems:' to be defined - use @synthesize, @dynamic or provide a method implementation307581958#1558#226#0(6@74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m307579051#14#0#14#0#0"0(0#0#74"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m8624879168#2291"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WSDayFood.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WSDayFood.o0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WestminsterAppDelegate.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.373047
-e307581958.591071
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WestminsterAppDelegate.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@95"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m307581958#307581958#0(0"0(0#0#87"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m8624720928#2317"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/WestminsterAppDelegate.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/WestminsterAppDelegate.o0#
-
-CCompileC build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/main.o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581958.372143
-e307581958.570501
-r1
-xCompileC
-xbuild/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/main.o
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@69"Compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m307581958#307581958#0(0"0(0#0#61"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m8624917696#2273"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -include /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/main.m -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib
-s307581960.434706
-e307581966.074857
-r1
-xCompileXIB
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@55"CompileXIB Classes/Controllers/WSAlmanackController.xib307581960#307581966#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#99"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib8624489536#662"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/WSAlmanackController.nib /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Classes/Controllers/WSAlmanackController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
-
-CCompileXIB /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib
-s307581959.501286
-e307581966.151272
-r1
-xCompileXIB
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib307581959#307581966#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#78"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib8622868992#640"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj/MainWindow.nib /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
-
-CCopyStringsFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
-s307581959.500612
-e307581960.434544
-r1
-xCopyStringsFile
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj/InfoPlist.strings
-xen.lproj/InfoPlist.strings
-lSLF07#2@31"Copy en.lproj/InfoPlist.strings307581959#307581960#0(0"0(0#0#81"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/en.lproj/InfoPlist.strings8623082400#519"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary en.lproj/InfoPlist.strings --outdir /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/en.lproj0#
-
-CGenerateDSYMFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app.dSYM /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster
-s307581959.469013
-e307581959.500527
-r1
-xGenerateDSYMFile
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app.dSYM
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster
-lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/Westminster.app.dSYM build/Debug-iphonesimulator/Westminster.app/Westminster307581959#307581959#0(0"0(0#0#110"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster8623387584#443"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app.dSYM0#
-
-CLd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster normal i386
-s307581958.931879
-e307581959.468931
-r1
-xLd
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster
-xnormal
-xi386
-lSLF07#2@115"Link /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster307581958#307581959#0(0"0(0#0#0"8613408832#1013"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -filelist /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Objects-normal/i386/Westminster.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework UIKit -framework Foundation -framework CoreGraphics -lxml2.2.7.3 -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Westminster0#
-
-CProcessInfoPlistFile /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Info.plist Westminster-Info.plist
-s307581957.091619
-e307581957.096740
-r1
-xProcessInfoPlistFile
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Info.plist
-xWestminster-Info.plist
-lSLF07#2@30"Process Westminster-Info.plist307581957#307581957#0(0"0(0#0#77"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Westminster-Info.plist8623961024#539"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Westminster-Info.plist -genpkginfo /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app/Info.plist0#
-
-CProcessPCH /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch.gch Westminster_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s307581957.096831
-e307581958.372054
-r1
-xProcessPCH
-x/var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch.gch
-xWestminster_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@33"Precompile Westminster_Prefix.pch307581957#307581958#0(0"0(0#0#77"/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Westminster_Prefix.pch8622740800#2145"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-generated-files.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-own-target-headers.hmap -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-all-target-headers.hmap -iquote /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/Westminster-project-headers.hmap -F/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources/i386 -I/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Westminster.build/Debug-iphonesimulator/Westminster.build/DerivedSources -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/Westminster_Prefix.pch -o /var/folders/Kv/KvdPhXXLHQ4HqLTvb2+ejk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Westminster_Prefix-eqvmohrcffybypcjbahdebmyfjak/Westminster_Prefix.pch.gch0#
-
-CTouch /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app
-s307581966.151352
-e307581966.153940
-r1
-xTouch
-x/Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app
-lSLF07#2@104"Touch /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app307581966#307581966#0(0"0(0#0#0"8623422048#314"    cd /Users/Tom/Documents/Programming/Xcode/iOS/Westminster    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Tom/Documents/Programming/Xcode/iOS/Westminster/build/Debug-iphonesimulator/Westminster.app0#
-
