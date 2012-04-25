@@ -79,13 +79,13 @@ BOOL dayIsShort(int day) {
                     startTime.hours=9;
                     startTime.minutes=25;
                     endTime.hours=10;
-                    endTime.minutes=10;
+                    endTime.minutes=05;
                     break;
                 case 2:
                     startTime.hours=10;
-                    startTime.minutes=15;
+                    startTime.minutes=10;
                     endTime.hours=10;
-                    endTime.minutes=55;
+                    endTime.minutes=50;
                     break;
                 case 3:
                     startTime.hours=11;
