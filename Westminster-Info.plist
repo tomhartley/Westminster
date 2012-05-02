@@ -6,16 +6,16 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>${PRODUCT_NAME}</string>
-	<key>CFBundleDocumentTypes</key>
-	<array/>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>icon.png</string>
-		<string>iconiPad.png</string>
+		<string>Icon</string>
+		<string>Icon-72</string>
+		<string>Icon-Small</string>
+		<string>Icon-Small-50</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.tmhrtly.westminster</string>
@@ -29,8 +29,6 @@
 	<string>2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array/>
 	<key>CFBundleVersion</key>
 	<string>Beta 1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -48,9 +46,5 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>UTExportedTypeDeclarations</key>
-	<array/>
-	<key>UTImportedTypeDeclarations</key>
-	<array/>
 </dict>
 </plist>
