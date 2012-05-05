@@ -33,6 +33,7 @@
 		D8406FFB140450AB0087A3CD /* WSLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = D8406FFA140450AA0087A3CD /* WSLesson.m */; };
 		D856E6461537665000D8464C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D856E6451537665000D8464C /* arrow.png */; };
 		D88063001305AC87002774C7 /* WSNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D88062FF1305AC87002774C7 /* WSNotice.m */; };
+		D8B37D2A1555270C00705F08 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B37D291555270C00705F08 /* Default@2x.png */; };
 		E212BEB6130FD8350009F2D2 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E212BEB5130FD8350009F2D2 /* 18-envelope.png */; };
 		E212BEBC130FE8360009F2D2 /* WSProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212BEBA130FE8360009F2D2 /* WSProfileController.m */; };
 		E212BEBD130FE8360009F2D2 /* WSProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212BEBB130FE8360009F2D2 /* WSProfileController.xib */; };
@@ -148,6 +149,7 @@
 		D856E6481537666C00D8464C /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullRefreshTableViewController.m; path = "External libraries/Pull to Refresh/PullRefreshTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		D88062FE1305AC87002774C7 /* WSNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSNotice.h; path = Model/WSNotice.h; sourceTree = "<group>"; };
 		D88062FF1305AC87002774C7 /* WSNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSNotice.m; path = Model/WSNotice.m; sourceTree = "<group>"; };
+		D8B37D291555270C00705F08 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/Launch images/Default@2x.png"; sourceTree = "<group>"; };
 		E20C8BE8130AEB3B002AE235 /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+VerticalAlign.h"; path = "External libraries/UILabel+VerticalAlign/UILabel+VerticalAlign.h"; sourceTree = SOURCE_ROOT; };
 		E20C8BE9130AEB3B002AE235 /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+VerticalAlign.m"; path = "External libraries/UILabel+VerticalAlign/UILabel+VerticalAlign.m"; sourceTree = SOURCE_ROOT; };
 		E212BEB5130FD8350009F2D2 /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "18-envelope.png"; path = "Resources/Images/Tab bar icons/18-envelope.png"; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				E2871E4413258DD6009FB406 /* Default-Landscape~ipad.png */,
 				E2871E4213258DCA009FB406 /* Default-Portrait~ipad.png */,
 				E2871E4013258D57009FB406 /* Default.png */,
+				D8B37D291555270C00705F08 /* Default@2x.png */,
 				E2CC48E813203A8E000B7138 /* 166-newspaper.png */,
 				E2180202152265E3000510F2 /* 166-newspaper@2x.png */,
 				E2B05BB713131B4B00D2E7CD /* 111-user.png */,
@@ -801,6 +804,7 @@
 				E23D33941550C27B006E2678 /* Icon@2x.png in Resources */,
 				E23D33951550C27B006E2678 /* iTunesArtwork.png in Resources */,
 				E23D33971550C3FF006E2678 /* Icon-Small-50.png in Resources */,
+				D8B37D2A1555270C00705F08 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
