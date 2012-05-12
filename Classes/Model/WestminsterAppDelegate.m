@@ -38,12 +38,13 @@
 									  withError:&error]) {
 		NSLog(@"%@", error);
 	}
-    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     [self performSelector:@selector(presentAuth) withObject:nil afterDelay:0];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePreps) name:@"WSPrepUpdatedNotification" object:nil];
     [self performSelector:@selector(setUpTabs) withObject:nil afterDelay:0];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
